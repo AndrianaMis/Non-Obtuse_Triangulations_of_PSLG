@@ -45,7 +45,8 @@ include_directories(utils)
 set(SOURCES
     ex.cpp
     utils/utils.cpp
-    
+    utils/algorithms.cpp
+    utils/new.cpp
     )
 add_executable( example  ${SOURCES} )
 

@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/andriana/DI/Project/part_3_check/ex.cpp" "/home/andriana/DI/Project/part_3_check/CMakeFiles/example.dir/ex.cpp.o"
+  "/home/andriana/DI/Project/part_3_check/utils/algorithms.cpp" "/home/andriana/DI/Project/part_3_check/CMakeFiles/example.dir/utils/algorithms.cpp.o"
   "/home/andriana/DI/Project/part_3_check/utils/utils.cpp" "/home/andriana/DI/Project/part_3_check/CMakeFiles/example.dir/utils/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

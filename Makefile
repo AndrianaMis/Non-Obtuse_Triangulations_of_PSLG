@@ -311,6 +311,33 @@ qrc_Triangulation_2.cpp.s:
 	$(MAKE) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Triangulation_2.cpp.s
 .PHONY : qrc_Triangulation_2.cpp.s
 
+utils/algorithms.o: utils/algorithms.cpp.o
+
+.PHONY : utils/algorithms.o
+
+# target to build an object file
+utils/algorithms.cpp.o:
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/utils/algorithms.cpp.o
+.PHONY : utils/algorithms.cpp.o
+
+utils/algorithms.i: utils/algorithms.cpp.i
+
+.PHONY : utils/algorithms.i
+
+# target to preprocess a source file
+utils/algorithms.cpp.i:
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/utils/algorithms.cpp.i
+.PHONY : utils/algorithms.cpp.i
+
+utils/algorithms.s: utils/algorithms.cpp.s
+
+.PHONY : utils/algorithms.s
+
+# target to generate assembly for a file
+utils/algorithms.cpp.s:
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/utils/algorithms.cpp.s
+.PHONY : utils/algorithms.cpp.s
+
 utils/utils.o: utils/utils.cpp.o
 
 .PHONY : utils/utils.o
@@ -367,6 +394,9 @@ help:
 	@echo "... qrc_Triangulation_2.o"
 	@echo "... qrc_Triangulation_2.i"
 	@echo "... qrc_Triangulation_2.s"
+	@echo "... utils/algorithms.o"
+	@echo "... utils/algorithms.i"
+	@echo "... utils/algorithms.s"
 	@echo "... utils/utils.o"
 	@echo "... utils/utils.i"
 	@echo "... utils/utils.s"
