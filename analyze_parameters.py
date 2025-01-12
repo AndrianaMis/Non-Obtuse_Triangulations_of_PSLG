@@ -30,7 +30,7 @@ def modify_json(input_file, method_value, output_file, L):
         json.dump(data, f, indent=4)
 
 inps=[]
-instance= ".vscode/challenge_instances_cgshop25/simple-polygon-exterior-20_250_eb5ab92f.instance.json"
+instance= ".vscode/challenge_instances_cgshop25/simple-polygon-exterior-20_60_28a85662.instance.json"
 def run_all():
     #with ThreadPoolExecutor(max_workers=8) as executor:
 
@@ -112,7 +112,6 @@ def graph():
 
          
 if __name__ == "__main__":
-    #modify_inputs()
-  #  run_all()
-   # remove_unecessary()
+    run_all()
+    remove_unecessary()
     graph()

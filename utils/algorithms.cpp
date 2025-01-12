@@ -94,11 +94,13 @@ void local_search(DATA2& data2, Custom_CDT& cdt) {
                     }
                
                 }
-
+            }
+            else{
+                i++;
             }
         
 
-            i++;
+            
             obtuse_edges = check_for_obtuse(cdt);
         }
         iteration ++;

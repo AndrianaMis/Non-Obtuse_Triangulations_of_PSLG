@@ -54,7 +54,7 @@ int main(int argc , char* argv[]){
    cout<<"Τελικές αμβλείες: "<<check_for_obtuse(cdt).size()<<endl;
    cout<<"Τελικές faces: "<<cdt.number_of_faces()<<endl;
 
-    CGAL::draw(cdt);
+   // CGAL::draw(cdt);
     return 0;
 }
 

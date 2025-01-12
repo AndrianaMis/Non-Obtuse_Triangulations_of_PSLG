@@ -1,0 +1,168 @@
+Input file: .vscode/temp_30_ant.json
+Output file: .vscode/output_30_ant.json
+simple-polygon-exterior-20_60_28a85662
+60
+
+POINTS_X
+2207 ,1854 ,1396 ,946 ,899 ,798 ,986 ,1017 ,1044 ,1530 ,1293 ,1083 ,820 ,854 ,765 ,199 ,0 ,26 ,205 ,178 ,171 ,124 ,8 ,29 ,309 ,443 ,691 ,679 ,812 ,1313 ,1343 ,1646 ,1824 ,2068 ,2218 ,2351 ,2455 ,2538 ,3395 ,3485 ,3572 ,3722 ,3078 ,3064 ,3160 ,3199 ,3380 ,3632 ,3690 ,3715 ,3821 ,3925 ,3550 ,3283 ,3235 ,3085 ,2976 ,2636 ,2485 ,2562 ,
+POINTS_Y
+118 ,24 ,134 ,130 ,144 ,178 ,284 ,255 ,199 ,690 ,791 ,470 ,456 ,558 ,604 ,47 ,281 ,289 ,725 ,831 ,1369 ,1437 ,1444 ,1784 ,1541 ,1434 ,1639 ,1210 ,1053 ,1720 ,1732 ,1383 ,1559 ,1580 ,1201 ,1476 ,1665 ,1736 ,1744 ,1712 ,1736 ,1369 ,1495 ,1368 ,891 ,912 ,855 ,845 ,909 ,1015 ,790 ,467 ,503 ,318 ,205 ,0 ,41 ,629 ,485 ,16 ,
+REGION_BOUND
+16 ,15 ,55 ,51 ,41 ,40 ,38 ,23 ,22 ,
+NUM CONSTRAINTS
+42
+
+ADDITIONAL CONSTRAINTS
+[0,1] ,[1,2] ,[4,5] ,[5,6] ,[6,7] ,[7,8] ,[8,9] ,[9,10] ,[11,12] ,[13,14] ,[14,15] ,[16,17] ,[17,18] ,[18,19] ,[19,20] ,[21,22] ,[23,24] ,[24,25] ,[27,28] ,[28,29] ,[29,30] ,[30,31] ,[31,32] ,[32,33] ,[34,35] ,[35,36] ,[38,39] ,[39,40] ,[41,42] ,[43,44] ,[44,45] ,[45,46] ,[46,47] ,[47,48] ,[48,49] ,[50,51] ,[51,52] ,[53,54] ,[55,56] ,[56,57] ,[57,58] ,[58,59] ,
+METHOD: ant
+
+PARAMETERS:
+L: 30, alpha: 2, beta: 5, kappa: 10, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Αρχικές αμβλείες: 76
+Αρχικά faces: 109
+Β. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ (ΑΝΟΙΧΤΟ)
+pn:0 obtuses:76 steiners:3
+pn:0 obtuses:76 steiners:4
+pn:0 obtuses:76 steiners:5
+pn:0 obtuses:76 steiners:6
+pn:0.168507 obtuses:78 steiners:7
+pn:0.189602 obtuses:80 steiners:8
+pn:0.209645 obtuses:82 steiners:9
+pn:0.228715 obtuses:84 steiners:10
+pn:-0.125655 obtuses:83 steiners:11
+pn:0 obtuses:83 steiners:12
+pn:0 obtuses:83 steiners:13
+pn:0 obtuses:83 steiners:14
+pn:0.173586 obtuses:84 steiners:15
+pn:0.18337 obtuses:85 steiners:16
+pn:0.383621 obtuses:87 steiners:17
+pn:-0.202259 obtuses:86 steiners:18
+pn:-0.216324 obtuses:85 steiners:19
+pn:0 obtuses:85 steiners:20
+pn:0 obtuses:85 steiners:21
+pn:0.499932 obtuses:87 steiners:22
+pn:0.511301 obtuses:89 steiners:23
+pn:-0.265499 obtuses:88 steiners:24
+pn:0 obtuses:88 steiners:25
+pn:0.572984 obtuses:90 steiners:26
+pn:0.582372 obtuses:92 steiners:27
+pn:0.591355 obtuses:94 steiners:28
+pn:0.89527 obtuses:97 steiners:29
+pn:0 obtuses:97 steiners:30
+pn:0 obtuses:97 steiners:31
+pn:0 obtuses:97 steiners:32
+pn:0.663236 obtuses:99 steiners:33
+pn:0 obtuses:99 steiners:34
+pn:0 obtuses:99 steiners:35
+pn:0 obtuses:99 steiners:36
+pn:0 obtuses:99 steiners:37
+pn:0 obtuses:99 steiners:38
+pn:0.769982 obtuses:101 steiners:39
+pn:0.774493 obtuses:103 steiners:40
+pn:0.778831 obtuses:105 steiners:41
+pn:0 obtuses:105 steiners:42
+pn:0 obtuses:105 steiners:43
+pn:0 obtuses:105 steiners:44
+pn:0.421786 obtuses:106 steiners:45
+pn:0 obtuses:106 steiners:46
+pn:0.869151 obtuses:108 steiners:47
+pn:0 obtuses:108 steiners:48
+pn:0 obtuses:108 steiners:49
+pn:0 obtuses:108 steiners:50
+pn:0 obtuses:108 steiners:51
+pn:0.944951 obtuses:110 steiners:52
+pn:0.945943 obtuses:112 steiners:53
+pn:-0.47981 obtuses:111 steiners:54
+pn:0 obtuses:111 steiners:55
+pn:0 obtuses:111 steiners:56
+pn:0 obtuses:111 steiners:57
+pn:1.53339 obtuses:114 steiners:58
+pn:0 obtuses:114 steiners:59
+pn:0 obtuses:114 steiners:60
+pn:0.528376 obtuses:115 steiners:61
+pn:0 obtuses:115 steiners:62
+pn:1.07759 obtuses:117 steiners:63
+pn:0 obtuses:117 steiners:64
+pn:1.09322 obtuses:119 steiners:65
+pn:1.09167 obtuses:121 steiners:66
+pn:1.09017 obtuses:123 steiners:67
+pn:0 obtuses:123 steiners:68
+pn:0 obtuses:123 steiners:69
+pn:0 obtuses:123 steiners:70
+pn:0.570844 obtuses:124 steiners:71
+pn:1.14401 obtuses:126 steiners:72
+pn:0 obtuses:126 steiners:73
+pn:0 obtuses:126 steiners:74
+pn:0 obtuses:126 steiners:75
+pn:1.18898 obtuses:128 steiners:76
+pn:1.18605 obtuses:130 steiners:77
+pn:1.18321 obtuses:132 steiners:78
+pn:-0.596953 obtuses:131 steiners:79
+pn:0 obtuses:131 steiners:80
+pn:0 obtuses:131 steiners:81
+pn:0 obtuses:131 steiners:82
+pn:1.25001 obtuses:133 steiners:83
+pn:0 obtuses:133 steiners:84
+pn:0 obtuses:133 steiners:85
+pn:0 obtuses:133 steiners:86
+pn:0 obtuses:133 steiners:87
+pn:0 obtuses:133 steiners:88
+pn:1.32091 obtuses:135 steiners:89
+pn:0 obtuses:135 steiners:90
+pn:1.33089 obtuses:137 steiners:91
+pn:1.3261 obtuses:139 steiners:92
+pn:-0.667866 obtuses:138 steiners:93
+pn:0 obtuses:138 steiners:94
+pn:0 obtuses:138 steiners:95
+pn:0 obtuses:138 steiners:96
+pn:-0.701815 obtuses:137 steiners:97
+pn:0 obtuses:137 steiners:98
+pn:0 obtuses:137 steiners:99
+pn:0 obtuses:137 steiners:100
+pn:0 obtuses:137 steiners:101
+pn:0 obtuses:137 steiners:102
+pn:0 obtuses:137 steiners:103
+pn:0 obtuses:137 steiners:104
+pn:-0.765565 obtuses:136 steiners:105
+pn:0 obtuses:136 steiners:106
+pn:0 obtuses:136 steiners:107
+pn:0 obtuses:136 steiners:108
+pn:1.58396 obtuses:138 steiners:109
+pn:0 obtuses:138 steiners:110
+pn:1.58994 obtuses:140 steiners:111
+pn:1.58158 obtuses:142 steiners:112
+pn:-0.795051 obtuses:141 steiners:113
+pn:-0.807827 obtuses:140 steiners:114
+pn:0 obtuses:140 steiners:115
+pn:-0.827955 obtuses:139 steiners:116
+pn:0 obtuses:139 steiners:117
+pn:1.67859 obtuses:141 steiners:118
+pn:1.66903 obtuses:143 steiners:119
+pn:-0.838595 obtuses:142 steiners:120
+pn:0 obtuses:142 steiners:121
+pn:1.69932 obtuses:144 steiners:122
+pn:1.68967 obtuses:146 steiners:123
+pn:1.68029 obtuses:148 steiners:124
+pn:0 obtuses:148 steiners:125
+pn:0 obtuses:148 steiners:126
+pn:0.851851 obtuses:149 steiners:127
+pn:1.70002 obtuses:151 steiners:128
+pn:0 obtuses:151 steiners:129
+pn:0 obtuses:151 steiners:130
+pn:0.861385 obtuses:152 steiners:131
+pn:1.71897 obtuses:154 steiners:132
+pn:0 obtuses:154 steiners:133
+pn:0 obtuses:154 steiners:134
+ Μέσος ρυθμός σύγκλισης: 0.29319
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 978
+Method: Ant Colony: 
+	Original CDT had: 76/109 obtuse faces
+	We inserted 129 steiner points:
+		Middle of largest edge: 3
+		Circumcenter: 47
+		Projection: 79
+		Polygon Cnetroid: 0
+Final obtuse faces: 154/361
+Τελικές αμβλείες: 154
+Τελικές faces: 361
