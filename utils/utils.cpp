@@ -131,6 +131,25 @@ int Contrained_Delaunay(Custom_CDT& cdt,DATA data)
 
 }
 
+
+bool  check_obtuse_triangle(CDT::Face_handle ft){
+    Point p = ft->vertex(0)->point();  //Πάιρνω όλα τα points που ορίζουν την έδρα
+    Point q = ft->vertex(1)->point();
+    Point r = ft->vertex(2)->point();
+
+    CGAL::Angle ang_pqr = CGAL::angle(p, q, r); //η γωνία του p-q-r με επίκεντρο το q vertex
+    CGAL::Angle ang_qrp = CGAL::angle(q, r, p); //η γωνία του q-r-p με επίκεντρο το r vertex
+    CGAL::Angle ang_rpq = CGAL::angle(r, p, q); //η γωνία του r-p-q με επίκεντρο το p vertex}
+
+    if(ang_pqr==CGAL::OBTUSE || ang_qrp==CGAL::OBTUSE || ang_rpq==CGAL::OBTUSE){
+        return true;
+    }
+    return false;
+}
+
+
+
+
 Point find_height_intersection(Point a, Point b , Point c){
     RT m_ac, m_h;
 
@@ -197,36 +216,6 @@ Point point_to_h(Custom_CDT& cdt, CDT::Face_handle face, DATA data, int i){
     return steiner;
 }
 
-
-void checking(Custom_CDT& cdt, DATA2& data2){
-    DATA data;
-    data.additional_constraints=data2.additional_constraints;
-    data.instance_uid=data2.instance_uid;
-    data.num_constraints=data2.num_constraints;
-    data.num_points=data2.num_points;
-    data.points_x=data2.points_x;
-    data.points_y=data2.points_y;
-    data.region_boundary=data2.region_boundary;
-    vector<pair<CDT::Face_handle, int>> obtuses=check_for_obtuse(cdt);
-    cout<<"obtuses [0]"<<endl;
-    cout<<obtuses.size()<<endl;
-    int i=0;
-    int j=0;
-    srand(time(0));
-   while(obtuses.size()>1 ){
-        Point steiner=point_to_h(cdt, obtuses[j].first, data, obtuses[j].second);
-        if(steiner!=Point(-1.0,-1.0)){
-            cout<<"βαλαμε με προτζεκτιον και έχουμε από "<<obtuses.size()<<" -> "<<check_for_obtuse(cdt).size()<<endl;
-            i++;
-        }
-    
-        obtuses=check_for_obtuse(cdt);
-
-        j=rand()%obtuses.size();
-        
-        
-   }
-}
 
 vector<pair<CDT::Face_handle, int>> check_for_obtuse(Custom_CDT& cdt) {
     vector<pair<CDT::Face_handle, int>> obtuses_i;
@@ -437,4 +426,157 @@ Point point_to_circumcenter( Custom_CDT& cdt, CDT::Face_handle face, DATA data, 
         
     }
     return steiner;
+}
+
+
+bool has_constraints(CDT::Face_handle face){
+    for(int i=0; i<3; i++){
+        if(face->is_constrained(i)) return true;
+    }
+    return false;
+}
+
+
+
+Point add_to_polygon_centroid(Custom_CDT& cdt, std::vector<CDT::Vertex_handle> vertices) {
+    RT x_sum = 0, y_sum = 0;
+
+    // Υπολογισμός του κέντρου βαρύτητας του πολυγώνου (μέση τιμή συντεταγμένων)
+    for (size_t i = 0; i < vertices.size(); ++i) {
+        Point p = vertices[i]->point();
+        x_sum += p.x(); 
+        y_sum += p.y();
+    }
+
+    RT x = x_sum / RT(vertices.size());
+    RT y = y_sum / RT(vertices.size());
+    Point steiner(x, y);
+
+    CDT::Vertex_handle vh = cdt.insert_no_flip(steiner);
+
+    // Έλεγχος αν η εισαγωγή του σημείου ήταν επιτυχής
+    if (vh == nullptr) {
+        std::cerr << "Error: Insertion returned a null vertex handle. The Steiner point could not be inserted." << std::endl;
+    } else {
+        // Προσπελάζουμε τις κορυφές του τριγωνισμού με τον iterator
+        bool is_near_existing = false;
+        for (auto v = cdt.vertices_begin(); v != cdt.vertices_end(); ++v) {
+            // Έλεγχος απόστασης μεταξύ του νέου σημείου και των υπαρχόντων σημείων
+            RT dist_squared = CGAL::square(v->point().x() - x) + CGAL::square(v->point().y() - y);
+            if (dist_squared < CGAL::square(RT(1e-6))) { // Αν η απόσταση είναι πολύ μικρή, θεωρούμε ότι είναι το ίδιο σημείο
+                is_near_existing = true;
+                break;
+            }
+        }
+
+        if (is_near_existing) {
+            std::cerr << "Warning: The Steiner point is too close to an existing point and will not be inserted." << std::endl;
+            cdt.remove(vh); // Αφαιρούμε το σημείο αν είναι πολύ κοντά σε άλλο
+        }
+    }
+
+    return steiner;
+}
+
+
+
+Point point_to_polyg(Custom_CDT& cdt, CDT::Face_handle face, DATA data, int i) {
+    vector<CDT::Face_handle> obtuse_neigh;
+
+    // Ελέγχουμε τις πλευρές του τριγώνου αν έχουν περιορισμούς
+    for (int i = 0; i < 3; i++) {
+        // Δημιουργούμε την πλευρά του τριγώνου (edge)
+        CDT::Vertex_handle v1 = face->vertex(i);
+        CDT::Vertex_handle v2 = face->vertex((i + 1) % 3);
+        
+        // Δημιουργούμε την άκρη (edge) από τη πλευρά
+        pair<CDT::Face_handle, int> edge(face, i);
+        
+        // Έλεγχος αν η πλευρά είναι περιορισμένη
+        if (cdt.is_constrained(edge)){
+            //cout << "The edge is constrained" << endl;
+            return Point(-1.0,-1.0);
+        } 
+    }
+
+    // Βρίσκουμε τους γείτονες του τριγώνου που είναι obtuse και δεν έχουν περιορισμούς
+    for (int i = 0; i < 3; i++) {
+        CDT::Face_handle neighbor = face->neighbor(i);
+        if (!check_obtuse_triangle(neighbor)){
+           //cout<< " The triangle has not obtuse neighbors" << endl;
+           continue;
+        } 
+        if (cdt.is_infinite(neighbor)) {
+            cout << "The triangle is infinite " << endl;
+            continue;
+        }
+
+        // Έλεγχος για τις πλευρές των γειτόνων
+        bool neighbor_has_constraints = false;
+        for (int j = 0; j < 3; j++) {
+            CDT::Vertex_handle nv1 = neighbor->vertex(j);
+            CDT::Vertex_handle nv2 = neighbor->vertex((j + 1) % 3);
+            
+            // Δημιουργία άκρης για τον γείτονα
+            pair<CDT::Face_handle, int> neighbor_edge(neighbor, j);
+            
+            if (cdt.is_constrained(neighbor_edge)) {
+                //cout << "The neighbor has a constrained edge " << endl;
+                neighbor_has_constraints = true;
+                break;
+            }
+        }
+
+        if (neighbor_has_constraints) continue;
+        
+        obtuse_neigh.push_back(neighbor);
+    }
+
+    // Αν δεν έχουμε αρκετούς γείτονες, επιστρέφουμε
+    if (obtuse_neigh.size() < 2) return Point(-1.0,-1.0);
+
+
+    set<CDT::Vertex_handle> unique_vertices;
+    
+    // Προσθήκη των κορυφών του τριγώνου στο set των μοναδικών κορυφών
+    unique_vertices.insert(face->vertex(0));
+    unique_vertices.insert(face->vertex(1));
+    unique_vertices.insert(face->vertex(2));
+
+    // Βρίσκουμε τις πρόσθετες κορυφές από τους γείτονες
+    for (const auto& n : obtuse_neigh) {
+        for (int j = 0; j < 3; j++) {
+            if (n->vertex(j) != face->vertex(0) && n->vertex(j) != face->vertex(1) && n->vertex(j) != face->vertex(2)) {
+                unique_vertices.insert(n->vertex(j));
+                break;
+            }
+        }
+    }
+
+    // Δημιουργία ενός vector από τις μοναδικές κορυφές
+    vector<CDT::Vertex_handle> all_vertices(unique_vertices.begin(), unique_vertices.end());
+    vector<Point> points_for_con;
+
+    // Προετοιμασία των σημείων για να ελεγχθεί αν το πολυγωνικό είναι κυρτό
+    for (const auto& vh : all_vertices) {
+        points_for_con.push_back(vh->point());
+    }
+
+    // Αν το πολυγωνικό δεν είναι κυρτό, επιστρέφουμε
+    if (!CGAL::is_convex_2(points_for_con.begin(), points_for_con.end())) return Point(-1.0,-1.0);
+
+
+    // Δημιουργία των περιορισμένων (constraints) για τις πλευρές του πολυγώνου
+    for (size_t i = 0; i < all_vertices.size(); ++i) {
+        CDT::Vertex_handle v1 = all_vertices[i];
+        CDT::Vertex_handle v2 = all_vertices[(i + 1) % all_vertices.size()];
+        
+        // Εισάγουμε τους περιορισμούς
+        cdt.insert_constraint(v1, v2);
+    }
+
+    // Προσθήκη στο κέντρο του πολυγώνου (αν χρειάζεται)
+
+    return add_to_polygon_centroid(cdt, all_vertices);
+    
 }

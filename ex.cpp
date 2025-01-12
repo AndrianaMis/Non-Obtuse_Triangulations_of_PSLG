@@ -1,7 +1,8 @@
 #include "utils/utils.hpp"
 
 int main(int argc , char* argv[]){
-        for (int i = 1; i < argc; ++i) {
+    create_map();
+    for (int i = 1; i < argc; ++i) {
         string arg = argv[i];
         if (arg == "-i" && i + 1 < argc) {
             input_file = argv[++i]; 
@@ -28,13 +29,31 @@ int main(int argc , char* argv[]){
     data.region_boundary=data2.region_boundary;
     data.num_constraints=data2.num_constraints;
     data.additional_constraints=data2.additional_constraints;
-    if(data2.delaunay){
 
-        Contrained_Delaunay(cdt_check, data);
+    Contrained_Delaunay(cdt_check, data);
+    
+   cout<<"Αρχικές αμβλείες: "<<check_for_obtuse(cdt_check).size()<<endl;
+   cout<<"Αρχικά faces: "<<cdt_check.number_of_faces()<<endl;
+  //CGAL::draw(cdt_check);
+
+   analyze_boundary(data2);
+   //hecking(cdt_check, data2);
+   
+    //we must also extract the parameters needed for each method
+    if(data2.method=="sa"){
+        simulated_annealing(data2, cdt);
     }
+    else if(data2.method=="local_search" || data2.method=="local" ||data2.method=="ls"){
+        local_search(data2, cdt);
+    }
+    else{
+       ant_colony(data2, cdt);
+     //   checking(data2, cdt);
+    }
+  //  CGAL::draw(cdt);
+   cout<<"Τελικές αμβλείες: "<<check_for_obtuse(cdt).size()<<endl;
+   cout<<"Τελικές faces: "<<cdt.number_of_faces()<<endl;
 
-    checking(cdt_check, data2);
-    CGAL::draw(cdt_check);
+    CGAL::draw(cdt);
     return 0;
 }
-
