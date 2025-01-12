@@ -338,6 +338,33 @@ utils/algorithms.cpp.s:
 	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/utils/algorithms.cpp.s
 .PHONY : utils/algorithms.cpp.s
 
+utils/new.o: utils/new.cpp.o
+
+.PHONY : utils/new.o
+
+# target to build an object file
+utils/new.cpp.o:
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/utils/new.cpp.o
+.PHONY : utils/new.cpp.o
+
+utils/new.i: utils/new.cpp.i
+
+.PHONY : utils/new.i
+
+# target to preprocess a source file
+utils/new.cpp.i:
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/utils/new.cpp.i
+.PHONY : utils/new.cpp.i
+
+utils/new.s: utils/new.cpp.s
+
+.PHONY : utils/new.s
+
+# target to generate assembly for a file
+utils/new.cpp.s:
+	$(MAKE) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/utils/new.cpp.s
+.PHONY : utils/new.cpp.s
+
 utils/utils.o: utils/utils.cpp.o
 
 .PHONY : utils/utils.o
@@ -397,6 +424,9 @@ help:
 	@echo "... utils/algorithms.o"
 	@echo "... utils/algorithms.i"
 	@echo "... utils/algorithms.s"
+	@echo "... utils/new.o"
+	@echo "... utils/new.i"
+	@echo "... utils/new.s"
 	@echo "... utils/utils.o"
 	@echo "... utils/utils.i"
 	@echo "... utils/utils.s"

@@ -243,9 +243,9 @@ typedef struct ant_evaluation
     int steiner_point_added;  //1 ή 0 αν το μυρμληγκι καλέιται να βάλει steiner σε ένα face
     int number_of_obtuses;   //Πόσες αμβλείες βελτίωσε
     string method;   //Ποια μέθοδο χρησιμοποίησε (ονοματικά)
-    double perfomance;   //ένα μέτρο αξιολόγηης, στο οποίο χρησιμοποιούμε radius imporenment - aspect ratio - number of obtuses - steiner point και βάρη
-    double radius_improvment;
-    double aspect_ratio_change;
+  //  double perfomance;   //ένα μέτρο αξιολόγηης, στο οποίο χρησιμοποιούμε radius imporenment - aspect ratio - number of obtuses - steiner point και βάρη
+  //  double radius_improvment;
+   // double aspect_ratio_change;
     CDT::Face_handle face;   //Το τυχαίο face στο οποίο δούλεψε
     vector<Point> vertices;  //vector από 3 Points (χρειάστηκε διότι είχαμε προβλήματα με τη μεταφορά Face_handle)
     double energy;    //Ενέργεια 

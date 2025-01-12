@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/andriana/DI/Project/part_3_check/ex.cpp" "/home/andriana/DI/Project/part_3_check/CMakeFiles/example.dir/ex.cpp.o"
   "/home/andriana/DI/Project/part_3_check/utils/algorithms.cpp" "/home/andriana/DI/Project/part_3_check/CMakeFiles/example.dir/utils/algorithms.cpp.o"
+  "/home/andriana/DI/Project/part_3_check/utils/new.cpp" "/home/andriana/DI/Project/part_3_check/CMakeFiles/example.dir/utils/new.cpp.o"
   "/home/andriana/DI/Project/part_3_check/utils/utils.cpp" "/home/andriana/DI/Project/part_3_check/CMakeFiles/example.dir/utils/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
