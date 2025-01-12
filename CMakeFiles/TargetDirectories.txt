@@ -1,0 +1,5 @@
+/home/andriana/DI/Project/part_3_check/CMakeFiles/rebuild_cache.dir
+/home/andriana/DI/Project/part_3_check/CMakeFiles/edit_cache.dir
+/home/andriana/DI/Project/part_3_check/CMakeFiles/example.dir
+/home/andriana/DI/Project/part_3_check/CMakeFiles/CGAL_Qt5_moc_and_resources.dir
+/home/andriana/DI/Project/part_3_check/CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir
