@@ -30,22 +30,31 @@ def modify_json(input_file, method_value, output_file, L):
         json.dump(data, f, indent=4)
 
 inps=[]
-instance= ".vscode/challenge_instances_cgshop25/simple-polygon-exterior-20_60_28a85662.instance.json"
+instances= [
+            ".vscode/challenge_instances_cgshop25/point-set_60_9fc02edd.instance.json", 
+            ".vscode/challenge_instances_cgshop25/simple-polygon-exterior-20_60_28a85662.instance.json",
+            ".vscode/challenge_instances_cgshop25/simple-polygon-exterior-20_80_f6e462fb.instance.json",
+            ".vscode/challenge_instances_cgshop25/ortho_150_53eb4022.instance.json",
+            ".vscode/challenge_instances_cgshop25/simple-polygon_150_f24b0f8e.instance.json"
+            
+            ]
 def run_all():
     #with ThreadPoolExecutor(max_workers=8) as executor:
-
-    for method in methods:
-    
-        for L in Ls:
-            # Generate unique file names for the temporary input, output, and results
-            temps=f".vscode/temp_{L}_{method}.json"
-            modify_json(instance, method, temps, L)
-            output_file = f".vscode/output_{L}_{method}.json"
-            result_file = f".vscode/results_{L}_{method}.txt"
-            inps.append(temps)
-                # Submit the execution task to the thread pool
-            run_example( temps, method, output_file, result_file)
-            
+    i=0
+    for instance in instances:
+        i+=1
+        for method in methods:
+        
+            for L in Ls:
+                # Generate unique file names for the temporary input, output, and results
+                temps=f".vscode/temp_{L}_{method}.json"
+                modify_json(instance, method, temps, L)
+                output_file = f".vscode/output_{L}_{method}.json"
+                result_file = f".vscode/results/results_{i}_{L}_{method}.txt"
+                if i==1: inps.append(temps)
+                    # Submit the execution task to the thread pool
+                run_example( temps, method, output_file, result_file)
+                
         
      
 
@@ -61,42 +70,47 @@ import matplotlib.pyplot as plt
 percent_changes_sa=[]
 percent_changes_ls=[]
 percent_changes_ant=[]
-methodNames=["Simulated Annealing(SA)", "Local Search (LS)", "Ant Colony (ANT)"]
+methodNames=["Local Search (LS)", "Simulated Annealing(SA)", "Ant Colony (ANT)"]
 
 def graph():
     initial_obt = 0
     initial_vert = 1
     final_obt = 0
     final_vert = 1
+    
     for method in methods:
         for L in Ls:
+            sum_diff=0
+            for i,instance in enumerate(instances):
           
-            with open(f'.vscode/results_{L}_{method}.txt', 'r') as file:
-                lines = file.readlines()
-                for line in lines:
-                    if line.startswith("Αρχικές αμβλείες:"):  
-                        parts = line.split()
-                        initial_obt = float(parts[2].strip())
-                    if line.startswith("Αρχικά faces:"):
-                        parts = line.split()
-                        initial_vert = float(parts[2].strip())
-                    if line.startswith("Τελικές αμβλείες:"):  
-                        parts = line.split()
-                        final_obt =float(parts[2].strip())
-                    if line.startswith("Τελικές faces:"):
-                        parts = line.split()
-                        final_vert = float(parts[2].strip())
-                diff=initial_obt/initial_vert - final_obt/final_vert
-                print(f'{method} -> {L} -> {diff}: {final_obt}, {final_vert} ')
+                with open(f'.vscode/results/results_{i+1}_{L}_{method}.txt', 'r') as file:
+                    lines = file.readlines()
+                    for line in lines:
+                        if line.startswith("Αρχικές αμβλείες:"):  
+                            parts = line.split()
+                            initial_obt = float(parts[2].strip())
+                        if line.startswith("Αρχικά faces:"):
+                            parts = line.split()
+                            initial_vert = float(parts[2].strip())
+                        if line.startswith("Τελικές αμβλείες:"):  
+                            parts = line.split()
+                            final_obt =float(parts[2].strip())
+                        if line.startswith("Τελικές faces:"):
+                            parts = line.split()
+                            final_vert = float(parts[2].strip())
+                    diff=initial_obt/initial_vert - final_obt/final_vert
+                    sum_diff+=diff
+            avg_diff=sum_diff/len(instances)
+            print(f'{method} -> {L} -> {avg_diff} ')
 
-                if method=="sa":
-                    percent_changes_sa.append(diff)
-                elif method=="ls":
-                    percent_changes_ls.append(diff)
-                elif method=="ant":
-                    percent_changes_ant.append(diff)
+            if method=="sa":
+                percent_changes_sa.append(avg_diff)
+            elif method=="ls":
+                percent_changes_ls.append(avg_diff)
+            elif method=="ant":
+                percent_changes_ant.append(avg_diff)
 
-    percent_changes = [percent_changes_sa, percent_changes_ls, percent_changes_ant]
+    percent_changes = [percent_changes_ls, percent_changes_sa, percent_changes_ant]
     print(percent_changes[1])
     # Δημιουργία ξεχωριστού γραφήματος για κάθε μέθοδο
     for i, method in enumerate(methodNames):
@@ -112,6 +126,6 @@ def graph():
 
          
 if __name__ == "__main__":
-    run_all()
-    remove_unecessary()
+  #  run_all()
+   # remove_unecessary()
     graph()

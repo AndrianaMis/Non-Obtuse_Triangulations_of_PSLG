@@ -35,7 +35,13 @@ categories = {
         
     ],
     "D": [
-        # Άλλα instances της κατηγορίας D
+        ".vscode/challenge_instances_cgshop25/ortho_40_df58ce3b.instance.json",
+        ".vscode/challenge_instances_cgshop25/ortho_60_5c5796a0.instance.json",
+        ".vscode/challenge_instances_cgshop25/ortho_80_06ee55d4.instance.json",
+        ".vscode/challenge_instances_cgshop25/ortho_100_bd1e4a14.instance.json",
+        ".vscode/challenge_instances_cgshop25/ortho_150_53eb4022.instance.json",
+        ".vscode/challenge_instances_cgshop25/ortho_250_3b977f7e.instance.json"
+       
     ],
     "E": [
         ".vscode/challenge_instances_cgshop25/simple-polygon_10_297edd18.instance.json",
@@ -49,11 +55,14 @@ categories = {
     ],
 }
 
-instances=[".vscode/challenge_instances_cgshop25/point-set_150_982c9ab3.instance.json", 
-           ".vscode/challenge_instances_cgshop25/simple-polygon-exterior-20_100_8d1c2e30.instance.json",
-           ".vscode/challenge_instances_cgshop25/simple-polygon-exterior-20_100_8ff7a64d.instance.json",
-           ".vscode/challenge_instances_cgshop25/point-set_150_20bcb550.instance.json"
-           ]
+instances=[ 
+    ".vscode/challenge_instances_cgshop25/point-set_100_05594822.instance.json",
+    ".vscode/challenge_instances_cgshop25/simple-polygon-exterior-20_60_28a85662.instance.json",
+    ".vscode/challenge_instances_cgshop25/simple-polygon-exterior-20_250_eb5ab92f.instance.json",
+    ".vscode/challenge_instances_cgshop25/ortho_150_53eb4022.instance.json",
+    ".vscode/challenge_instances_cgshop25/simple-polygon_100_cb23308c.instance.json"
+
+]
 algorithms = ["ls", "sa", "ant"]
 
 def modify_json(input_file, method_value, output_file):
@@ -62,8 +71,8 @@ def modify_json(input_file, method_value, output_file):
     data["method"] = method_value  # Update the "method" field
     data["delaunay"] = True
     data["parameters"] = {
-        "alpha": 2.0, "beta": 5.0, "xi": 1.0, "psi": 3.0,
-        "lambda": 0.5, "kappa": 10, "L": 30
+        "alpha": 2.0, "beta": 0.5, "xi": 1.0, "psi": 3.0,
+        "lambda": 0.5, "kappa": 10, "L": 100
     }
     
     with open(output_file, "w") as f:
@@ -92,16 +101,16 @@ def remove_unecessary():
 def run_all1():
     #with ThreadPoolExecutor(max_workers=8) as executor:
     i=0
-    for cat, instances in categories.items():  # Loop through each category and its instances
+    for cat, insts in categories.items():  # Loop through each category and its instances
         i=i+1
-        for instance in instances:  # Loop through each instance in the category
+        for instance in insts:  # Loop through each instance in the category
             for algorithm in algorithms: 
                 # Generate unique file names for the temporary input, output, and results
                 temps=f".vscode/temp_{i}_{algorithm}.json"
                 modify_json(instance, algorithm, temps)
                 output_file = f".vscode/output_{i}_{algorithm}.json"
-                result_file = f".vscode/results_{i}_{algorithm}.txt"
-                inps.append(temps)
+                result_file = f".vscode/results/results_{i}_{algorithm}.txt"
+                if i==1: inps.append(temps)
                     # Submit the execution task to the thread pool
                 run_example( temps, algorithm, output_file, result_file)
                # time.sleep(4)
@@ -121,7 +130,7 @@ def run_all():
             inps.append(temps)
                 # Submit the execution task to the thread pool
             run_example( temps, algorithm, output_file, result_file)
-            time.sleep(4)
+            #time.sleep(4)
 
       
 if __name__ == "__main__":

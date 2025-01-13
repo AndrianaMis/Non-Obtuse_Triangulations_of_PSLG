@@ -76,6 +76,7 @@ void local_search(DATA2& data2, Custom_CDT& cdt) {
 
                     }
                 }  
+                //η polygon δεν επιστρεφει valid sp
                 ++it;
 
             }
@@ -92,7 +93,6 @@ void local_search(DATA2& data2, Custom_CDT& cdt) {
                         cout<<"pn:"<<pn<<" obtuses:"<<obt_next<<" steiners:"<<n+1<<endl;
                         sum_pn+=pn;
                     }
-               
                 }
             }
             else{
@@ -108,9 +108,11 @@ void local_search(DATA2& data2, Custom_CDT& cdt) {
     }
     cout<<"iteration: "<<iteration<<" out of: "<<L<<endl;
 
-    steiners=cdt.number_of_vertices() - steiners;  
-    double p_avg=sum_pn/all_steiners_added.size();
-    cout<<"Μέσος ρυθμός σύγκλισης: "<<p_avg<<endl;
+    steiners=all_steiners_added.size();
+    double p_avg=0;
+    if(steiners>0) {
+        p_avg=sum_pn/steiners;
+        cout<<"Μέσος ρυθμός σύγκλισης: "<<p_avg<<endl;}
     
     if(p_avg>0){
         int obtuses=check_for_obtuse(cdt).size();
@@ -161,20 +163,22 @@ void simulated_annealing(DATA2& data2, Custom_CDT& cdt){
     }
     double sum_pn=0.0;
     double pn, pn_old;
-    
+    srand(time(0));
+
     while (T>=0 ){
-        srand(time(0));
         int i=0;
         int j=0;
-        while(obtuses.size()>0 && j<=number_of_obtuse ){
+        while(j<obtuses.size() ){
             const auto& trig=obtuses[i];
             CDT::Face_handle face=trig.first;
             int i_of_face=trig.second;
             int random_i=rand()%(map_of_functions.size());
             function<Point(Custom_CDT&, CDT::Face_handle, DATA, int)> random_func=pinakas[random_i];
             Custom_CDT copy_cdt(cdt);
-            random_func(copy_cdt, face, data, i_of_face);
-            
+            Point steiner=random_func(copy_cdt, face, data, i_of_face);
+            if(steiner==Point(-1.0,-1.0)) {
+               // cout<<"j= "<<j<<" not valid sp"<<endl;
+                continue;}
             vector<pair<CDT::Face_handle, int>> obtuses_of_copy=check_for_obtuse(copy_cdt); 
             steiners=cdt.number_of_vertices()- vertices_og; 
             double new_energy=alpha*obtuses_of_copy.size() + beta*steiners;
@@ -182,7 +186,7 @@ void simulated_annealing(DATA2& data2, Custom_CDT& cdt){
             
             
             double de=new_energy-energy;
-            if(de<0){
+            if(de<0){   //αποδεχομαστε 
                 int obtuse_n=check_for_obtuse(cdt).size();
 
                 Point steiner=random_func(cdt, face, data, i_of_face);
@@ -201,9 +205,9 @@ void simulated_annealing(DATA2& data2, Custom_CDT& cdt){
                 }
   
             }
-            else{
-                double pr=exp((-de/T));
-                if (rand()/RAND_MAX < pr){
+            else{    //αποδεχομαστε με πιθανοτητα
+                double R = static_cast<double>(rand()) / static_cast<double>(RAND_MAX); // R ∈ [0, 1]
+                if (exp(-de / T) >= R){
                     int obtuse_n=check_for_obtuse(cdt).size();
 
                     Point steiner=random_func(cdt, face, data, i_of_face);
@@ -221,29 +225,23 @@ void simulated_annealing(DATA2& data2, Custom_CDT& cdt){
                         }
                     }
                }
+               else{
+            //    cout<<"δεν αποδεχομαστε λογω πιθανοτητασ"<<endl;
+                j++; //oxi apodoxh , αρα προχωραμε στο επομενο 
+              //  cout<<"j= "<<j<<endl;
+                }
                
             }
-
-            
-            vector<pair<CDT::Face_handle, int>> new_obtuses=check_for_obtuse(cdt);
-            if(new_obtuses==obtuses){
-                i++;
-            }
-            else{ 
-                i=0;
-            }
-            if(j==(number_of_obtuse/2)){
-                i=new_obtuses.size()/2;
-            }
-            obtuses=new_obtuses;
-            j++;
+            obtuses=check_for_obtuse(cdt);
 
         }
         T=T-(1.0/(double)L);
     }
-    double p_avg=sum_pn/all_steiners_added.size();
-    cout<<"Μέσος ρυθμός σύγκλισης: "<<p_avg<<endl;
-    
+    steiners=all_steiners_added.size();
+    double p_avg=0;
+    if(steiners>0) {
+        p_avg=sum_pn/steiners;
+        cout<<"Μέσος ρυθμός σύγκλισης: "<<p_avg<<endl;}
     if(p_avg>0){
         int obtuses_final=check_for_obtuse(cdt).size();
         double energy_final=alpha*obtuses_final+ beta*(all_steiners_added.size());
@@ -386,7 +384,7 @@ double compute_aspect_ratio_change(const Custom_CDT& cdt) {
 double compute_aspect_ratio(const CDT::Face_handle& face) {
     // Υπολογίζουμε το μήκος των πλευρών
     double a = CGAL::squared_distance(face->vertex(0)->point(), face->vertex(1)->point());
-    double b = CGAL::squared_distance(face->vertex(1)->point(), face->vertex(2)->point());
+    double b = CGAL::squared_distance(face->verte)->point(), face->vertex(2)->point());
     double c = CGAL::squared_distance(face->vertex(2)->point(), face->vertex(0)->point());
     a = sqrt(a);
     b = sqrt(b);
@@ -553,8 +551,6 @@ void create_results_map(){
 //Υστερα, μαζεύουμε τα μυρμήγκια που θα εξεταστούν και θα βοηθησουν στην τριγωνοποίηση.
 //Επιλέξαμε να συνδυάζουμε τις δουλειές των μυρμηγκιών που δεν δημιουργούν conflicts, έτσι εισάγουμε steiner points σε διαφορετικά faces κάθε φορά.
 void save_best_tring(Custom_CDT& cdt, vector<ant_eval> logs, DATA data ){
-   // cout<<"Saving best triangulation\n"<<endl;
-    //cout<<"CDT verteces: "<<cdt.number_of_vertices()<<" and faces: "<<cdt.number_of_faces()<<endl;
     sort(logs.begin(), logs.end(), [](const ant_evaluation& a, const ant_evaluation& b) {
         return a.energy < b.energy;  // Sort σε φθίνουσα σειρά
     });
@@ -571,23 +567,25 @@ void save_best_tring(Custom_CDT& cdt, vector<ant_eval> logs, DATA data ){
         }
         
    }
+    sort(ants_used.begin(), ants_used.end(), [](const ant_evaluation& a, const ant_evaluation& b) {
+        return a.energy < b.energy;  // Sort σε φθίνουσα σειρά
+    });
+    
     
     double pn, pn_old;
-    
+    int k=0;
     int counter_pn=0;
     for(const auto& item: ants_used){
-        //cout<<"ant "<< item.ant_id<<" face: [("<<item.face->vertex(0)->point().x()<<','<<item.face->vertex(0)->point().y()<<") , ("<<item.face->vertex(1)->point().x()<<","<<item.face->vertex(1)->point().y()<<"),("<<item.face->vertex(2)->point().x()<<","<<item.face->vertex(2)->point().y()<<")]"<<endl;
-
         if(item.steiner_point_added==0) continue;
         if(item.face==nullptr || cdt.is_infinite(item.face) ){
-  //          cout<<"invalid face of ANT: "<<item.ant_id<<", returning \n"<<endl;
             continue;
         }
         string method=item.method;
         int vert_before=cdt.number_of_vertices();
         int vert_after;
         int steiners;
-        
+       // if(item.helped==false) continue;
+ //       if(method!="Altitude") continue;   //ΕΔΩ ΘΑ ΕΞΑΙΡΟΥΜΕ ΜΕΘΟΔΟΥΣ
         if(method=="Middle"){
 
             int obtuse_n=check_for_obtuse(cdt).size();
@@ -673,7 +671,8 @@ void save_best_tring(Custom_CDT& cdt, vector<ant_eval> logs, DATA data ){
             if(steiners!=0) results_log["polygon_centroid"]++;
         }
 
-    
+        k++;
+        if(k==1) break;   //μονο το πρωτο steinner 
 
     }
 
@@ -786,7 +785,6 @@ void ant_colony(DATA2& data2, Custom_CDT& cdt){
             pthread_join(thread_pool[i], nullptr);
         }
 
-
         //save best triangulation
         save_best_tring(cdt, ant_logs, data);
         steiners=cdt.number_of_vertices()-steiners;
@@ -794,21 +792,20 @@ void ant_colony(DATA2& data2, Custom_CDT& cdt){
         update_pherormones(pherormones, alpha, beta,steiners, obtuses, lambda  );
 
         ant_logs.clear();
-
-
-
     }
     pthread_mutex_destroy(&logs_lock);
-    int steiners_added=cdt.number_of_vertices() - vert_before;
-    double p_avg=sum_pn/all_steiners_added.size();
-    cout<<" Μέσος ρυθμός σύγκλισης: "<<p_avg<<endl;
+    int steiners=all_steiners_added.size();
+    double p_avg=0;
+    if(steiners>0) {
+        p_avg=sum_pn/steiners;
+        cout<<"Μέσος ρυθμός σύγκλισης: "<<p_avg<<endl;}
     if(p_avg>0){
         int obtuses=check_for_obtuse(cdt).size();
        double energy=alpha*obtuses + beta*(all_steiners_added.size());
         cout<<"Ενέργεια τριγωνοποίσης που δεν συγκλίνει: "<<energy<<endl;
     }
     
-    cout<<"Method: Ant Colony: \n"<<"\tOriginal CDT had: "<<obtuses_before<<"/"<<face_before<<" obtuse faces\n"<<"\tWe inserted "<<steiners_added<<" steiner points:\n"<<
+    cout<<"Method: Ant Colony: \n"<<"\tOriginal CDT had: "<<obtuses_before<<"/"<<face_before<<" obtuse faces\n"<<"\tWe inserted "<<steiners<<" steiner points:\n"<<
     "\t\tMiddle of largest edge: "<<results_log["middle"]<<"\n\t\tCircumcenter: "<<results_log["circumcenter"]<<"\n\t\tProjection: "<<results_log["altitude"]<<
     "\n\t\tPolygon Cnetroid: "<<results_log["polygon_centroid"]<<"\nFinal obtuse faces: "<<check_for_obtuse(cdt).size()<<"/"<<cdt.number_of_faces()<<endl;
     return;

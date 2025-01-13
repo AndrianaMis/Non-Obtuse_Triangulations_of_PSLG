@@ -1,5 +1,5 @@
-Input file: .vscode/temp_150_ls.json
-Output file: .vscode/output_150_ls.json
+Input file: .vscode/temp_2_ls.json
+Output file: .vscode/output_2_ls.json
 simple-polygon-exterior-20_60_28a85662
 60
 
@@ -17,7 +17,7 @@ ADDITIONAL CONSTRAINTS
 METHOD: ls
 
 PARAMETERS:
-L: 150, alpha: 2, beta: 5, kappa: 10, lambda: 0.5, psi: 3, xi: 1, 
+L: 100, alpha: 2, beta: 0.5, kappa: 10, lambda: 0.5, psi: 3, xi: 1, 
 DELAUNAY: true
 Αρχικές αμβλείες: 76
 Αρχικά faces: 109
@@ -28,8 +28,7 @@ pn:-0.0626782 obtuses:71 steiners:5
 pn:-0.0778001 obtuses:70 steiners:6
 pn:-0.093342 obtuses:69 steiners:7
 pn:-0.109329 obtuses:68 steiners:8
-Stopping cause triangulation was not improved
-iteration: 17 out of: 150
+iteration: 12 out of: 100
 Μέσος ρυθμός σύγκλισης: -0.0530814
 Method: Local search
 	Inserted: 8 Steiner points

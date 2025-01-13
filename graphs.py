@@ -6,7 +6,7 @@ steiners_values_ant = []
 obtuses_values_ant = []
 
 # Άνοιγμα του αρχείου και ανάγνωση
-with open('.vscode/results_4_ant.txt', 'r') as file:
+with open('.vscode/results_2_ant.txt', 'r') as file:
     lines = file.readlines()
 
     for line in lines:
@@ -34,7 +34,7 @@ steiners_values_ls = []
 obtuses_values_ls = []
 
 
-with open('.vscode/results_4_ls.txt', 'r') as file:
+with open('.vscode/results_2_ls.txt', 'r') as file:
     lines = file.readlines()
 
     for line in lines:
@@ -56,7 +56,7 @@ steiners_values_sa = []
 obtuses_values_sa = []
 
 
-with open('.vscode/results_4_sa.txt', 'r') as file:
+with open('.vscode/results_2_sa.txt', 'r') as file:
     lines = file.readlines()
 
     for line in lines:
@@ -94,7 +94,7 @@ plt.xlabel('Steiner Points (Steiners)')
 plt.ylabel('PN Values (pn)')
 
 # Τίτλος γραφήματος
-plt.title('Ροή PN Values για Κάθε Μέθοδο (Ε. Κατηγορία εισόδου)')
+plt.title('Ροή PN Values για Κάθε Μέθοδο (B. Κατηγορία εισόδου)')
 
 # Υποσημειώσεις για τις μεθόδους
 plt.legend()
