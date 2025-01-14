@@ -217,7 +217,6 @@ pn:0 obtuses:44 steiners:196
 pn:0 obtuses:44 steiners:197
 pn:0 obtuses:44 steiners:198
 pn:0 obtuses:44 steiners:199
-Μέσος ρυθμός σύγκλισης: 0.32738
 Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 291.2
 Method: Ant Colony: 
 	Original CDT had: 34/69 obtuse faces

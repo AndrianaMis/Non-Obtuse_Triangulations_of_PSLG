@@ -29,7 +29,6 @@ pn:0 obtuses:44 steiners:7
 pn:0 obtuses:44 steiners:8
 pn:0 obtuses:44 steiners:9
 pn:0.213295 obtuses:45 steiners:10
-Μέσος ρυθμός σύγκλισης: 0.0112585
 Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 143
 Αρχικές αμβλείες: 45
 Τελικές αμβλείες: 45

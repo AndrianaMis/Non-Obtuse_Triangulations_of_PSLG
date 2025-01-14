@@ -86,7 +86,6 @@ Warning: The Steiner point is too close to an existing point and will not be ins
 Warning: The Steiner point is too close to an existing point and will not be inserted.
 Warning: The Steiner point is too close to an existing point and will not be inserted.
 pn:0 obtuses:110 steiners:55
-Μέσος ρυθμός σύγκλισης: 0.144943
 Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 374
 Method: Ant Colony: 
 	Original CDT had: 80/111 obtuse faces

@@ -63,44 +63,109 @@ categories = {
 methods=["ls", "sa", "ant"]
 avg_avg={}
 
-# Άνοιγμα του αρχείου και ανάγνωση
-for cat , instaces in categories.items():
-    sum_avg_pn = {method: 0 for method in methods}
-    count = {method: 0 for method in methods}
-    for method in methods:
-        for i, inst in enumerate(instaces):
-            print(f'i: {i+1}, method: {method}, category: {cat}')
-            with open('.vscode/results/results_{cat}_{i+1}_{method}.txt', 'r') as file:
-                lines = file.readlines()
+def avg_pn():
+    # Άνοιγμα του αρχείου και ανάγνωση
+    for cat , instaces in categories.items():
+        sum_avg_pn = {method: 0 for method in methods}
+        count = {method: 0 for method in methods}
+        for method in methods:
+            for i, inst in enumerate(instaces):
+                #print(f'i: {i+1}, method: {method}, category: {cat}')
+                
+                with open(f'.vscode/results/results_{cat}_{i+1}_{method}.txt', 'r') as file:
+                    lines = file.readlines()
 
-                for line in lines:
-                    if line.startswith("Μέσος ρυθμός σύγκλισης:"):  # Αν η γραμμή ξεκινάει με 'pn:', τότε έχουμε δεδομένα
-                        # Διαχωρισμός των τιμών της γραμμής
-                        parts = line.split()
-                        avg_pn = float(parts[0].split(":")[1])  # Παίρνουμε την τιμή του pn
-                        sum_avg_pn[method] += avg_pn
-                        count[method] += 1
-    avg_avg[cat] = {method: (sum_avg_pn[method] / count[method] if count[method] > 0 else 0) for method in methods}
+                    for line in lines:
+                        if line.startswith("Μέσος ρυθμός σύγκλισης:"):  # Αν η γραμμή ξεκινάει με 'pn:', τότε έχουμε δεδομένα
+                            # Διαχωρισμός των τιμών της γραμμής
+                            parts = line.split()
+                            avg_pn = float(line.split(":")[1])   # Παίρνουμε την τιμή του pn
+                            sum_avg_pn[method] += avg_pn
+                            count[method] += 1
+        avg_avg[cat] = {method: (sum_avg_pn[method] / count[method] if count[method] > 0 else 0) for method in methods}
+    ##  print(cat)
+    #  print(avg_avg[cat])
 
 
 
+    for cat, method_averages in avg_avg.items():
+        plt.figure(figsize=(8, 6))
+        methods_list = list(method_averages.keys())
+        averages = list(method_averages.values())
+        
+        # Δημιουργία μπάρας
+        plt.bar(methods_list, averages, color=['blue', 'green', 'red'], width=0.5)
+        
+        # Προσαρμογή του y-άξονα για αρνητικές τιμές
+        y_min = min(averages) * 1.2 if min(averages) < 0 else 0
+        y_max = max(averages) * 1.2 if max(averages) > 0 else 0
+        plt.ylim(y_min, y_max)
+        
+        # Προσαρμογές στο διάγραμμα
+        plt.title(f"Μέσος ρυθμός σύγκλισης για την κατηγορία: {cat}")
+        plt.xlabel("Μέθοδος")
+        plt.ylabel("Μέσος ρυθμός σύγκλισης")
+        plt.xticks(rotation=45)
+        plt.grid(axis="y", linestyle="--", alpha=0.7)
+        
+        # Εμφάνιση του διαγράμματος
+        plt.tight_layout()
+        plt.show()
 
-categories_list = list(avg_avg.keys())
-x = range(len(categories_list))
+def energy_finding():
+    missing_avg_files = {}  # Λεξικό για αποθήκευση αποτελεσμάτων
 
-for method in methods:
-    averages = [avg_avg[cat][method] for cat in categories_list]
-    plt.bar(
-        [pos + 0.2 * methods.index(method) for pos in x],  # Θέση μπάρας
-        averages,
-        width=0.2,
-        label=method,
-    )
+    # Έλεγχος για κάθε κατηγορία, instance, και μέθοδο
+    for cat, instances in categories.items():
+        for i, inst in enumerate(instances):
+            for method in methods:
+                file_path = f'.vscode/results/results_{cat}_{i+1}_{method}.txt'
+                with open(file_path, 'r') as file:
+                    lines = file.readlines()
+                            
+                            # Έλεγχος αν υπάρχει "Μέσος ρυθμός σύγκλισης"
+                    #has_avg = any("Μέσος ρυθμός σύγκλισης:" in line for line in lines)
+                    has_energy = any("Ενέργεια τριγωνοποίσης που δεν συγκλίνει:" in line for line in lines)
+                    has_avg = any("Μέσος ρυθμός σύγκλισης:" in line for line in lines)
 
-# Προσαρμογές στο διάγραμμα
-plt.xticks([pos + 0.3 for pos in x], categories_list)  # Τοποθέτηση κατηγοριών στον x-άξονα
-plt.xlabel("Κατηγορία")
-plt.ylabel("Μέσος ρυθμός σύγκλισης")
-plt.title("Μέσος ρυθμός σύγκλισης ανά κατηγορία και μέθοδο")
-plt.legend()
-plt.show()
+                            
+                        # Αν δεν έχει "Μέσος ρυθμός σύγκλισης" αλλά έχει "Ενέργεια"
+                    if not has_avg and has_energy:
+                        if cat not in missing_avg_files:
+                            missing_avg_files[cat] = []
+                        missing_avg_files[cat].append((i+1, method))
+# Αναζήτηση για κάθε κατηγορία αν υπάρχει instance με όλες τις μεθόδους στο missing_avg_files
+    instances_with_all_missing_methods = {}
+
+    # Έλεγχος για κάθε κατηγορία
+    for cat, files in missing_avg_files.items():
+        # Δημιουργία ενός λεξικού για να παρακολουθούμε ποια instances έχουν όλες τις μεθόδους
+        instance_methods = {}
+
+        # Κωδικοποίηση των μεθόδων σε λίστα
+        for inst, meth in files:
+            if inst not in instance_methods:
+                instance_methods[inst] = set()
+            instance_methods[inst].add(meth)
+
+        # Έλεγχος για κάθε instance αν έχει και τις τρεις μεθόδους
+        for inst, meth in instance_methods.items():
+            if len(meth) == 3:  # Αν έχει και τις τρεις μεθόδους
+                if cat not in instances_with_all_missing_methods:
+                    instances_with_all_missing_methods[cat] = []
+                instances_with_all_missing_methods[cat].append(inst)
+
+    # Εμφάνιση των αποτελεσμάτων
+    if instances_with_all_missing_methods:
+        print("Instances που δεν συγκλίνουν με καμία από τις 3 μεθόδους")
+        for cat, instances in instances_with_all_missing_methods.items():
+            print(f"\nΚατηγορία: {cat}")
+            for inst in instances:
+                print(f"  - Instance: {inst}")
+    else:
+        print("Δεν υπάρχουν instances που δεν συγκλίνουν σε καμία από τις 3 μεθόδους.")
+
+
+
+if __name__ == "__main__":
+    energy_finding()

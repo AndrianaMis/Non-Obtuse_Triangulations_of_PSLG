@@ -280,7 +280,6 @@ pn:0 obtuses:110 steiners:196
 The triangle is infinite 
 pn:0 obtuses:110 steiners:197
 pn:0 obtuses:110 steiners:198
-Μέσος ρυθμός σύγκλισης: 0.0487732
 Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 488.4
 Method: Ant Colony: 
 	Original CDT had: 108/284 obtuse faces
