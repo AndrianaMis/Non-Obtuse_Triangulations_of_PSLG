@@ -1,0 +1,108 @@
+Input file: .vscode/temp_4_ant.json
+Output file: .vscode/output_4_ant.json
+point-set_60_9fc02edd
+60
+
+POINTS_X
+7300 ,13100 ,14200 ,5400 ,8350 ,11400 ,6650 ,14900 ,200 ,7850 ,11400 ,14900 ,13993 ,12050 ,14900 ,13992 ,7300 ,9450 ,16800 ,15108 ,9242 ,19800 ,19800 ,10150 ,4700 ,16800 ,12050 ,8350 ,3100 ,8350 ,12600 ,12600 ,14900 ,9450 ,4700 ,5608 ,10150 ,3100 ,3600 ,7850 ,10150 ,19800 ,16150 ,14200 ,9450 ,5400 ,12050 ,11400 ,15110 ,200 ,3100 ,4700 ,10360 ,19800 ,5400 ,200 ,16150 ,7300 ,13100 ,12600 ,
+POINTS_Y
+10950 ,10800 ,11650 ,11650 ,2300 ,10800 ,10800 ,8450 ,1100 ,7250 ,2300 ,5750 ,7102 ,7250 ,1600 ,10052 ,3300 ,5750 ,7250 ,7103 ,10052 ,800 ,10000 ,1600 ,5750 ,3300 ,10950 ,6950 ,3300 ,10800 ,7250 ,3300 ,11650 ,8450 ,11650 ,7103 ,11650 ,10950 ,2300 ,3300 ,8450 ,12200 ,2300 ,8450 ,11650 ,1600 ,3300 ,6950 ,10053 ,800 ,7250 ,8450 ,10053 ,11900 ,5750 ,12200 ,6950 ,7250 ,6950 ,10950 ,
+REGION_BOUND
+49 ,21 ,41 ,55 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ant
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+pn:0 obtuses:82 steiners:3
+pn:0 obtuses:82 steiners:4
+pn:0 obtuses:82 steiners:5
+pn:0.132171 obtuses:84 steiners:6
+pn:0 obtuses:84 steiners:7
+pn:0 obtuses:84 steiners:8
+pn:0.199778 obtuses:86 steiners:9
+pn:0.325445 obtuses:89 steiners:10
+pn:0 obtuses:89 steiners:11
+pn:0.128412 obtuses:90 steiners:12
+pn:0 obtuses:90 steiners:13
+pn:0 obtuses:90 steiners:14
+pn:0 obtuses:90 steiners:15
+pn:0 obtuses:90 steiners:16
+pn:0 obtuses:90 steiners:17
+pn:0.384526 obtuses:92 steiners:18
+pn:0.397768 obtuses:94 steiners:19
+pn:0 obtuses:94 steiners:20
+pn:0 obtuses:94 steiners:21
+pn:0 obtuses:94 steiners:22
+pn:0.238058 obtuses:95 steiners:23
+pn:0 obtuses:95 steiners:24
+pn:0 obtuses:95 steiners:25
+pn:-0.269809 obtuses:94 steiners:26
+pn:0 obtuses:94 steiners:27
+pn:0 obtuses:94 steiners:28
+pn:0.599961 obtuses:96 steiners:29
+pn:0 obtuses:96 steiners:30
+pn:0.316037 obtuses:97 steiners:31
+pn:0 obtuses:97 steiners:32
+pn:0.663236 obtuses:99 steiners:33
+pn:0.336661 obtuses:100 steiners:34
+pn:0.343262 obtuses:101 steiners:35
+pn:0 obtuses:101 steiners:36
+pn:-0.363164 obtuses:100 steiners:37
+pn:-0.376865 obtuses:99 steiners:38
+pn:-0.390844 obtuses:98 steiners:39
+pn:0.400997 obtuses:99 steiners:40
+pn:0 obtuses:99 steiners:41
+pn:0.829988 obtuses:101 steiners:42
+pn:0 obtuses:101 steiners:43
+pn:0.852931 obtuses:103 steiners:44
+pn:0.85576 obtuses:105 steiners:45
+pn:0 obtuses:105 steiners:46
+pn:0 obtuses:105 steiners:47
+pn:0 obtuses:105 steiners:48
+pn:0 obtuses:105 steiners:49
+pn:0 obtuses:105 steiners:50
+pn:1.42258 obtuses:108 steiners:51
+pn:0.944951 obtuses:110 steiners:52
+pn:0 obtuses:110 steiners:53
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:110 steiners:54
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:110 steiners:55
+Μέσος ρυθμός σύγκλισης: 0.144943
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 374
+Method: Ant Colony: 
+	Original CDT had: 80/111 obtuse faces
+	We inserted 55 steiner points:
+		Middle of largest edge: 5
+		Circumcenter: 15
+		Projection: 35
+		Polygon Cnetroid: 0
+Final obtuse faces: 110/219
+Αρχικές αμβλείες: 80
+Τελικές αμβλείες: 110
+
+Αρχικά faces: 111
+Τελικές faces: 219
+
+Αρχική ενέργεια: 240
+Τελική ενέργεια: 374
+
+-37.5% αύξηση αμβλείων

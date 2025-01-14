@@ -31,14 +31,14 @@ int main(int argc , char* argv[]){
     data.additional_constraints=data2.additional_constraints;
 
     Contrained_Delaunay(cdt_check, data);
-    
-   cout<<"Αρχικές αμβλείες: "<<check_for_obtuse(cdt_check).size()<<endl;
-   cout<<"Αρχικά faces: "<<cdt_check.number_of_faces()<<endl;
+    int obtuses_initial=check_for_obtuse(cdt_check).size();
+
+   double initial_energy= data2.parameters["alpha"] * obtuses_initial ;
   //CGAL::draw(cdt_check);
 
    analyze_boundary(data2);
    //hecking(cdt_check, data2);
-   
+   int vert_before=cdt_check.number_of_vertices();
     //we must also extract the parameters needed for each method
     if(data2.method=="sa"){
         simulated_annealing(data2, cdt);
@@ -51,10 +51,26 @@ int main(int argc , char* argv[]){
      //   checking(data2, cdt);
     }
   //  CGAL::draw(cdt);
-   cout<<"Τελικές αμβλείες: "<<check_for_obtuse(cdt).size()<<endl;
+  int obtuses_final=check_for_obtuse(cdt).size();
+  int vert_after=cdt.number_of_vertices();
+   steiners= vert_after-vert_before;
+    cout<<"Αρχικές αμβλείες: "<<obtuses_initial<<endl;
+   cout<<"Τελικές αμβλείες: "<<obtuses_final<<endl;
+
+   cout<<"\nΑρχικά faces: "<<cdt_check.number_of_faces()<<endl;
    cout<<"Τελικές faces: "<<cdt.number_of_faces()<<endl;
 
-   // CGAL::draw(cdt);
+   cout<<"\nΑρχική ενέργεια: "<<initial_energy<<endl;
+    double final_energy=(data2.parameters["alpha"] * obtuses_final )+ (data2.parameters["beta"] * steiners);
+    cout<<"Τελική ενέργεια: "<<final_energy<<endl;
+    double per = (static_cast<double>(obtuses_initial) - static_cast<double>(obtuses_final)) / static_cast<double>(obtuses_initial) * 100;
+   
+    cout<<endl;
+    if(per>=0) cout<<per<<"%"<<" μείωση αμβλείων"<<endl;
+    else cout<<per<<"%"<< " αύξηση αμβλείων"<<endl;
+  //  double metric=(data2.parameters["alpha"])*(obtuses_initial - obtuses_final)/(cdt.number_of_faces() - cdt_check.number_of_faces() + (data2.parameters["beta"] * steiners) );
+ //   CGAL::draw(cdt);
+  // cout<<"Metric: "<<metric<<endl;
     return 0;
 }
 

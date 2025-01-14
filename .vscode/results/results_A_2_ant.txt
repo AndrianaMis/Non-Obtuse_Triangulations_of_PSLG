@@ -1,0 +1,197 @@
+Input file: .vscode/temp_2_ant.json
+Output file: .vscode/output_2_ant.json
+point-set_20_0c4009d9
+20
+
+POINTS_X
+3925 ,9825 ,10375 ,9975 ,9875 ,3525 ,3625 ,4025 ,4025 ,10175 ,3625 ,3725 ,3725 ,9875 ,9675 ,3675 ,4225 ,10275 ,10175 ,9975 ,
+POINTS_Y
+5350 ,8050 ,5650 ,5150 ,5850 ,8300 ,3650 ,5850 ,3850 ,3350 ,4850 ,4350 ,5650 ,4850 ,4850 ,8050 ,5650 ,3850 ,8300 ,6150 ,
+REGION_BOUND
+5 ,6 ,9 ,17 ,2 ,18 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ant
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+pn:-0.100679 obtuses:24 steiners:3
+pn:0.278233 obtuses:26 steiners:4
+pn:0 obtuses:26 steiners:5
+pn:0 obtuses:26 steiners:6
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:26 steiners:7
+pn:0.81778 obtuses:29 steiners:8
+pn:0 obtuses:29 steiners:9
+pn:0 obtuses:29 steiners:10
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:-0.36818 obtuses:28 steiners:11
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:1.53464 obtuses:32 steiners:12
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:32 steiners:13
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:32 steiners:14
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:32 steiners:15
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:32 steiners:16
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:32 steiners:17
+pn:-0.555451 obtuses:31 steiners:18
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:31 steiners:19
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:31 steiners:20
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:31 steiners:21
+pn:0 obtuses:31 steiners:22
+pn:0 obtuses:31 steiners:23
+pn:0 obtuses:31 steiners:24
+pn:0 obtuses:31 steiners:25
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:31 steiners:26
+pn:0 obtuses:31 steiners:27
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:31 steiners:28
+pn:2.63237 obtuses:34 steiners:29
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:-0.880578 obtuses:33 steiners:30
+pn:1.79447 obtuses:35 steiners:31
+pn:0 obtuses:35 steiners:32
+pn:0 obtuses:35 steiners:33
+pn:0 obtuses:35 steiners:34
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:35 steiners:35
+pn:0 obtuses:35 steiners:36
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:-1.05798 obtuses:34 steiners:37
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:34 steiners:38
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:34 steiners:39
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:34 steiners:40
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:34 steiners:41
+pn:0 obtuses:34 steiners:42
+pn:0 obtuses:34 steiners:43
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:34 steiners:44
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:34 steiners:45
+pn:0 obtuses:34 steiners:46
+pn:0 obtuses:34 steiners:47
+pn:0 obtuses:34 steiners:48
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Μέσος ρυθμός σύγκλισης: 0.0853048
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 140.4
+Method: Ant Colony: 
+	Original CDT had: 26/32 obtuse faces
+	We inserted 48 steiner points:
+		Middle of largest edge: 1
+		Circumcenter: 3
+		Projection: 44
+		Polygon Cnetroid: 0
+Final obtuse faces: 34/124
+Αρχικές αμβλείες: 26
+Τελικές αμβλείες: 34
+
+Αρχικά faces: 32
+Τελικές faces: 124
+
+Αρχική ενέργεια: 78
+Τελική ενέργεια: 140.4
+
+-30.7692% αύξηση αμβλείων

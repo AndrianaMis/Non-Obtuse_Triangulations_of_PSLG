@@ -1,0 +1,243 @@
+Input file: .vscode/temp_1_ant.json
+Output file: .vscode/output_1_ant.json
+simple-polygon_10_297edd18
+10
+
+POINTS_X
+41 ,12 ,15 ,36 ,40 ,55 ,50 ,51 ,55 ,40 ,
+POINTS_Y
+46 ,17 ,5 ,6 ,20 ,20 ,30 ,42 ,45 ,66 ,
+REGION_BOUND
+0 ,1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ant
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Ε. Μη κυρτό boundary, ακανόνιστο, που δεν εντάσσεται στις κατηγορίες Α-Δ. 
+pn:0 obtuses:8 steiners:3
+pn:0 obtuses:8 steiners:4
+pn:0 obtuses:8 steiners:5
+pn:-0.732395 obtuses:7 steiners:6
+pn:0 obtuses:7 steiners:7
+pn:0 obtuses:7 steiners:8
+pn:-1.30877 obtuses:6 steiners:9
+pn:0 obtuses:6 steiners:10
+pn:-1.91293 obtuses:5 steiners:11
+pn:0 obtuses:5 steiners:12
+pn:0 obtuses:5 steiners:13
+pn:0 obtuses:5 steiners:14
+The triangle is infinite 
+pn:0 obtuses:5 steiners:15
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:5 steiners:16
+The triangle is infinite 
+pn:0 obtuses:5 steiners:17
+pn:0 obtuses:5 steiners:18
+The triangle is infinite 
+pn:0 obtuses:5 steiners:19
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:5 steiners:20
+The triangle is infinite 
+pn:0 obtuses:5 steiners:21
+pn:-4.79672 obtuses:4 steiners:22
+The triangle is infinite 
+pn:0 obtuses:4 steiners:23
+pn:0 obtuses:4 steiners:24
+The triangle is infinite 
+pn:0 obtuses:4 steiners:25
+The triangle is infinite 
+The triangle is infinite 
+The triangle is infinite 
+pn:10.338 obtuses:6 steiners:26
+The triangle is infinite 
+pn:-4.83095 obtuses:5 steiners:27
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:5 steiners:28
+pn:0 obtuses:5 steiners:29
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:5 steiners:30
+pn:0 obtuses:5 steiners:31
+pn:-7.02843 obtuses:4 steiners:32
+The triangle is infinite 
+pn:7.25159 obtuses:5 steiners:33
+pn:0 obtuses:5 steiners:34
+The triangle is infinite 
+pn:0 obtuses:5 steiners:35
+pn:0 obtuses:5 steiners:36
+pn:0 obtuses:5 steiners:37
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:5 steiners:38
+pn:0 obtuses:5 steiners:39
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:5 steiners:40
+pn:0 obtuses:5 steiners:41
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:5 steiners:42
+pn:0 obtuses:5 steiners:43
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:5 steiners:44
+The triangle is infinite 
+pn:0 obtuses:5 steiners:45
+pn:0 obtuses:5 steiners:46
+pn:0 obtuses:5 steiners:47
+pn:0 obtuses:5 steiners:48
+pn:0 obtuses:5 steiners:49
+pn:9.02461 obtuses:6 steiners:50
+pn:0 obtuses:6 steiners:51
+The triangle is infinite 
+pn:0 obtuses:6 steiners:52
+The triangle is infinite 
+pn:0 obtuses:6 steiners:53
+pn:0 obtuses:6 steiners:54
+pn:0 obtuses:6 steiners:55
+The triangle is infinite 
+pn:0 obtuses:6 steiners:56
+The triangle is infinite 
+pn:0 obtuses:6 steiners:57
+The triangle is infinite 
+pn:0 obtuses:6 steiners:58
+The triangle is infinite 
+pn:0 obtuses:6 steiners:59
+The triangle is infinite 
+pn:0 obtuses:6 steiners:60
+The triangle is infinite 
+pn:9.3259 obtuses:7 steiners:61
+pn:-9.48006 obtuses:6 steiners:62
+The triangle is infinite 
+pn:0 obtuses:6 steiners:63
+The triangle is infinite 
+pn:-11.5772 obtuses:5 steiners:64
+pn:0 obtuses:5 steiners:65
+The triangle is infinite 
+The triangle is infinite 
+pn:-14.6156 obtuses:4 steiners:66
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:4 steiners:67
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:4 steiners:68
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:4 steiners:69
+pn:0 obtuses:4 steiners:70
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:4 steiners:71
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:4 steiners:72
+pn:0 obtuses:4 steiners:73
+The triangle is infinite 
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:4 steiners:74
+pn:0 obtuses:4 steiners:75
+The triangle is infinite 
+The triangle is infinite 
+The triangle is infinite 
+pn:16.8471 obtuses:5 steiners:76
+The triangle is infinite 
+pn:0 obtuses:5 steiners:77
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:5 steiners:78
+The triangle is infinite 
+The triangle is infinite 
+The triangle is infinite 
+pn:26.4127 obtuses:7 steiners:79
+The triangle is infinite 
+pn:0 obtuses:7 steiners:80
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:7 steiners:81
+The triangle is infinite 
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:-12.5631 obtuses:6 steiners:82
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:6 steiners:83
+The triangle is infinite 
+The triangle is infinite 
+The triangle is infinite 
+pn:12.8714 obtuses:7 steiners:84
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:7 steiners:85
+The triangle is infinite 
+The triangle is infinite 
+pn:-13.1797 obtuses:6 steiners:86
+The triangle is infinite 
+The triangle is infinite 
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:6 steiners:87
+The triangle is infinite 
+The triangle is infinite 
+The triangle is infinite 
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:6 steiners:88
+The triangle is infinite 
+pn:0 obtuses:6 steiners:89
+The triangle is infinite 
+The triangle is infinite 
+pn:13.7963 obtuses:7 steiners:90
+The triangle is infinite 
+pn:0 obtuses:7 steiners:91
+The triangle is infinite 
+pn:12.218 obtuses:8 steiners:92
+pn:0 obtuses:8 steiners:93
+The triangle is infinite 
+The triangle is infinite 
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:8 steiners:94
+The triangle is infinite 
+pn:0 obtuses:8 steiners:95
+pn:0 obtuses:8 steiners:96
+The triangle is infinite 
+pn:0 obtuses:8 steiners:97
+pn:0 obtuses:8 steiners:98
+The triangle is infinite 
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:8 steiners:99
+The triangle is infinite 
+The triangle is infinite 
+pn:22.2026 obtuses:10 steiners:100
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:10 steiners:101
+pn:0 obtuses:10 steiners:102
+pn:-10.7994 obtuses:9 steiners:103
+The triangle is infinite 
+pn:20.7693 obtuses:11 steiners:104
+pn:0 obtuses:11 steiners:105
+pn:0 obtuses:11 steiners:106
+The triangle is infinite 
+pn:-10.1505 obtuses:10 steiners:107
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:10 steiners:108
+pn:0 obtuses:10 steiners:109
+pn:0 obtuses:10 steiners:110
+The triangle is infinite 
+pn:0 obtuses:10 steiners:111
+The triangle is infinite 
+The triangle is infinite 
+pn:0 obtuses:10 steiners:112
+pn:0 obtuses:10 steiners:113
+pn:0 obtuses:10 steiners:114
+pn:0 obtuses:10 steiners:115

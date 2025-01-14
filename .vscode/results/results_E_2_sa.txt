@@ -1,0 +1,62 @@
+Input file: .vscode/temp_2_sa.json
+Output file: .vscode/output_2_sa.json
+simple-polygon_20_4bd3c2e5
+20
+
+POINTS_X
+43 ,44 ,22 ,26 ,28 ,50 ,33 ,23 ,19 ,3 ,8 ,0 ,4 ,8 ,19 ,29 ,53 ,58 ,55 ,55 ,
+POINTS_Y
+45 ,37 ,34 ,39 ,46 ,67 ,61 ,55 ,54 ,65 ,51 ,38 ,23 ,0 ,8 ,1 ,10 ,22 ,30 ,43 ,
+REGION_BOUND
+0 ,1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,16 ,17 ,18 ,19 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: sa
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Ε. Μη κυρτό boundary, ακανόνιστο, που δεν εντάσσεται στις κατηγορίες Α-Δ. 
+Αρχική Ενέργεια: 60
+pn:0 obtuses:20 steiners:3
+pn:0 obtuses:20 steiners:4
+pn:0 obtuses:20 steiners:5
+pn:-0.281334 obtuses:19 steiners:6
+pn:0 obtuses:19 steiners:7
+pn:-0.404903 obtuses:18 steiners:8
+pn:0 obtuses:18 steiners:9
+pn:-0.542503 obtuses:17 steiners:10
+pn:0 obtuses:17 steiners:11
+pn:0 obtuses:17 steiners:12
+pn:0 obtuses:17 steiners:13
+pn:0 obtuses:17 steiners:14
+pn:-0.878708 obtuses:16 steiners:15
+pn:-1 obtuses:15 steiners:16
+pn:0 obtuses:15 steiners:17
+pn:0 obtuses:15 steiners:18
+pn:-1.27606 obtuses:14 steiners:19
+pn:1.34507 obtuses:15 steiners:20
+pn:-1.41407 obtuses:14 steiners:21
+pn:0 obtuses:14 steiners:22
+pn:0 obtuses:14 steiners:23
+pn:0 obtuses:14 steiners:24
+pn:0 obtuses:14 steiners:25
+pn:0 obtuses:14 steiners:26
+pn:0 obtuses:14 steiners:27
+pn:0 obtuses:14 steiners:28
+pn:0 obtuses:14 steiners:29
+pn:0 obtuses:14 steiners:30
+Μέσος ρυθμός σύγκλισης: -0.148417
+Αρχικές αμβλείες: 20
+Τελικές αμβλείες: 14
+
+Αρχικά faces: 30
+Τελικές faces: 85
+
+Αρχική ενέργεια: 60
+Τελική ενέργεια: 66
+
+30% μείωση αμβλείων

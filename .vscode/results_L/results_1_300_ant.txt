@@ -1,0 +1,62 @@
+Input file: .vscode/temp_300_ant.json
+Output file: .vscode/output_300_ant.json
+point-set_60_9fc02edd
+60
+
+POINTS_X
+7300 ,13100 ,14200 ,5400 ,8350 ,11400 ,6650 ,14900 ,200 ,7850 ,11400 ,14900 ,13993 ,12050 ,14900 ,13992 ,7300 ,9450 ,16800 ,15108 ,9242 ,19800 ,19800 ,10150 ,4700 ,16800 ,12050 ,8350 ,3100 ,8350 ,12600 ,12600 ,14900 ,9450 ,4700 ,5608 ,10150 ,3100 ,3600 ,7850 ,10150 ,19800 ,16150 ,14200 ,9450 ,5400 ,12050 ,11400 ,15110 ,200 ,3100 ,4700 ,10360 ,19800 ,5400 ,200 ,16150 ,7300 ,13100 ,12600 ,
+POINTS_Y
+10950 ,10800 ,11650 ,11650 ,2300 ,10800 ,10800 ,8450 ,1100 ,7250 ,2300 ,5750 ,7102 ,7250 ,1600 ,10052 ,3300 ,5750 ,7250 ,7103 ,10052 ,800 ,10000 ,1600 ,5750 ,3300 ,10950 ,6950 ,3300 ,10800 ,7250 ,3300 ,11650 ,8450 ,11650 ,7103 ,11650 ,10950 ,2300 ,3300 ,8450 ,12200 ,2300 ,8450 ,11650 ,1600 ,3300 ,6950 ,10053 ,800 ,7250 ,8450 ,10053 ,11900 ,5750 ,12200 ,6950 ,7250 ,6950 ,10950 ,
+REGION_BOUND
+49 ,21 ,41 ,55 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ant
+
+PARAMETERS:
+L: 300, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+pn:0 obtuses:82 steiners:3
+pn:0.0837645 obtuses:84 steiners:4
+pn:0 obtuses:84 steiners:5
+pn:0 obtuses:84 steiners:6
+pn:0 obtuses:84 steiners:7
+pn:0.176217 obtuses:86 steiners:8
+pn:0.195185 obtuses:88 steiners:9
+pn:-0.108472 obtuses:87 steiners:10
+pn:0 obtuses:87 steiners:11
+pn:0.131347 obtuses:88 steiners:12
+pn:0.41881 obtuses:91 steiners:13
+pn:0 obtuses:91 steiners:14
+pn:0 obtuses:91 steiners:15
+pn:0 obtuses:91 steiners:16
+pn:0.535018 obtuses:94 steiners:17
+pn:0 obtuses:94 steiners:18
+pn:0.195721 obtuses:95 steiners:19
+pn:0.606134 obtuses:98 steiners:20
+pn:0.414073 obtuses:100 steiners:21
+pn:0 obtuses:100 steiners:22
+pn:0 obtuses:100 steiners:23
+pn:0.694527 obtuses:103 steiners:24
+Μέσος ρυθμός σύγκλισης: 0.139264
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 328.2
+Method: Ant Colony: 
+	Original CDT had: 80/111 obtuse faces
+	We inserted 24 steiner points:
+		Middle of largest edge: 3
+		Circumcenter: 9
+		Projection: 12
+		Polygon Cnetroid: 0
+Final obtuse faces: 103/158
+Αρχικές αμβλείες: 80
+Αρχικά faces: 111
+Αρχική ενέργεια: 240
+ Steiners added: 24
+Τελικές αμβλείες: 103
+Τελικές faces: 158
+Τελική ενέργεια: 328.2
+Metric: -1.0423

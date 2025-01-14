@@ -86,6 +86,11 @@ void local_search(DATA2& data2, Custom_CDT& cdt) {
                 if(steiner!=Point(-1.0 , -1.0)){
                     all_steiners_added.push_back(steiner);
                     int obt_next=check_for_obtuse(cdt).size();
+                    if(obt_next==0) { 
+                        obtuse_edges=check_for_obtuse(cdt);
+                        break;
+                    }
+
                     int n=all_steiners_added.size() -1;
                     if(n>1){
                         pn_old=pn;
@@ -104,6 +109,8 @@ void local_search(DATA2& data2, Custom_CDT& cdt) {
             obtuse_edges = check_for_obtuse(cdt);
         }
         iteration ++;
+        if(obtuse_edges.size()==0) break;
+
         if(improved==false && not_improved_for>=15) cout<<"Stopping cause triangulation was not improved"<<endl;
     }
     cout<<"iteration: "<<iteration<<" out of: "<<L<<endl;
@@ -194,6 +201,7 @@ void simulated_annealing(DATA2& data2, Custom_CDT& cdt){
                     all_steiners_added.push_back(steiner);
                 
                     int obt_next=check_for_obtuse(cdt).size();
+                    if(obt_next==0) break;
                     int n=all_steiners_added.size() -1;
                     if(n>1){
                         pn_old=pn;
@@ -215,6 +223,7 @@ void simulated_annealing(DATA2& data2, Custom_CDT& cdt){
                         all_steiners_added.push_back(steiner);
                     
                         int obt_next=check_for_obtuse(cdt).size();
+                        if(obt_next==0) break;
                         int n=all_steiners_added.size() -1;
                         if(n>1){
                             pn_old=pn;
@@ -226,7 +235,7 @@ void simulated_annealing(DATA2& data2, Custom_CDT& cdt){
                     }
                }
                else{
-            //    cout<<"δεν αποδεχομαστε λογω πιθανοτητασ"<<endl;
+              //  cout<<"δεν αποδεχομαστε λογω πιθανοτητασ"<<endl;
                 j++; //oxi apodoxh , αρα προχωραμε στο επομενο 
               //  cout<<"j= "<<j<<endl;
                 }
@@ -235,6 +244,7 @@ void simulated_annealing(DATA2& data2, Custom_CDT& cdt){
             obtuses=check_for_obtuse(cdt);
 
         }
+        if(obtuses.size()==0) break;
         T=T-(1.0/(double)L);
     }
     steiners=all_steiners_added.size();
@@ -358,44 +368,48 @@ int select_method(const vector<pair<string, double>>& probabilities) {
 //Συνάρτηση που υπλογίζει και επιστρέφει το μέσο aspect ratio (ο λόγος της μεγαλύτερης πλευράς προς τη μικρότερη) των τριγώνων της τριγωνοποίησης.
 //Είναι ένα μέτρο που δείχνει αν το κάθε τρίγωνο είνια "κανονικό " ή "μακρόστενο" . Ένα aspect ratio κοντά στο 1 σημαίνει ότι το τρίγωνο 
 //είναι σχεδόν ισόπλευρο, ενώ ένα μεγάλο aspect ratio δείχνει ότι το τρίγωνο είναι πολύ στενό και μακρύ.
+
+// Υπολογίζει το aspect ratio για ένα τρίγωνο
+double compute_aspect_ratio(const CDT::Face_handle& face) {
+    // Υπολογίζουμε το μήκος των πλευρών
+    double a = CGAL::to_double(CGAL::squared_distance(face->vertex(0)->point(), face->vertex(1)->point()));
+    double b = CGAL::to_double(CGAL::squared_distance(face->vertex(1)->point(), face->vertex(2)->point()));
+    double c = CGAL::to_double(CGAL::squared_distance(face->vertex(2)->point(), face->vertex(0)->point()));
+
+    a = std::sqrt(a);
+    b = std::sqrt(b);
+    c = std::sqrt(c);
+
+    // Εύρεση της μέγιστης και ελάχιστης πλευράς
+    double max_side = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+    double min_side = (a < b) ? ((a < c) ? a : c) : ((b < c) ? b : c);
+
+    // Υπολογισμός aspect ratio
+    return max_side / min_side;
+}
+
+
+// Υπολογίζει και επιστρέφει τον μέσο όρο του aspect ratio της τριγωνοποίησης
 double compute_aspect_ratio_change(const Custom_CDT& cdt) {
-    double total_aspect_ratio = 0.0;
-    int triangle_count = 0;
+    double total_aspect_ratio = 0.0; // Συνολικό άθροισμα aspect ratios
+    int triangle_count = 0;         // Αριθμός τριγώνων
+
+    // Διατρέχουμε όλα τα πεπερασμένα τρίγωνα
     for (auto face = cdt.finite_faces_begin(); face != cdt.finite_faces_end(); ++face) {
-        if (!cdt.is_infinite(face)) {
-            // Υπολογίζουμε το aspect ratio για το τρέχον τρίγωνο
-            double aspect_ratio = compute_aspect_ratio(face);
+        if (!cdt.is_infinite(face)) { // Αν δεν είναι άπειρο τρίγωνο
+            double aspect_ratio = compute_aspect_ratio(face); // Υπολογισμός aspect ratio
             total_aspect_ratio += aspect_ratio;
             triangle_count++;
         }
     }
+
+    // Επιστρέφουμε τον μέσο όρο
     if (triangle_count == 0) {
         return 0.0; // Αν δεν υπάρχουν τρίγωνα, επιστρέφουμε 0
     }
-    // Επιστρέφουμε τον μέσο aspect ratio
     return total_aspect_ratio / triangle_count;
 }
-
-
-
-
-
-//Συνάρτηση που χρησιμοποιείται για τον υπολογισμού του aspect ratio δωσμένου ένος τριγώνουν
-double compute_aspect_ratio(const CDT::Face_handle& face) {
-    // Υπολογίζουμε το μήκος των πλευρών
-    double a = CGAL::squared_distance(face->vertex(0)->point(), face->vertex(1)->point());
-    double b = CGAL::squared_distance(face->verte)->point(), face->vertex(2)->point());
-    double c = CGAL::squared_distance(face->vertex(2)->point(), face->vertex(0)->point());
-    a = sqrt(a);
-    b = sqrt(b);
-    c = sqrt(c);
-    //μέγιστη και ελάχιστη πλευρά
-    double max_side = max({a, b, c});
-    double min_side = min({a, b, c});
-    // Υπολογισμός aspect ratio
-    return max_side / min_side;
-}*/
-
+*/
 
 
 
@@ -594,6 +608,7 @@ void save_best_tring(Custom_CDT& cdt, vector<ant_eval> logs, DATA data ){
                     all_steiners_added.push_back(the_steiner);
                     
                     int obt_next=check_for_obtuse(cdt).size();
+                    if(obt_next==0) break;
                     int n=all_steiners_added.size() -1;
                     if(n>1){
                         pn_old=pn;
@@ -615,6 +630,8 @@ void save_best_tring(Custom_CDT& cdt, vector<ant_eval> logs, DATA data ){
                     all_steiners_added.push_back(the_steiner);
                     
                     int obt_next=check_for_obtuse(cdt).size();
+                    if(obt_next==0) break;
+
                     int n=all_steiners_added.size() -1;
                     if(n>1){
                         pn_old=pn;
@@ -636,6 +653,8 @@ void save_best_tring(Custom_CDT& cdt, vector<ant_eval> logs, DATA data ){
                     all_steiners_added.push_back(the_steiner);
                     
                     int obt_next=check_for_obtuse(cdt).size();
+                    if(obt_next==0) break;
+
                     int n=all_steiners_added.size() -1;
                     if(n>1){
                         pn_old=pn;
@@ -657,6 +676,8 @@ void save_best_tring(Custom_CDT& cdt, vector<ant_eval> logs, DATA data ){
                     all_steiners_added.push_back(the_steiner);
                     
                     int obt_next=check_for_obtuse(cdt).size();
+                    if(obt_next==0) break;
+
                     int n=all_steiners_added.size() -1;
                     if(n>1){
                         pn_old=pn;
@@ -790,7 +811,7 @@ void ant_colony(DATA2& data2, Custom_CDT& cdt){
         steiners=cdt.number_of_vertices()-steiners;
         int obtuses=check_for_obtuse(cdt).size();
         update_pherormones(pherormones, alpha, beta,steiners, obtuses, lambda  );
-
+        if(obtuses==0) break;
         ant_logs.clear();
     }
     pthread_mutex_destroy(&logs_lock);

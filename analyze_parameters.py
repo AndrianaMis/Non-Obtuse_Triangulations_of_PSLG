@@ -3,7 +3,7 @@ import numpy as np
 import json
 import os
 
-Ls = [20,30,50,100,150]
+Ls = [30,50,100,150, 200, 300]
 methods=["ls", "sa", "ant"]
 
 
@@ -22,8 +22,8 @@ def modify_json(input_file, method_value, output_file, L):
     data["method"] = method_value  # Update the "method" field
     data["delaunay"] = True
     data["parameters"] = {
-        "alpha": 2.0, "beta": 5.0, "xi": 1.0, "psi": 3.0,
-        "lambda": 0.5, "kappa": 10, "L": L
+        "alpha": 3.0, "beta": 0.8, "xi": 1.0, "psi": 3.0,
+        "lambda": 0.5, "kappa": 8, "L": L
     }
     
     with open(output_file, "w") as f:
@@ -34,7 +34,7 @@ instances= [
             ".vscode/challenge_instances_cgshop25/point-set_60_9fc02edd.instance.json", 
             ".vscode/challenge_instances_cgshop25/simple-polygon-exterior-20_60_28a85662.instance.json",
             ".vscode/challenge_instances_cgshop25/simple-polygon-exterior-20_80_f6e462fb.instance.json",
-            ".vscode/challenge_instances_cgshop25/ortho_150_53eb4022.instance.json",
+            ".vscode/challenge_instances_cgshop25/ortho_60_f744490d.instance.json",
             ".vscode/challenge_instances_cgshop25/simple-polygon_150_f24b0f8e.instance.json"
             
             ]
@@ -110,15 +110,16 @@ def graph():
             elif method=="ant":
                 percent_changes_ant.append(avg_diff)
 
+
     percent_changes = [percent_changes_ls, percent_changes_sa, percent_changes_ant]
     print(percent_changes[1])
     # Δημιουργία ξεχωριστού γραφήματος για κάθε μέθοδο
     for i, method in enumerate(methodNames):
         plt.figure(figsize=(8, 5))
         plt.bar(Ls, percent_changes[i], color='skyblue', edgecolor='black', alpha=0.8)
-        plt.title(f"Percent Change vs L for {method}", fontsize=14)
+        plt.title(f"Percent Changes vs L for {method}", fontsize=14)
         plt.xlabel("L Values", fontsize=12)
-        plt.ylabel("Percent Change (%)", fontsize=12)
+        plt.ylabel("Percent Change", fontsize=12)
         plt.xticks(Ls)
         plt.grid(axis='y', linestyle='--', alpha=0.6)
         plt.tight_layout()

@@ -1,0 +1,349 @@
+Input file: .vscode/temp_300_ant.json
+Output file: .vscode/output_300_ant.json
+simple-polygon-exterior-20_60_28a85662
+60
+
+POINTS_X
+2207 ,1854 ,1396 ,946 ,899 ,798 ,986 ,1017 ,1044 ,1530 ,1293 ,1083 ,820 ,854 ,765 ,199 ,0 ,26 ,205 ,178 ,171 ,124 ,8 ,29 ,309 ,443 ,691 ,679 ,812 ,1313 ,1343 ,1646 ,1824 ,2068 ,2218 ,2351 ,2455 ,2538 ,3395 ,3485 ,3572 ,3722 ,3078 ,3064 ,3160 ,3199 ,3380 ,3632 ,3690 ,3715 ,3821 ,3925 ,3550 ,3283 ,3235 ,3085 ,2976 ,2636 ,2485 ,2562 ,
+POINTS_Y
+118 ,24 ,134 ,130 ,144 ,178 ,284 ,255 ,199 ,690 ,791 ,470 ,456 ,558 ,604 ,47 ,281 ,289 ,725 ,831 ,1369 ,1437 ,1444 ,1784 ,1541 ,1434 ,1639 ,1210 ,1053 ,1720 ,1732 ,1383 ,1559 ,1580 ,1201 ,1476 ,1665 ,1736 ,1744 ,1712 ,1736 ,1369 ,1495 ,1368 ,891 ,912 ,855 ,845 ,909 ,1015 ,790 ,467 ,503 ,318 ,205 ,0 ,41 ,629 ,485 ,16 ,
+REGION_BOUND
+16 ,15 ,55 ,51 ,41 ,40 ,38 ,23 ,22 ,
+NUM CONSTRAINTS
+42
+
+ADDITIONAL CONSTRAINTS
+[0,1] ,[1,2] ,[4,5] ,[5,6] ,[6,7] ,[7,8] ,[8,9] ,[9,10] ,[11,12] ,[13,14] ,[14,15] ,[16,17] ,[17,18] ,[18,19] ,[19,20] ,[21,22] ,[23,24] ,[24,25] ,[27,28] ,[28,29] ,[29,30] ,[30,31] ,[31,32] ,[32,33] ,[34,35] ,[35,36] ,[38,39] ,[39,40] ,[41,42] ,[43,44] ,[44,45] ,[45,46] ,[46,47] ,[47,48] ,[48,49] ,[50,51] ,[51,52] ,[53,54] ,[55,56] ,[56,57] ,[57,58] ,[58,59] ,
+METHOD: ant
+
+PARAMETERS:
+L: 300, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Β. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ (ΑΝΟΙΧΤΟ)
+pn:0 obtuses:76 steiners:3
+pn:-0.0460412 obtuses:75 steiners:4
+pn:-0.0601542 obtuses:74 steiners:5
+pn:0 obtuses:74 steiners:6
+pn:-0.088262 obtuses:73 steiners:7
+pn:0 obtuses:73 steiners:8
+pn:0 obtuses:73 steiners:9
+pn:0 obtuses:73 steiners:10
+pn:0 obtuses:73 steiners:11
+pn:-0.158523 obtuses:72 steiners:12
+pn:0 obtuses:72 steiners:13
+pn:0 obtuses:72 steiners:14
+pn:0 obtuses:72 steiners:15
+pn:0 obtuses:72 steiners:16
+pn:0 obtuses:72 steiners:17
+pn:0 obtuses:72 steiners:18
+pn:0.255114 obtuses:73 steiners:19
+pn:0 obtuses:73 steiners:20
+pn:0 obtuses:73 steiners:21
+pn:0 obtuses:73 steiners:22
+pn:0 obtuses:73 steiners:23
+pn:0 obtuses:73 steiners:24
+pn:-0.337889 obtuses:72 steiners:25
+pn:0 obtuses:72 steiners:26
+pn:0 obtuses:72 steiners:27
+pn:0 obtuses:72 steiners:28
+pn:0 obtuses:72 steiners:29
+pn:0 obtuses:72 steiners:30
+pn:0 obtuses:72 steiners:31
+pn:-0.44053 obtuses:71 steiners:32
+pn:-0.460964 obtuses:70 steiners:33
+pn:0 obtuses:70 steiners:34
+pn:-0.496377 obtuses:69 steiners:35
+pn:0 obtuses:69 steiners:36
+pn:0 obtuses:69 steiners:37
+pn:0 obtuses:69 steiners:38
+pn:0 obtuses:69 steiners:39
+pn:0 obtuses:69 steiners:40
+pn:0 obtuses:69 steiners:41
+pn:0 obtuses:69 steiners:42
+pn:0 obtuses:69 steiners:43
+pn:0 obtuses:69 steiners:44
+pn:-0.649619 obtuses:68 steiners:45
+pn:0 obtuses:68 steiners:46
+pn:0 obtuses:68 steiners:47
+pn:0 obtuses:68 steiners:48
+pn:0 obtuses:68 steiners:49
+pn:0 obtuses:68 steiners:50
+pn:0 obtuses:68 steiners:51
+pn:0 obtuses:68 steiners:52
+pn:-0.777768 obtuses:67 steiners:53
+pn:0 obtuses:67 steiners:54
+pn:0 obtuses:67 steiners:55
+pn:0 obtuses:67 steiners:56
+pn:0 obtuses:67 steiners:57
+pn:0 obtuses:67 steiners:58
+pn:0 obtuses:67 steiners:59
+pn:0 obtuses:67 steiners:60
+pn:0 obtuses:67 steiners:61
+pn:-0.924809 obtuses:66 steiners:62
+pn:0 obtuses:66 steiners:63
+pn:0.954885 obtuses:67 steiners:64
+pn:0 obtuses:67 steiners:65
+pn:0 obtuses:67 steiners:66
+pn:0 obtuses:67 steiners:67
+pn:0 obtuses:67 steiners:68
+pn:0 obtuses:67 steiners:69
+pn:0 obtuses:67 steiners:70
+pn:0 obtuses:67 steiners:71
+pn:0 obtuses:67 steiners:72
+pn:0 obtuses:67 steiners:73
+pn:0 obtuses:67 steiners:74
+pn:0 obtuses:67 steiners:75
+pn:0 obtuses:67 steiners:76
+pn:-1.15038 obtuses:66 steiners:77
+pn:0 obtuses:66 steiners:78
+pn:0 obtuses:66 steiners:79
+pn:0 obtuses:66 steiners:80
+pn:0 obtuses:66 steiners:81
+pn:0 obtuses:66 steiners:82
+pn:0 obtuses:66 steiners:83
+pn:0 obtuses:66 steiners:84
+pn:-1.29009 obtuses:65 steiners:85
+pn:0 obtuses:65 steiners:86
+pn:0 obtuses:65 steiners:87
+pn:0 obtuses:65 steiners:88
+pn:2.68199 obtuses:67 steiners:89
+pn:0 obtuses:67 steiners:90
+pn:0 obtuses:67 steiners:91
+pn:2.69134 obtuses:69 steiners:92
+pn:0 obtuses:69 steiners:93
+pn:2.67158 obtuses:71 steiners:94
+pn:0 obtuses:71 steiners:95
+pn:0 obtuses:71 steiners:96
+pn:0 obtuses:71 steiners:97
+pn:0 obtuses:71 steiners:98
+pn:0 obtuses:71 steiners:99
+pn:-1.41136 obtuses:70 steiners:100
+pn:0 obtuses:70 steiners:101
+pn:0 obtuses:70 steiners:102
+pn:0 obtuses:70 steiners:103
+pn:0 obtuses:70 steiners:104
+pn:0 obtuses:70 steiners:105
+pn:0 obtuses:70 steiners:106
+pn:0 obtuses:70 steiners:107
+pn:0 obtuses:70 steiners:108
+pn:0 obtuses:70 steiners:109
+pn:0 obtuses:70 steiners:110
+pn:0 obtuses:70 steiners:111
+pn:-1.60433 obtuses:69 steiners:112
+pn:0 obtuses:69 steiners:113
+pn:0 obtuses:69 steiners:114
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:69 steiners:115
+pn:0 obtuses:69 steiners:116
+pn:0 obtuses:69 steiners:117
+pn:0 obtuses:69 steiners:118
+pn:0 obtuses:69 steiners:119
+pn:0 obtuses:69 steiners:120
+pn:0 obtuses:69 steiners:121
+pn:0 obtuses:69 steiners:122
+pn:0 obtuses:69 steiners:123
+pn:0 obtuses:69 steiners:124
+pn:0 obtuses:69 steiners:125
+pn:0 obtuses:69 steiners:126
+pn:0 obtuses:69 steiners:127
+pn:0 obtuses:69 steiners:128
+pn:0 obtuses:69 steiners:129
+pn:0 obtuses:69 steiners:130
+pn:0 obtuses:69 steiners:131
+pn:3.75738 obtuses:71 steiners:132
+pn:0 obtuses:71 steiners:133
+pn:0 obtuses:71 steiners:134
+pn:0 obtuses:71 steiners:135
+pn:0 obtuses:71 steiners:136
+pn:0 obtuses:71 steiners:137
+pn:-1.95038 obtuses:70 steiners:138
+pn:0 obtuses:70 steiners:139
+pn:0 obtuses:70 steiners:140
+pn:0 obtuses:70 steiners:141
+pn:0 obtuses:70 steiners:142
+pn:0 obtuses:70 steiners:143
+pn:0 obtuses:70 steiners:144
+pn:0 obtuses:70 steiners:145
+pn:0 obtuses:70 steiners:146
+pn:0 obtuses:70 steiners:147
+pn:0 obtuses:70 steiners:148
+pn:0 obtuses:70 steiners:149
+pn:0 obtuses:70 steiners:150
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:70 steiners:151
+pn:0 obtuses:70 steiners:152
+pn:0 obtuses:70 steiners:153
+pn:0 obtuses:70 steiners:154
+pn:2.19152 obtuses:71 steiners:155
+pn:0 obtuses:71 steiners:156
+pn:0 obtuses:71 steiners:157
+pn:0 obtuses:71 steiners:158
+pn:0 obtuses:71 steiners:159
+pn:0 obtuses:71 steiners:160
+pn:0 obtuses:71 steiners:161
+pn:0 obtuses:71 steiners:162
+pn:0 obtuses:71 steiners:163
+pn:0 obtuses:71 steiners:164
+pn:0 obtuses:71 steiners:165
+pn:0 obtuses:71 steiners:166
+pn:0 obtuses:71 steiners:167
+pn:0 obtuses:71 steiners:168
+pn:0 obtuses:71 steiners:169
+pn:0 obtuses:71 steiners:170
+pn:0 obtuses:71 steiners:171
+pn:0 obtuses:71 steiners:172
+pn:-2.44684 obtuses:70 steiners:173
+pn:0 obtuses:70 steiners:174
+pn:0 obtuses:70 steiners:175
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:70 steiners:176
+pn:0 obtuses:70 steiners:177
+pn:0 obtuses:70 steiners:178
+pn:5.02849 obtuses:72 steiners:179
+pn:0 obtuses:72 steiners:180
+pn:0 obtuses:72 steiners:181
+pn:0 obtuses:72 steiners:182
+pn:0 obtuses:72 steiners:183
+pn:0 obtuses:72 steiners:184
+pn:0 obtuses:72 steiners:185
+pn:0 obtuses:72 steiners:186
+pn:0 obtuses:72 steiners:187
+pn:-2.62241 obtuses:71 steiners:188
+pn:0 obtuses:71 steiners:189
+pn:0 obtuses:71 steiners:190
+pn:0 obtuses:71 steiners:191
+pn:0 obtuses:71 steiners:192
+pn:0 obtuses:71 steiners:193
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:71 steiners:194
+pn:0 obtuses:71 steiners:195
+pn:2.7343 obtuses:72 steiners:196
+pn:0 obtuses:72 steiners:197
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:72 steiners:198
+pn:0 obtuses:72 steiners:199
+pn:0 obtuses:72 steiners:200
+pn:0 obtuses:72 steiners:201
+pn:0 obtuses:72 steiners:202
+pn:0 obtuses:72 steiners:203
+pn:0 obtuses:72 steiners:204
+pn:0 obtuses:72 steiners:205
+pn:0 obtuses:72 steiners:206
+pn:0 obtuses:72 steiners:207
+pn:0 obtuses:72 steiners:208
+pn:0 obtuses:72 steiners:209
+pn:0 obtuses:72 steiners:210
+pn:0 obtuses:72 steiners:211
+pn:0 obtuses:72 steiners:212
+pn:0 obtuses:72 steiners:213
+pn:0 obtuses:72 steiners:214
+pn:0 obtuses:72 steiners:215
+pn:0 obtuses:72 steiners:216
+pn:0 obtuses:72 steiners:217
+pn:0 obtuses:72 steiners:218
+pn:0 obtuses:72 steiners:219
+pn:0 obtuses:72 steiners:220
+pn:0 obtuses:72 steiners:221
+pn:0 obtuses:72 steiners:222
+pn:0 obtuses:72 steiners:223
+pn:0 obtuses:72 steiners:224
+pn:0 obtuses:72 steiners:225
+pn:0 obtuses:72 steiners:226
+pn:0 obtuses:72 steiners:227
+pn:-3.18186 obtuses:71 steiners:228
+pn:-3.24118 obtuses:70 steiners:229
+pn:0 obtuses:70 steiners:230
+pn:0 obtuses:70 steiners:231
+pn:0 obtuses:70 steiners:232
+pn:0 obtuses:70 steiners:233
+pn:0 obtuses:70 steiners:234
+pn:0 obtuses:70 steiners:235
+pn:0 obtuses:70 steiners:236
+pn:0 obtuses:70 steiners:237
+pn:0 obtuses:70 steiners:238
+pn:6.71874 obtuses:72 steiners:239
+pn:0 obtuses:72 steiners:240
+pn:0 obtuses:72 steiners:241
+pn:0 obtuses:72 steiners:242
+pn:0 obtuses:72 steiners:243
+pn:0 obtuses:72 steiners:244
+pn:0 obtuses:72 steiners:245
+pn:0 obtuses:72 steiners:246
+pn:0 obtuses:72 steiners:247
+pn:0 obtuses:72 steiners:248
+pn:0 obtuses:72 steiners:249
+pn:0 obtuses:72 steiners:250
+pn:0 obtuses:72 steiners:251
+pn:0 obtuses:72 steiners:252
+pn:0 obtuses:72 steiners:253
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:72 steiners:254
+pn:0 obtuses:72 steiners:255
+pn:0 obtuses:72 steiners:256
+pn:-3.58747 obtuses:71 steiners:257
+pn:0 obtuses:71 steiners:258
+pn:0 obtuses:71 steiners:259
+pn:0 obtuses:71 steiners:260
+pn:0 obtuses:71 steiners:261
+pn:0 obtuses:71 steiners:262
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:71 steiners:263
+pn:0 obtuses:71 steiners:264
+pn:0 obtuses:71 steiners:265
+pn:0 obtuses:71 steiners:266
+pn:0 obtuses:71 steiners:267
+pn:0 obtuses:71 steiners:268
+pn:0 obtuses:71 steiners:269
+pn:0 obtuses:71 steiners:270
+pn:0 obtuses:71 steiners:271
+pn:0 obtuses:71 steiners:272
+pn:0 obtuses:71 steiners:273
+pn:7.5977 obtuses:73 steiners:274
+pn:0 obtuses:73 steiners:275
+pn:0 obtuses:73 steiners:276
+pn:0 obtuses:73 steiners:277
+pn:0 obtuses:73 steiners:278
+pn:0 obtuses:73 steiners:279
+pn:-3.85523 obtuses:72 steiners:280
+pn:0 obtuses:72 steiners:281
+pn:0 obtuses:72 steiners:282
+pn:0 obtuses:72 steiners:283
+pn:0 obtuses:72 steiners:284
+pn:0 obtuses:72 steiners:285
+pn:0 obtuses:72 steiners:286
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:72 steiners:287
+pn:0 obtuses:72 steiners:288
+pn:0 obtuses:72 steiners:289
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:72 steiners:290
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:72 steiners:291
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:72 steiners:292
+pn:0 obtuses:72 steiners:293
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:72 steiners:294
+pn:0 obtuses:72 steiners:295
+pn:0 obtuses:72 steiners:296
+pn:0 obtuses:72 steiners:297
+pn:0 obtuses:72 steiners:298
+pn:0 obtuses:72 steiners:299
+Μέσος ρυθμός σύγκλισης: 0.0217411
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 455.2
+Method: Ant Colony: 
+	Original CDT had: 76/109 obtuse faces
+	We inserted 299 steiner points:
+		Middle of largest edge: 3
+		Circumcenter: 8
+		Projection: 288
+		Polygon Cnetroid: 0
+Final obtuse faces: 72/689
+Αρχικές αμβλείες: 76
+Αρχικά faces: 109
+Αρχική ενέργεια: 228
+ Steiners added: 299
+Τελικές αμβλείες: 72
+Τελικές faces: 689
+Τελική ενέργεια: 455.2
+Metric: 0.0146484
