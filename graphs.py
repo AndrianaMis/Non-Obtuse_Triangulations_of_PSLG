@@ -61,107 +61,46 @@ categories = {
 }
 
 methods=["ls", "sa", "ant"]
-
+avg_avg={}
 
 # Άνοιγμα του αρχείου και ανάγνωση
 for cat , instaces in categories.items():
-
+    sum_avg_pn = {method: 0 for method in methods}
+    count = {method: 0 for method in methods}
     for method in methods:
-        for inst, i in enumerate(instaces):
-            print(i)
-        
+        for i, inst in enumerate(instaces):
+            print(f'i: {i+1}, method: {method}, category: {cat}')
+            with open('.vscode/results/results_{cat}_{i+1}_{method}.txt', 'r') as file:
+                lines = file.readlines()
 
-        with open('.vscode/results/results_{cat}_{i}_{method}.txt', 'r') as file:
-            lines = file.readlines()
-
-            for line in lines:
-                if line.startswith("pn:"):  # Αν η γραμμή ξεκινάει με 'pn:', τότε έχουμε δεδομένα
-                    # Διαχωρισμός των τιμών της γραμμής
-                    parts = line.split()
-                    pn = float(parts[0].split(":")[1])  # Παίρνουμε την τιμή του pn
-                    obtuses = int(parts[1].split(":")[1])  # Παίρνουμε την τιμή των obtuses
-                    steiners = int(parts[2].split(":")[1])  # Παίρνουμε την τιμή των steiners
-                    
-                    # Αποθήκευση των τιμών στις αντίστοιχες λίστες
-                    pn_values_ant.append(pn)
-                    steiners_values_ant.append(steiners)
-                    obtuses_values_ant.append(obtuses)
+                for line in lines:
+                    if line.startswith("Μέσος ρυθμός σύγκλισης:"):  # Αν η γραμμή ξεκινάει με 'pn:', τότε έχουμε δεδομένα
+                        # Διαχωρισμός των τιμών της γραμμής
+                        parts = line.split()
+                        avg_pn = float(parts[0].split(":")[1])  # Παίρνουμε την τιμή του pn
+                        sum_avg_pn[method] += avg_pn
+                        count[method] += 1
+    avg_avg[cat] = {method: (sum_avg_pn[method] / count[method] if count[method] > 0 else 0) for method in methods}
 
 
 
 
-pn_values_ls= []
-steiners_values_ls = []
-obtuses_values_ls = []
+categories_list = list(avg_avg.keys())
+x = range(len(categories_list))
 
+for method in methods:
+    averages = [avg_avg[cat][method] for cat in categories_list]
+    plt.bar(
+        [pos + 0.2 * methods.index(method) for pos in x],  # Θέση μπάρας
+        averages,
+        width=0.2,
+        label=method,
+    )
 
-with open('.vscode/results/results_3_ls.txt', 'r') as file:
-    lines = file.readlines()
-
-    for line in lines:
-        if line.startswith("pn:"):  # Αν η γραμμή ξεκινάει με 'pn:', τότε έχουμε δεδομένα
-            # Διαχωρισμός των τιμών της γραμμής
-            parts = line.split()
-            pn = float(parts[0].split(":")[1])  # Παίρνουμε την τιμή του pn
-            obtuses = int(parts[1].split(":")[1])  # Παίρνουμε την τιμή των obtuses
-            steiners = int(parts[2].split(":")[1])  # Παίρνουμε την τιμή των steiners
-            
-            
-            # Αποθήκευση των τιμών στις αντίστοιχες λίστες
-            pn_values_ls.append(pn)
-            steiners_values_ls.append(steiners)
-            obtuses_values_ls.append(obtuses)
-
-pn_values_sa= []
-steiners_values_sa = []
-obtuses_values_sa = []
-
-
-with open('.vscode/results/results_3_sa.txt', 'r') as file:
-    lines = file.readlines()
-
-    for line in lines:
-        if line.startswith("pn:"):  # Αν η γραμμή ξεκινάει με 'pn:', τότε έχουμε δεδομένα
-            # Διαχωρισμός των τιμών της γραμμής
-            parts = line.split()
-            pn = float(parts[0].split(":")[1])  # Παίρνουμε την τιμή του pn
-            obtuses = int(parts[1].split(":")[1])  # Παίρνουμε την τιμή των obtuses
-            steiners = int(parts[2].split(":")[1])  # Παίρνουμε την τιμή των steiners
-            
-            # Αποθήκευση των τιμών στις αντίστοιχες λίστες
-            pn_values_sa.append(pn)
-            steiners_values_sa.append(steiners)
-            obtuses_values_sa.append(obtuses)
-
-
-
-
-
-
-# Σχεδιάζουμε το γράφημα για τις 3 μεθόδους (ls, ant, sa)
-plt.figure(figsize=(10, 6))
-
-# Μεθόδος LS (ls)
-plt.plot(steiners_values_ls, pn_values_ls, marker='o', label='LS Method (pn)', color='blue')
-
-# Μεθόδος ANT (ant)
-plt.plot(steiners_values_ant, pn_values_ant, marker='o', label='ANT Method (pn)', color='red')
-
-# Μεθόδος SA (sa)
-plt.plot(steiners_values_sa, pn_values_sa, marker='o', label='SA Method (pn)', color='green')
-
-# Προσθήκη αξόνων και τίτλων
-plt.xlabel('Steiner Points (Steiners)')
-plt.ylabel('PN Values (pn)')
-
-# Τίτλος γραφήματος
-plt.title('Ροή PN Values για Κάθε Μέθοδο (Γ. Κατηγορία εισόδου)')
-
-# Υποσημειώσεις για τις μεθόδους
+# Προσαρμογές στο διάγραμμα
+plt.xticks([pos + 0.3 for pos in x], categories_list)  # Τοποθέτηση κατηγοριών στον x-άξονα
+plt.xlabel("Κατηγορία")
+plt.ylabel("Μέσος ρυθμός σύγκλισης")
+plt.title("Μέσος ρυθμός σύγκλισης ανά κατηγορία και μέθοδο")
 plt.legend()
-
-# Προσθήκη grid για καλύτερη οπτικοποίηση
-plt.grid(True)
-
-# Εμφάνιση γραφήματος
 plt.show()
