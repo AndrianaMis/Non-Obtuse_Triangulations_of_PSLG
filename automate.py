@@ -136,8 +136,10 @@ def run_all():
             run_example( temps, algorithm, output_file, result_file)
             #time.sleep(4)
 
+
+
       
 if __name__ == "__main__":
     #modify_inputs()
-    run_all1()
+   # run_all1()
     remove_unecessary()

@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+import re
+
 
 # Λίστες για τα δεδομένα
 pn_values_ant = []
@@ -155,6 +157,18 @@ def energy_finding():
                     instances_with_all_missing_methods[cat] = []
                 instances_with_all_missing_methods[cat].append(inst)
 
+
+
+
+    if missing_avg_files:
+        print("Αρχεία που περιέχουν 'Ενέργεια' αλλά όχι 'Μέσος ρυθμός σύγκλισης':")
+        for cat, files in missing_avg_files.items():
+            print(f"\nΚατηγορία: {cat}")
+            for inst, method in files:
+                print(f"  - Instance: {inst}, Μέθοδος: {method}")
+    else:
+        print("Όλα τα αρχεία έχουν 'Μέσος ρυθμός σύγκλισης'.")
+        
     # Εμφάνιση των αποτελεσμάτων
     if instances_with_all_missing_methods:
         print("Instances που δεν συγκλίνουν με καμία από τις 3 μεθόδους")
@@ -167,5 +181,61 @@ def energy_finding():
 
 
 
+
+
+def percentage_graph():
+    avg_per={}
+    percentage_pattern = r'(-?\d+(\.\d+)?)%'
+    for cat , instaces in categories.items():
+        sum_percent = {method: 0 for method in methods}
+        count = {method: 0 for method in methods}
+        for method in methods:
+            for i, inst in enumerate(instaces):
+                #print(f'i: {i+1}, method: {method}, category: {cat}')
+                
+                with open(f'.vscode/results/results_{cat}_{i+1}_{method}.txt', 'r') as file:
+                    lines = file.readlines()
+
+                    for line in lines:
+                        match = re.search(percentage_pattern, line)
+                        
+                        if match:  # Αν βρέθηκε ποσοστό
+                            # Λήψη της πρώτης ομάδας από την αντιστοιχία (την τιμή του ποσοστού)
+                            per = float(match.group(1))
+                print(f'{cat}_{i}_{method} -> {per}')
+                sum_percent[method] += per
+                count[method] += 1
+        avg_per[cat] = {method: (sum_percent[method] / count[method] if count[method] > 0 else 0) for method in methods}
+        print(cat)
+        print(avg_per[cat])
+
+
+
+    for cat, method_averages in avg_per.items():
+        plt.figure(figsize=(8, 6))
+        methods_list = list(method_averages.keys())
+        averages = list(method_averages.values())
+        
+        # Δημιουργία μπάρας
+        plt.bar(methods_list, averages, color=['blue', 'green', 'red'], width=0.5)
+        
+        # Προσαρμογή του y-άξονα για αρνητικές τιμές
+        y_min = min(averages) * 1.2 if min(averages) < 0 else 0
+        y_max = max(averages) * 1.2 if max(averages) > 0 else 0
+        plt.ylim(y_min, y_max)
+        
+        # Προσαρμογές στο διάγραμμα
+        plt.title(f"Μέσο ποσοστό μεταβολής αμβλείων για την κατηγορία: {cat}")
+        plt.xlabel("Μέθοδος")
+        plt.ylabel("Μέσο ποσοστό μεταβολής")
+        plt.xticks(rotation=45)
+        plt.grid(axis="y", linestyle="--", alpha=0.7)
+        
+        # Εμφάνιση του διαγράμματος
+        plt.tight_layout()
+        plt.show()
+
+
 if __name__ == "__main__":
     energy_finding()
+    #percentage_graph()
