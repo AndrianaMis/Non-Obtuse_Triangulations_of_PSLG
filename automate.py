@@ -113,7 +113,7 @@ def run_all1():
                 temps=f".vscode/temp_{i}_{algorithm}.json"
                 modify_json(instance, algorithm, temps)
                 output_file = f".vscode/output_{i}_{algorithm}.json"
-                result_file = f".vscode/results/results_{cat}_{i}_{algorithm}.txt"
+                result_file = f".vscode/results_proj/results_{cat}_{i}_{algorithm}.txt"
                 if i==1: inps.append(temps)
                     # Submit the execution task to the thread pool
                 run_example( temps, algorithm, output_file, result_file)

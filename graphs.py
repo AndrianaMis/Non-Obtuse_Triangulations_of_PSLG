@@ -135,7 +135,7 @@ def energy_finding():
                     if not has_avg and has_energy:
                         if cat not in missing_avg_files:
                             missing_avg_files[cat] = []
-                        missing_avg_files[cat].append((i+1, method))
+                        missing_avg_files[cat].append((inst, method))
 # Αναζήτηση για κάθε κατηγορία αν υπάρχει instance με όλες τις μεθόδους στο missing_avg_files
     instances_with_all_missing_methods = {}
 
@@ -168,7 +168,7 @@ def energy_finding():
                 print(f"  - Instance: {inst}, Μέθοδος: {method}")
     else:
         print("Όλα τα αρχεία έχουν 'Μέσος ρυθμός σύγκλισης'.")
-        
+
     # Εμφάνιση των αποτελεσμάτων
     if instances_with_all_missing_methods:
         print("Instances που δεν συγκλίνουν με καμία από τις 3 μεθόδους")

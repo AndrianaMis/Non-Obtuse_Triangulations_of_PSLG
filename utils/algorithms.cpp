@@ -8,11 +8,11 @@ vector<Point> all_steiners_added;   //vector που καταγράφει όλα 
 map<string, double> parameters_used; 
 
 void create_map(){
-    map_of_functions["Middle"]=point_to_middle;
-    map_of_functions["Circumcenter"]=point_to_circumcenter;
+   // map_of_functions["Middle"]=point_to_middle;
+  //  map_of_functions["Circumcenter"]=point_to_circumcenter;
     //map_of_functions["Centroid"]=point_to_centroid;
    // map_of_functions["Incenter"]=point_to_incenter;
-    map_of_functions["Polygon"]=point_to_polyg;
+    //map_of_functions["Polygon"]=point_to_polyg;
     map_of_functions["Altitude"]=point_to_h;
 }
 
@@ -286,9 +286,9 @@ pthread_mutex_t  logs_lock;
 //vector που υπολογ΄΄ιζει και επιστρέφει τα η κάθε μεθόδου από τους τύπος που μας δώθηκαν, paired με το όνομα της μεθόδου 
 vector<pair<string ,double>> compute_htta(double r){
     vector<pair<string , double>> vec;
-    vec.push_back(make_pair("middle", middle_probabiliy(r)));
+ //   vec.push_back(make_pair("middle", middle_probabiliy(r)));
     vec.push_back(make_pair("altitude", altitude_probabiliy(r)));
-    vec.push_back(make_pair("circumcenter", circumcenter_probabiliy(r)));
+   // vec.push_back(make_pair("circumcenter", circumcenter_probabiliy(r)));
     return vec;
 }
 
@@ -466,11 +466,11 @@ void* ant_work(void* inp){
         delete inp;
         return NULL;
     }
-    if(find_neigh(face)>=2){
+//    if(find_neigh(face)>=2){
        // cout<<"Face with id "<<random_index<<" has mre than 2 obtuse neighbors"<<endl;
-        point_to_polyg(copy_cdt, face, data,0);
-        method="Polygons";
-    }
+  //      point_to_polyg(copy_cdt, face, data,0);
+    //    method="Polygons";
+   // }
     else{
         vector<pair<string, double>> httas=compute_htta(r);
         vector<pair<string, double>> probabilities = compute_p(httas,pherormones, x,y);
