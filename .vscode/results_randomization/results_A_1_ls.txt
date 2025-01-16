@@ -1,0 +1,49 @@
+Input file: .vscode/temp_1_ls.json
+Output file: .vscode/output_1_ls.json
+point-set_10_c04b0024
+10
+
+POINTS_X
+10 ,25 ,34 ,39 ,31 ,26 ,0 ,43 ,37 ,16 ,
+POINTS_Y
+3 ,0 ,0 ,25 ,20 ,9 ,26 ,26 ,30 ,10 ,
+REGION_BOUND
+6 ,0 ,1 ,2 ,7 ,8 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ls
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+pn:-0.380182 obtuses:6 steiners:3
+pn:-0.633761 obtuses:5 steiners:4
+
+Ο αλγόριθμος δεν συγκλίνει: Εκτελούμε τυχαιοποίηση
+pn:1.50787 obtuses:7 steiners:5
+pn:0 obtuses:7 steiners:6
+pn:0 obtuses:7 steiners:7
+pn:0 obtuses:7 steiners:8
+pn:0 obtuses:7 steiners:9
+pn:0 obtuses:7 steiners:10
+pn:0 obtuses:7 steiners:11
+iteration: 51 out of: 200
+Randomization pn: 1.50787
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 29.8
+Method: Local search
+	Inserted: 11 Steiner points
+Obtuse faces are now: 7/19
+Αρχικές αμβλείες: 9
+Τελικές αμβλείες: 7
+
+Αρχικά faces: 12
+Τελικές faces: 19
+
+Αρχική ενέργεια: 27
+Τελική ενέργεια: 25
+
+22.2222% μείωση αμβλείων

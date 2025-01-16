@@ -1,0 +1,53 @@
+Input file: .vscode/temp_1_sa.json
+Output file: .vscode/output_1_sa.json
+simple-polygon_10_297edd18
+10
+
+POINTS_X
+41 ,12 ,15 ,36 ,40 ,55 ,50 ,51 ,55 ,40 ,
+POINTS_Y
+46 ,17 ,5 ,6 ,20 ,20 ,30 ,42 ,45 ,66 ,
+REGION_BOUND
+0 ,1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: sa
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Ε. Μη κυρτό boundary, ακανόνιστο, που δεν εντάσσεται στις κατηγορίες Α-Δ. 
+Αρχική Ενέργεια: 30
+pn:0 obtuses:10 steiners:3
+pn:0 obtuses:10 steiners:4
+pn:-0.472165 obtuses:9 steiners:5
+pn:0 obtuses:9 steiners:6
+
+Ο αλγόριθμος δεν συγκλίνει: Εκτελούμε τυχαιοποίηση
+pn:1.86624 obtuses:12 steiners:7
+pn:0 obtuses:12 steiners:8
+pn:0 obtuses:12 steiners:9
+pn:0 obtuses:12 steiners:10
+pn:0 obtuses:12 steiners:11
+pn:0 obtuses:12 steiners:12
+pn:0 obtuses:12 steiners:13
+pn:0 obtuses:12 steiners:14
+pn:0 obtuses:12 steiners:15
+pn:0 obtuses:12 steiners:16
+pn:0 obtuses:12 steiners:17
+pn:0 obtuses:12 steiners:18
+Randomization pn: 1.86624
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 50.4
+Αρχικές αμβλείες: 10
+Τελικές αμβλείες: 12
+
+Αρχικά faces: 12
+Τελικές faces: 26
+
+Αρχική ενέργεια: 30
+Τελική ενέργεια: 41.6
+
+-20% αύξηση αμβλείων

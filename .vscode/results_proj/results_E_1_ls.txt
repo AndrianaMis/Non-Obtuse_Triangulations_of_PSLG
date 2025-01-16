@@ -1,0 +1,39 @@
+Input file: .vscode/temp_1_ls.json
+Output file: .vscode/output_1_ls.json
+simple-polygon_10_297edd18
+10
+
+POINTS_X
+41 ,12 ,15 ,36 ,40 ,55 ,50 ,51 ,55 ,40 ,
+POINTS_Y
+46 ,17 ,5 ,6 ,20 ,20 ,30 ,42 ,45 ,66 ,
+REGION_BOUND
+0 ,1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ls
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Ε. Μη κυρτό boundary, ακανόνιστο, που δεν εντάσσεται στις κατηγορίες Α-Δ. 
+pn:-0.329329 obtuses:7 steiners:3
+Stopping cause triangulation was not improved
+iteration: 17 out of: 200
+Μέσος ρυθμός σύγκλισης: -0.109776
+Method: Local search
+	Inserted: 3 Steiner points
+Obtuse faces are now: 7/15
+Αρχικές αμβλείες: 10
+Τελικές αμβλείες: 7
+
+Αρχικά faces: 12
+Τελικές faces: 15
+
+Αρχική ενέργεια: 30
+Τελική ενέργεια: 23.4
+
+30% μείωση αμβλείων

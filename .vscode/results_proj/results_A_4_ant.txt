@@ -1,0 +1,238 @@
+Input file: .vscode/temp_4_ant.json
+Output file: .vscode/output_4_ant.json
+point-set_60_9fc02edd
+60
+
+POINTS_X
+7300 ,13100 ,14200 ,5400 ,8350 ,11400 ,6650 ,14900 ,200 ,7850 ,11400 ,14900 ,13993 ,12050 ,14900 ,13992 ,7300 ,9450 ,16800 ,15108 ,9242 ,19800 ,19800 ,10150 ,4700 ,16800 ,12050 ,8350 ,3100 ,8350 ,12600 ,12600 ,14900 ,9450 ,4700 ,5608 ,10150 ,3100 ,3600 ,7850 ,10150 ,19800 ,16150 ,14200 ,9450 ,5400 ,12050 ,11400 ,15110 ,200 ,3100 ,4700 ,10360 ,19800 ,5400 ,200 ,16150 ,7300 ,13100 ,12600 ,
+POINTS_Y
+10950 ,10800 ,11650 ,11650 ,2300 ,10800 ,10800 ,8450 ,1100 ,7250 ,2300 ,5750 ,7102 ,7250 ,1600 ,10052 ,3300 ,5750 ,7250 ,7103 ,10052 ,800 ,10000 ,1600 ,5750 ,3300 ,10950 ,6950 ,3300 ,10800 ,7250 ,3300 ,11650 ,8450 ,11650 ,7103 ,11650 ,10950 ,2300 ,3300 ,8450 ,12200 ,2300 ,8450 ,11650 ,1600 ,3300 ,6950 ,10053 ,800 ,7250 ,8450 ,10053 ,11900 ,5750 ,12200 ,6950 ,7250 ,6950 ,10950 ,
+REGION_BOUND
+49 ,21 ,41 ,55 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ant
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+pn:0 obtuses:80 steiners:3
+pn:0 obtuses:80 steiners:4
+pn:0 obtuses:80 steiners:5
+pn:0 obtuses:80 steiners:6
+pn:0 obtuses:80 steiners:7
+pn:0 obtuses:80 steiners:8
+pn:0 obtuses:80 steiners:9
+pn:0 obtuses:80 steiners:10
+pn:0 obtuses:80 steiners:11
+pn:0 obtuses:80 steiners:12
+pn:0 obtuses:80 steiners:13
+pn:0 obtuses:80 steiners:14
+pn:0 obtuses:80 steiners:15
+pn:0 obtuses:80 steiners:16
+pn:0 obtuses:80 steiners:17
+pn:0 obtuses:80 steiners:18
+pn:0 obtuses:80 steiners:19
+pn:0 obtuses:80 steiners:20
+pn:0 obtuses:80 steiners:21
+pn:0 obtuses:80 steiners:22
+pn:0 obtuses:80 steiners:23
+pn:0 obtuses:80 steiners:24
+pn:0 obtuses:80 steiners:25
+pn:0 obtuses:80 steiners:26
+pn:0 obtuses:80 steiners:27
+pn:0 obtuses:80 steiners:28
+pn:0 obtuses:80 steiners:29
+pn:0 obtuses:80 steiners:30
+pn:0 obtuses:80 steiners:31
+pn:0 obtuses:80 steiners:32
+pn:0 obtuses:80 steiners:33
+pn:0 obtuses:80 steiners:34
+pn:0 obtuses:80 steiners:35
+pn:0 obtuses:80 steiners:36
+pn:0 obtuses:80 steiners:37
+pn:0 obtuses:80 steiners:38
+pn:0 obtuses:80 steiners:39
+pn:0 obtuses:80 steiners:40
+pn:0 obtuses:80 steiners:41
+pn:-0.521994 obtuses:79 steiners:42
+pn:0 obtuses:79 steiners:43
+pn:0 obtuses:79 steiners:44
+pn:0 obtuses:79 steiners:45
+pn:0 obtuses:79 steiners:46
+pn:0 obtuses:79 steiners:47
+pn:0 obtuses:79 steiners:48
+pn:0 obtuses:79 steiners:49
+pn:0 obtuses:79 steiners:50
+pn:0 obtuses:79 steiners:51
+pn:0 obtuses:79 steiners:52
+pn:0 obtuses:79 steiners:53
+pn:0 obtuses:79 steiners:54
+pn:0 obtuses:79 steiners:55
+pn:0 obtuses:79 steiners:56
+pn:0 obtuses:79 steiners:57
+pn:0 obtuses:79 steiners:58
+pn:0 obtuses:79 steiners:59
+pn:0 obtuses:79 steiners:60
+pn:-0.770694 obtuses:78 steiners:61
+pn:0 obtuses:78 steiners:62
+pn:0 obtuses:78 steiners:63
+pn:0 obtuses:78 steiners:64
+pn:0 obtuses:78 steiners:65
+pn:0 obtuses:78 steiners:66
+pn:0 obtuses:78 steiners:67
+pn:0 obtuses:78 steiners:68
+pn:0 obtuses:78 steiners:69
+pn:0 obtuses:78 steiners:70
+pn:0 obtuses:78 steiners:71
+pn:0 obtuses:78 steiners:72
+pn:0 obtuses:78 steiners:73
+pn:0 obtuses:78 steiners:74
+pn:0 obtuses:78 steiners:75
+pn:0 obtuses:78 steiners:76
+pn:0 obtuses:78 steiners:77
+pn:0 obtuses:78 steiners:78
+pn:-1.0129 obtuses:77 steiners:79
+pn:0 obtuses:77 steiners:80
+pn:0 obtuses:77 steiners:81
+pn:0 obtuses:77 steiners:82
+pn:0 obtuses:77 steiners:83
+pn:0 obtuses:77 steiners:84
+pn:0 obtuses:77 steiners:85
+pn:0 obtuses:77 steiners:86
+pn:0 obtuses:77 steiners:87
+pn:0 obtuses:77 steiners:88
+pn:0 obtuses:77 steiners:89
+pn:0 obtuses:77 steiners:90
+pn:0 obtuses:77 steiners:91
+pn:0 obtuses:77 steiners:92
+pn:0 obtuses:77 steiners:93
+pn:0 obtuses:77 steiners:94
+pn:0 obtuses:77 steiners:95
+pn:0 obtuses:77 steiners:96
+pn:0 obtuses:77 steiners:97
+pn:0 obtuses:77 steiners:98
+pn:0 obtuses:77 steiners:99
+pn:0 obtuses:77 steiners:100
+pn:0 obtuses:77 steiners:101
+pn:0 obtuses:77 steiners:102
+pn:0 obtuses:77 steiners:103
+pn:0 obtuses:77 steiners:104
+pn:0 obtuses:77 steiners:105
+pn:0 obtuses:77 steiners:106
+pn:0 obtuses:77 steiners:107
+pn:0 obtuses:77 steiners:108
+pn:0 obtuses:77 steiners:109
+pn:0 obtuses:77 steiners:110
+pn:0 obtuses:77 steiners:111
+pn:0 obtuses:77 steiners:112
+pn:0 obtuses:77 steiners:113
+pn:0 obtuses:77 steiners:114
+pn:0 obtuses:77 steiners:115
+pn:0 obtuses:77 steiners:116
+pn:0 obtuses:77 steiners:117
+pn:0 obtuses:77 steiners:118
+pn:0 obtuses:77 steiners:119
+pn:0 obtuses:77 steiners:120
+pn:0 obtuses:77 steiners:121
+pn:0 obtuses:77 steiners:122
+pn:0 obtuses:77 steiners:123
+pn:0 obtuses:77 steiners:124
+pn:0 obtuses:77 steiners:125
+pn:0 obtuses:77 steiners:126
+pn:0 obtuses:77 steiners:127
+pn:0 obtuses:77 steiners:128
+pn:0 obtuses:77 steiners:129
+pn:0 obtuses:77 steiners:130
+pn:0 obtuses:77 steiners:131
+pn:0 obtuses:77 steiners:132
+pn:0 obtuses:77 steiners:133
+pn:0 obtuses:77 steiners:134
+pn:0 obtuses:77 steiners:135
+pn:0 obtuses:77 steiners:136
+pn:0 obtuses:77 steiners:137
+pn:0 obtuses:77 steiners:138
+pn:0 obtuses:77 steiners:139
+pn:0 obtuses:77 steiners:140
+pn:0 obtuses:77 steiners:141
+pn:0 obtuses:77 steiners:142
+pn:0 obtuses:77 steiners:143
+pn:0 obtuses:77 steiners:144
+pn:0 obtuses:77 steiners:145
+pn:0 obtuses:77 steiners:146
+pn:0 obtuses:77 steiners:147
+pn:0 obtuses:77 steiners:148
+pn:0 obtuses:77 steiners:149
+pn:0 obtuses:77 steiners:150
+pn:0 obtuses:77 steiners:151
+pn:0 obtuses:77 steiners:152
+pn:0 obtuses:77 steiners:153
+pn:0 obtuses:77 steiners:154
+pn:0 obtuses:77 steiners:155
+pn:0 obtuses:77 steiners:156
+pn:0 obtuses:77 steiners:157
+pn:-2.05885 obtuses:76 steiners:158
+pn:0 obtuses:76 steiners:159
+pn:0 obtuses:76 steiners:160
+pn:0 obtuses:76 steiners:161
+pn:0 obtuses:76 steiners:162
+pn:0 obtuses:76 steiners:163
+pn:0 obtuses:76 steiners:164
+pn:0 obtuses:76 steiners:165
+pn:0 obtuses:76 steiners:166
+pn:0 obtuses:76 steiners:167
+pn:0 obtuses:76 steiners:168
+pn:0 obtuses:76 steiners:169
+pn:0 obtuses:76 steiners:170
+pn:0 obtuses:76 steiners:171
+pn:0 obtuses:76 steiners:172
+pn:0 obtuses:76 steiners:173
+pn:0 obtuses:76 steiners:174
+pn:0 obtuses:76 steiners:175
+pn:0 obtuses:76 steiners:176
+pn:0 obtuses:76 steiners:177
+pn:0 obtuses:76 steiners:178
+pn:0 obtuses:76 steiners:179
+pn:0 obtuses:76 steiners:180
+pn:0 obtuses:76 steiners:181
+pn:0 obtuses:76 steiners:182
+pn:0 obtuses:76 steiners:183
+pn:0 obtuses:76 steiners:184
+pn:0 obtuses:76 steiners:185
+pn:0 obtuses:76 steiners:186
+pn:0 obtuses:76 steiners:187
+pn:0 obtuses:76 steiners:188
+pn:0 obtuses:76 steiners:189
+pn:0 obtuses:76 steiners:190
+pn:0 obtuses:76 steiners:191
+pn:0 obtuses:76 steiners:192
+pn:0 obtuses:76 steiners:193
+pn:0 obtuses:76 steiners:194
+pn:0 obtuses:76 steiners:195
+pn:0 obtuses:76 steiners:196
+pn:0 obtuses:76 steiners:197
+pn:0 obtuses:76 steiners:198
+pn:0 obtuses:76 steiners:199
+Μέσος ρυθμός σύγκλισης: -0.0219318
+Method: Ant Colony: 
+	Original CDT had: 80/111 obtuse faces
+	We inserted 199 steiner points:
+		Middle of largest edge: 0
+		Circumcenter: 0
+		Projection: 199
+		Polygon Cnetroid: 0
+Final obtuse faces: 76/509
+Αρχικές αμβλείες: 80
+Τελικές αμβλείες: 76
+
+Αρχικά faces: 111
+Τελικές faces: 509
+
+Αρχική ενέργεια: 240
+Τελική ενέργεια: 387.2
+
+5% μείωση αμβλείων

@@ -1,0 +1,60 @@
+Input file: .vscode/temp_4_ls.json
+Output file: .vscode/output_4_ls.json
+point-set_60_9fc02edd
+60
+
+POINTS_X
+7300 ,13100 ,14200 ,5400 ,8350 ,11400 ,6650 ,14900 ,200 ,7850 ,11400 ,14900 ,13993 ,12050 ,14900 ,13992 ,7300 ,9450 ,16800 ,15108 ,9242 ,19800 ,19800 ,10150 ,4700 ,16800 ,12050 ,8350 ,3100 ,8350 ,12600 ,12600 ,14900 ,9450 ,4700 ,5608 ,10150 ,3100 ,3600 ,7850 ,10150 ,19800 ,16150 ,14200 ,9450 ,5400 ,12050 ,11400 ,15110 ,200 ,3100 ,4700 ,10360 ,19800 ,5400 ,200 ,16150 ,7300 ,13100 ,12600 ,
+POINTS_Y
+10950 ,10800 ,11650 ,11650 ,2300 ,10800 ,10800 ,8450 ,1100 ,7250 ,2300 ,5750 ,7102 ,7250 ,1600 ,10052 ,3300 ,5750 ,7250 ,7103 ,10052 ,800 ,10000 ,1600 ,5750 ,3300 ,10950 ,6950 ,3300 ,10800 ,7250 ,3300 ,11650 ,8450 ,11650 ,7103 ,11650 ,10950 ,2300 ,3300 ,8450 ,12200 ,2300 ,8450 ,11650 ,1600 ,3300 ,6950 ,10053 ,800 ,7250 ,8450 ,10053 ,11900 ,5750 ,12200 ,6950 ,7250 ,6950 ,10950 ,
+REGION_BOUND
+49 ,21 ,41 ,55 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ls
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+
+Ο αλγόριθμος δεν συγκλίνει: Εκτελούμε τυχαιοποίηση
+pn:0 obtuses:83 steiners:3
+pn:0 obtuses:83 steiners:4
+pn:0 obtuses:83 steiners:5
+pn:0 obtuses:83 steiners:6
+pn:0 obtuses:83 steiners:7
+pn:0 obtuses:83 steiners:8
+pn:0 obtuses:83 steiners:9
+pn:0 obtuses:83 steiners:10
+pn:0 obtuses:83 steiners:11
+pn:0 obtuses:83 steiners:12
+pn:0 obtuses:83 steiners:13
+pn:0 obtuses:83 steiners:14
+pn:0 obtuses:83 steiners:15
+pn:0 obtuses:83 steiners:16
+pn:0 obtuses:83 steiners:17
+pn:0 obtuses:83 steiners:18
+pn:0 obtuses:83 steiners:19
+pn:0 obtuses:83 steiners:20
+
+Η μέθοδος της τυχαιοποίησης δεν συγκλίνει. Σταματάει η διαδικασία
+iteration: 50 out of: 200
+Randomization pn: 0
+Μέσος ρυθμός σύγκλισης: 0
+Method: Local search
+	Inserted: 20 Steiner points
+Obtuse faces are now: 83/114
+Αρχικές αμβλείες: 80
+Τελικές αμβλείες: 83
+
+Αρχικά faces: 111
+Τελικές faces: 114
+
+Αρχική ενέργεια: 240
+Τελική ενέργεια: 249.8
+
+-3.75% αύξηση αμβλείων

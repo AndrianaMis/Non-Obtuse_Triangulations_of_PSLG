@@ -1,0 +1,60 @@
+Input file: .vscode/temp_2_sa.json
+Output file: .vscode/output_2_sa.json
+point-set_20_0c4009d9
+20
+
+POINTS_X
+3925 ,9825 ,10375 ,9975 ,9875 ,3525 ,3625 ,4025 ,4025 ,10175 ,3625 ,3725 ,3725 ,9875 ,9675 ,3675 ,4225 ,10275 ,10175 ,9975 ,
+POINTS_Y
+5350 ,8050 ,5650 ,5150 ,5850 ,8300 ,3650 ,5850 ,3850 ,3350 ,4850 ,4350 ,5650 ,4850 ,4850 ,8050 ,5650 ,3850 ,8300 ,6150 ,
+REGION_BOUND
+5 ,6 ,9 ,17 ,2 ,18 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: sa
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+Αρχική Ενέργεια: 78
+pn:0 obtuses:26 steiners:3
+
+Ο αλγόριθμος δεν συγκλίνει: Εκτελούμε τυχαιοποίηση
+pn:0.257604 obtuses:28 steiners:4
+pn:0 obtuses:28 steiners:5
+pn:0 obtuses:28 steiners:6
+pn:0 obtuses:28 steiners:7
+pn:0 obtuses:28 steiners:8
+pn:0 obtuses:28 steiners:9
+pn:0 obtuses:28 steiners:10
+pn:0 obtuses:28 steiners:11
+pn:0 obtuses:28 steiners:12
+pn:0 obtuses:28 steiners:13
+pn:0 obtuses:28 steiners:14
+pn:0 obtuses:28 steiners:15
+pn:0 obtuses:28 steiners:16
+pn:0 obtuses:28 steiners:17
+pn:0 obtuses:28 steiners:18
+pn:0 obtuses:28 steiners:19
+pn:0 obtuses:28 steiners:20
+pn:0 obtuses:28 steiners:21
+pn:0 obtuses:28 steiners:22
+pn:0 obtuses:28 steiners:23
+
+Η μέθοδος της τυχαιοποίησης δεν συγκλίνει. Σταματάει η διαδικασία
+Randomization pn: 0.257604
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 102.4
+Αρχικές αμβλείες: 26
+Τελικές αμβλείες: 28
+
+Αρχικά faces: 32
+Τελικές faces: 40
+
+Αρχική ενέργεια: 78
+Τελική ενέργεια: 87.2
+
+-7.69231% αύξηση αμβλείων

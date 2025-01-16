@@ -1,0 +1,57 @@
+Input file: .vscode/temp_1_ant.json
+Output file: .vscode/output_1_ant.json
+point-set_10_c04b0024
+10
+
+POINTS_X
+10 ,25 ,34 ,39 ,31 ,26 ,0 ,43 ,37 ,16 ,
+POINTS_Y
+3 ,0 ,0 ,25 ,20 ,9 ,26 ,26 ,30 ,10 ,
+REGION_BOUND
+6 ,0 ,1 ,2 ,7 ,8 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ant
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+pn:-0.329329 obtuses:7 steiners:3
+pn:0 obtuses:7 steiners:4
+pn:0 obtuses:7 steiners:5
+pn:-0.845488 obtuses:6 steiners:6
+pn:-1.18275 obtuses:5 steiners:7
+pn:0 obtuses:5 steiners:8
+pn:-1.89453 obtuses:4 steiners:9
+pn:-2.73045 obtuses:3 steiners:10
+pn:0 obtuses:3 steiners:11
+pn:0 obtuses:3 steiners:12
+pn:-5.06561 obtuses:2 steiners:13
+pn:0 obtuses:2 steiners:14
+pn:-10.0466 obtuses:1 steiners:15
+pn:0 obtuses:1 steiners:16
+pn:0 obtuses:1 steiners:17
+pn:0 obtuses:1 steiners:18
+Μέσος ρυθμός σύγκλισης: -1.16288
+Method: Ant Colony: 
+	Original CDT had: 9/12 obtuse faces
+	We inserted 19 steiner points:
+		Middle of largest edge: 0
+		Circumcenter: 0
+		Projection: 18
+		Polygon Cnetroid: 0
+Final obtuse faces: 0/41
+Αρχικές αμβλείες: 9
+Τελικές αμβλείες: 0
+
+Αρχικά faces: 12
+Τελικές faces: 41
+
+Αρχική ενέργεια: 27
+Τελική ενέργεια: 15.2
+
+100% μείωση αμβλείων

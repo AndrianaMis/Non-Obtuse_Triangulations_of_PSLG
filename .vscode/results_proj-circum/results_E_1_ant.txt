@@ -1,0 +1,124 @@
+Input file: .vscode/temp_1_ant.json
+Output file: .vscode/output_1_ant.json
+simple-polygon_10_297edd18
+10
+
+POINTS_X
+41 ,12 ,15 ,36 ,40 ,55 ,50 ,51 ,55 ,40 ,
+POINTS_Y
+46 ,17 ,5 ,6 ,20 ,20 ,30 ,42 ,45 ,66 ,
+REGION_BOUND
+0 ,1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ant
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Ε. Μη κυρτό boundary, ακανόνιστο, που δεν εντάσσεται στις κατηγορίες Α-Δ. 
+pn:0 obtuses:10 steiners:3
+pn:0 obtuses:10 steiners:4
+pn:-0.472165 obtuses:9 steiners:5
+pn:-0.646018 obtuses:8 steiners:6
+pn:-0.866239 obtuses:7 steiners:7
+pn:0 obtuses:7 steiners:8
+pn:0 obtuses:7 steiners:9
+pn:-1.46308 obtuses:6 steiners:10
+pn:0 obtuses:6 steiners:11
+pn:0 obtuses:6 steiners:12
+pn:0 obtuses:6 steiners:13
+pn:0 obtuses:6 steiners:14
+pn:0 obtuses:6 steiners:15
+pn:0 obtuses:6 steiners:16
+pn:0 obtuses:6 steiners:17
+pn:0 obtuses:6 steiners:18
+pn:0 obtuses:6 steiners:19
+pn:-3.55449 obtuses:5 steiners:20
+pn:0 obtuses:5 steiners:21
+pn:0 obtuses:5 steiners:22
+pn:0 obtuses:5 steiners:23
+pn:0 obtuses:5 steiners:24
+pn:0 obtuses:5 steiners:25
+pn:0 obtuses:5 steiners:26
+pn:0 obtuses:5 steiners:27
+pn:0 obtuses:5 steiners:28
+pn:0 obtuses:5 steiners:29
+pn:0 obtuses:5 steiners:30
+pn:0 obtuses:5 steiners:31
+pn:0 obtuses:5 steiners:32
+pn:0 obtuses:5 steiners:33
+pn:-7.47475 obtuses:4 steiners:34
+pn:0 obtuses:4 steiners:35
+pn:0 obtuses:4 steiners:36
+pn:0 obtuses:4 steiners:37
+pn:0 obtuses:4 steiners:38
+pn:0 obtuses:4 steiners:39
+pn:0 obtuses:4 steiners:40
+pn:0 obtuses:4 steiners:41
+pn:0 obtuses:4 steiners:42
+pn:-12.2259 obtuses:3 steiners:43
+pn:0 obtuses:3 steiners:44
+pn:0 obtuses:3 steiners:45
+pn:63.0739 obtuses:12 steiners:46
+pn:-4.04587 obtuses:11 steiners:47
+pn:-4.52707 obtuses:10 steiners:48
+pn:0 obtuses:10 steiners:49
+pn:0 obtuses:10 steiners:50
+pn:0 obtuses:10 steiners:51
+pn:0 obtuses:10 steiners:52
+pn:0 obtuses:10 steiners:53
+pn:0 obtuses:10 steiners:54
+pn:-5.74199 obtuses:9 steiners:55
+pn:0 obtuses:9 steiners:56
+pn:0 obtuses:9 steiners:57
+pn:-6.77235 obtuses:8 steiners:58
+pn:0 obtuses:8 steiners:59
+pn:0 obtuses:8 steiners:60
+pn:0 obtuses:8 steiners:61
+pn:-8.212 obtuses:7 steiners:62
+pn:0 obtuses:7 steiners:63
+pn:0 obtuses:7 steiners:64
+pn:0 obtuses:7 steiners:65
+pn:-10.0967 obtuses:6 steiners:66
+pn:0 obtuses:6 steiners:67
+pn:0 obtuses:6 steiners:68
+pn:0 obtuses:6 steiners:69
+pn:0 obtuses:6 steiners:70
+pn:0 obtuses:6 steiners:71
+pn:0 obtuses:6 steiners:72
+pn:0 obtuses:6 steiners:73
+pn:-13.4004 obtuses:5 steiners:74
+pn:0 obtuses:5 steiners:75
+pn:0 obtuses:5 steiners:76
+pn:0 obtuses:5 steiners:77
+pn:0 obtuses:5 steiners:78
+pn:-17.5165 obtuses:4 steiners:79
+pn:0 obtuses:4 steiners:80
+pn:0 obtuses:4 steiners:81
+pn:0 obtuses:4 steiners:82
+pn:0 obtuses:4 steiners:83
+pn:0 obtuses:4 steiners:84
+pn:0 obtuses:4 steiners:85
+pn:0 obtuses:4 steiners:86
+pn:0 obtuses:4 steiners:87
+pn:0 obtuses:4 steiners:88
+pn:0 obtuses:4 steiners:89
+pn:0 obtuses:4 steiners:90
+pn:0 obtuses:4 steiners:91
+pn:0 obtuses:4 steiners:92
+pn:0 obtuses:4 steiners:93
+pn:0 obtuses:4 steiners:94
+pn:0 obtuses:4 steiners:95
+pn:-27.4734 obtuses:3 steiners:96
+pn:0 obtuses:3 steiners:97
+pn:0 obtuses:3 steiners:98
+pn:0 obtuses:3 steiners:99
+pn:0 obtuses:3 steiners:100
+pn:0 obtuses:3 steiners:101
+pn:0 obtuses:3 steiners:102
+pn:-41.5598 obtuses:2 steiners:103
+pn:0 obtuses:2 steiners:104

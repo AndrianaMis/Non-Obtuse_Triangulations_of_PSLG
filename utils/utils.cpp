@@ -3,6 +3,146 @@
 string input_file;   //to pairnoyme apo main
 string output_file;
 
+
+
+
+
+string rational_to_string(const K::RT& coord) {
+    ostringstream oss;
+
+    // Convert the exact coordinate to a Quotient<CGAL::Gmpz> representation
+    auto exact_coord = coord.exact(); // Avoid reference here
+
+    // Convert the rational number (quotient) to a string
+    oss << exact_coord;
+
+    return oss.str();
+}
+
+
+
+
+string fix_integer_representation(const string& json_string, const string& key, int value) {
+    ostringstream ss;
+    ss << "\"" << key << "\": \"" << value << "\""; // Match the stringified integer
+    string old_value = ss.str();
+
+    ss.str(""); // Clear the stream
+    ss << "\"" << key << "\": " << value; // Correct integer format
+    string new_value = ss.str();
+
+    // Replace all occurrences in the JSON string
+    return regex_replace(json_string, regex(old_value), new_value);
+}
+
+string fix_edge(const string& json_string, int v1, int v2) {
+    ostringstream ss;
+    ss << "\\[\\s*\"" << v1 << "\"\\s*,\\s*\"" << v2 << "\"\\s*\\]";
+    string old_value = ss.str();
+    ss.str("");
+    ss << "[\n\t\t\t" << v1 << ", " << v2 << "\n\t\t]";
+    string new_value = ss.str();
+    return regex_replace(json_string, regex(old_value), new_value);
+}
+
+
+void extract_to_output2(const vector<Point>& steiner_points, Custom_CDT& cdt, const string& input_filename, const string& output_filename, int obtuse_count,map<string, double> parameters, string method) {
+    ptree root;
+    ptree steiner_x_array, steiner_y_array;
+    ptree edges_array;
+    ptree parameters_object;
+
+    // Διαβάζουμε το instance_uid από το αρχείο εισόδου
+    ptree input_root;
+    read_json(input_filename, input_root);
+    string instance_uid = input_root.get<string>("instance_uid", "default_instance_uid"); // Ανάκτηση instance_uid
+
+    root.put("content_type", "CG_SHOP_2025_Solution");
+    root.put("instance_uid", instance_uid); // Χρήση του instance_uid από το αρχείο εισόδου
+
+    // Map για αποθήκευση των κορυφών
+    map<string, int> vertex_map;
+    int vertex_counter = 0;
+
+    // Αντιστοιχία κορυφών (συντεταγμένων -> δείκτες)
+    auto get_vertex_index = [&](const K::Point_2& point) -> int {
+        string coord_str = rational_to_string(point.x()) + "," + rational_to_string(point.y());
+        if (vertex_map.find(coord_str) == vertex_map.end()) {
+            vertex_map[coord_str] = vertex_counter++;
+        }
+        return vertex_map[coord_str];
+    };
+
+    // Εξαγωγή συντεταγμένων Steiner
+    for (const auto& point : steiner_points) {
+        steiner_x_array.push_back(ptree::value_type("", rational_to_string(point.x())));
+        steiner_y_array.push_back(ptree::value_type("", rational_to_string(point.y())));
+    }
+
+    root.add_child("steiner_points_x", steiner_x_array);
+    root.add_child("steiner_points_y", steiner_y_array);
+
+    // Εξαγωγή ακμών με δείκτες κορυφών
+    for (CDT::Edge_iterator ei = cdt.edges_begin(); ei != cdt.edges_end(); ++ei) {
+        CDT::Vertex_handle v1 = ei->first->vertex(cdt.ccw(ei->second));
+        CDT::Vertex_handle v2 = ei->first->vertex(cdt.cw(ei->second));
+
+        int index1 = get_vertex_index(v1->point());
+        int index2 = get_vertex_index(v2->point());
+
+        ptree edge;
+        edge.push_back(ptree::value_type("", to_string(index1))); // Add first index
+        edge.push_back(ptree::value_type("", to_string(index2))); // Add second index
+
+        // Add edge to edges array
+        edges_array.push_back(ptree::value_type("", edge));
+    }
+
+
+    root.add_child("edges", edges_array);
+    root.put("obtuse_count", (float)obtuse_count);
+    root.put("method", method);
+
+    for (const auto& [key, value] : parameters) {
+        parameters_object.put(key, (int)(value));
+    }
+    root.add_child("parameters", parameters_object);
+
+
+    // Εξαγωγή JSON σε string
+    ostringstream oss;
+    write_json(oss, root, true);
+    string json_string = oss.str();
+
+    // Αφαίρεση escape χαρακτήρων
+    for (size_t pos = 0; (pos = json_string.find("\\/", pos)) != string::npos;) {
+        json_string.replace(pos, 2, "/");
+    }
+    json_string = fix_integer_representation(json_string, "obtuse_count", obtuse_count);
+    for(const auto& param: parameters){
+        json_string=fix_integer_representation(json_string, param.first, param.second);
+    }
+    for(const auto& edge: edges_array){
+        ptree values = edge.second; 
+        vector<int> values_vector;  //για αποθηκευση των values
+        for (auto& v : values) {
+            int index = stoi(v.second.get_value<string>());
+            values_vector.push_back(index);
+        }
+       json_string=fix_edge(json_string, values_vector[0] , values_vector[1]);
+      // cout<<values_vector[0]<<","<<values_vector[1]<<endl;
+        
+    }
+
+    // Εξαγωγή σε αρχείο
+    ofstream file(output_filename);
+    file << json_string;
+    file.close();
+}
+
+
+
+
 int READ_DATA2(DATA2& data){
 
 
@@ -507,7 +647,7 @@ Point point_to_polyg(Custom_CDT& cdt, CDT::Face_handle face, DATA data, int i) {
            continue;
         } 
         if (cdt.is_infinite(neighbor)) {
-            cout << "The triangle is infinite " << endl;
+            //cout << "The triangle is infinite " << endl;
             continue;
         }
 

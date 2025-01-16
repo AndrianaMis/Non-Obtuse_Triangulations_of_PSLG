@@ -98,12 +98,17 @@ def remove_unecessary():
         print(f'removing {inp}!!!')
         os.remove(inp)
 
+def run(input_file, output_file):
+    command = f"./example -i {input_file} -o {output_file}"
+    print(f"Running: {command}")
+  
+    process = os.system(command)
+    return f"Finished: {command}, Exit Code: {process}"
 
 
 # Run all combinations in parallel
 def run_all1():
     #with ThreadPoolExecutor(max_workers=8) as executor:
-
     for cat, insts in categories.items():  # Loop through each category and its instances
         i=0
         for instance in insts:  # Loop through each instance in the category
@@ -113,33 +118,40 @@ def run_all1():
                 temps=f".vscode/temp_{i}_{algorithm}.json"
                 modify_json(instance, algorithm, temps)
                 output_file = f".vscode/output_{i}_{algorithm}.json"
-                result_file = f".vscode/results_proj/results_{cat}_{i}_{algorithm}.txt"
-                if i==1: inps.append(temps)
+                result_file = f".vscode/results_randomization/results_{cat}_{i}_{algorithm}.txt"
+                if cat=="A": inps.append(temps)
                     # Submit the execution task to the thread pool
                 run_example( temps, algorithm, output_file, result_file)
                # time.sleep(4)
 
 
-def run_all():
-    i=0
-    for instance in instances:
-        
-        i=i+1
-        for algorithm in algorithms:
-            # Generate unique file names for the temporary input, output, and results
-            temps=f".vscode/temp_{i}_{algorithm}.json"
-            modify_json(instance, algorithm, temps)
-            output_file = f".vscode/output_{i}_{algorithm}.json"
-            result_file = f".vscode/results/results_{i}_{algorithm}.txt"
-            inps.append(temps)
-                # Submit the execution task to the thread pool
-            run_example( temps, algorithm, output_file, result_file)
-            #time.sleep(4)
+def run_all_cat():
+
+    directory_path = ".vscode/challenge_instances_cgshop25"
+    prefix = "simple-polygon-exterior"
+
+    matching_files = []
+
+    for file_name in os.listdir(directory_path):
+        if file_name.startswith(prefix) and file_name.endswith(".json"):
+            matching_files.append(file_name)
+
+    # Εκτύπωση των αρχείων που ταιριάζουν
+    print("Αρχεία που ξεκινούν με το", prefix, ":")
+    for file in matching_files:
+        print(file)
+        input_file = os.path.join(directory_path, file)
+        temps=f".vscode/temp_{file}_.json"
+        modify_json(input_file, "ant", temps)
+        output_file=f"output_files/outputs_B/output_{file}"
+        inps.append(temps)
+        run(temps, output_file)
+
 
 
 
       
 if __name__ == "__main__":
     #modify_inputs()
-   # run_all1()
+    run_all_cat()
     remove_unecessary()

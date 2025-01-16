@@ -1,0 +1,68 @@
+Input file: .vscode/temp_1_ant.json
+Output file: .vscode/output_1_ant.json
+simple-polygon_10_297edd18
+10
+
+POINTS_X
+41 ,12 ,15 ,36 ,40 ,55 ,50 ,51 ,55 ,40 ,
+POINTS_Y
+46 ,17 ,5 ,6 ,20 ,20 ,30 ,42 ,45 ,66 ,
+REGION_BOUND
+0 ,1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ant
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Ε. Μη κυρτό boundary, ακανόνιστο, που δεν εντάσσεται στις κατηγορίες Α-Δ. 
+pn:-0.290489 obtuses:8 steiners:3
+pn:0 obtuses:8 steiners:4
+pn:0.527835 obtuses:9 steiners:5
+pn:0 obtuses:9 steiners:6
+pn:-0.764077 obtuses:8 steiners:7
+pn:0 obtuses:8 steiners:8
+pn:0 obtuses:8 steiners:9
+pn:-1.26738 obtuses:7 steiners:10
+pn:0 obtuses:7 steiners:11
+pn:-1.77162 obtuses:6 steiners:12
+pn:0 obtuses:6 steiners:13
+pn:-2.46022 obtuses:5 steiners:14
+pn:0 obtuses:5 steiners:15
+pn:-3.45753 obtuses:4 steiners:16
+pn:0 obtuses:4 steiners:17
+pn:0 obtuses:4 steiners:18
+pn:0 obtuses:4 steiners:19
+pn:0 obtuses:4 steiners:20
+pn:-5.89631 obtuses:3 steiners:21
+pn:0 obtuses:3 steiners:22
+pn:0 obtuses:3 steiners:23
+pn:0 obtuses:3 steiners:24
+pn:0 obtuses:3 steiners:25
+pn:0 obtuses:3 steiners:26
+pn:0 obtuses:3 steiners:27
+pn:0 obtuses:3 steiners:28
+pn:0 obtuses:3 steiners:29
+pn:0 obtuses:3 steiners:30
+pn:0 obtuses:3 steiners:31
+pn:0 obtuses:3 steiners:32
+pn:0 obtuses:3 steiners:33
+pn:0 obtuses:3 steiners:34
+pn:0 obtuses:3 steiners:35
+pn:0 obtuses:3 steiners:36
+pn:0 obtuses:3 steiners:37
+pn:0 obtuses:3 steiners:38
+pn:0 obtuses:3 steiners:39
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:3 steiners:40
+pn:0 obtuses:3 steiners:41
+pn:0 obtuses:3 steiners:42
+pn:0 obtuses:3 steiners:43
+pn:0 obtuses:3 steiners:44
+pn:0 obtuses:3 steiners:45
+pn:0 obtuses:3 steiners:46
+pn:0 obtuses:3 steiners:47

@@ -1,0 +1,39 @@
+Input file: .vscode/temp_1_ls.json
+Output file: .vscode/output_1_ls.json
+simple-polygon-exterior-20_10_46c44a43
+10
+
+POINTS_X
+677 ,638 ,1921 ,2315 ,2118 ,2346 ,1417 ,1362 ,1276 ,858 ,
+POINTS_Y
+1827 ,314 ,2063 ,1985 ,2607 ,2977 ,2835 ,2953 ,2867 ,3032 ,
+REGION_BOUND
+1 ,3 ,5 ,9 ,0 ,
+NUM CONSTRAINTS
+6
+
+ADDITIONAL CONSTRAINTS
+[2,3] ,[3,4] ,[4,5] ,[5,6] ,[6,7] ,[7,8] ,
+METHOD: ls
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Β. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ (ΑΝΟΙΧΤΟ)
+pn:-0.44966 obtuses:5 steiners:3
+Stopping cause triangulation was not improved
+iteration: 17 out of: 200
+Μέσος ρυθμός σύγκλισης: -0.149887
+Method: Local search
+	Inserted: 3 Steiner points
+Obtuse faces are now: 5/16
+Αρχικές αμβλείες: 8
+Τελικές αμβλείες: 5
+
+Αρχικά faces: 13
+Τελικές faces: 16
+
+Αρχική ενέργεια: 24
+Τελική ενέργεια: 17.4
+
+37.5% μείωση αμβλείων

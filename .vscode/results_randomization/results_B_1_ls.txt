@@ -1,0 +1,48 @@
+Input file: .vscode/temp_1_ls.json
+Output file: .vscode/output_1_ls.json
+simple-polygon-exterior-20_10_46c44a43
+10
+
+POINTS_X
+677 ,638 ,1921 ,2315 ,2118 ,2346 ,1417 ,1362 ,1276 ,858 ,
+POINTS_Y
+1827 ,314 ,2063 ,1985 ,2607 ,2977 ,2835 ,2953 ,2867 ,3032 ,
+REGION_BOUND
+1 ,3 ,5 ,9 ,0 ,
+NUM CONSTRAINTS
+6
+
+ADDITIONAL CONSTRAINTS
+[2,3] ,[3,4] ,[4,5] ,[5,6] ,[6,7] ,[7,8] ,
+METHOD: ls
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Β. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ (ΑΝΟΙΧΤΟ)
+pn:-0.44966 obtuses:5 steiners:3
+
+Ο αλγόριθμος δεν συγκλίνει: Εκτελούμε τυχαιοποίηση
+pn:1.1696 obtuses:7 steiners:4
+pn:0 obtuses:7 steiners:5
+pn:0 obtuses:7 steiners:6
+pn:0 obtuses:7 steiners:7
+pn:0 obtuses:7 steiners:8
+pn:0 obtuses:7 steiners:9
+pn:0 obtuses:7 steiners:10
+iteration: 51 out of: 200
+Randomization pn: 1.1696
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 29
+Method: Local search
+	Inserted: 10 Steiner points
+Obtuse faces are now: 7/18
+Αρχικές αμβλείες: 8
+Τελικές αμβλείες: 7
+
+Αρχικά faces: 13
+Τελικές faces: 18
+
+Αρχική ενέργεια: 24
+Τελική ενέργεια: 24.2
+
+12.5% μείωση αμβλείων

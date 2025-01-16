@@ -72,7 +72,7 @@ bool is_axis_aligned(const vector<int>& boundary_vert, const vector<int>& points
 }
 
 
-void analyze_boundary(DATA2& data2){
+int analyze_boundary(DATA2& data2){
     vector<Point> boundary_polyg;
     for(int j=0; j<data2.region_boundary.size(); j++){
         boundary_polyg.push_back(Point(data2.points_x[data2.region_boundary[j]],data2.points_y[data2.region_boundary[j]]) );
@@ -80,15 +80,31 @@ void analyze_boundary(DATA2& data2){
         
     }
     if(CGAL::is_convex_2(boundary_polyg.begin(), boundary_polyg.end())){
-        if(data2.additional_constraints.size()==0) cout<<"Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ"<<endl;
-        else if(closed(data2.additional_constraints)) cout<<"Γ. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ (ΚΛΕΙΣΤΟ)"<<endl;
-        else cout<<"Β. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ (ΑΝΟΙΧΤΟ)"<<endl;
+        if(data2.additional_constraints.size()==0) {
+            cout<<"Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ"<<endl;
+            return 1;
+        }
+        else if(closed(data2.additional_constraints)) {
+            cout<<"Γ. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ (ΚΛΕΙΣΤΟ)"<<endl;
+            return 3;
+        }
+        else{
+
+         cout<<"Β. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ (ΑΝΟΙΧΤΟ)"<<endl;
+         return 2;
+        }
 
     }
     else if(is_axis_aligned(data2.region_boundary, data2.points_x, data2.points_y)){
-        if(data2.num_constraints==0) cout<<"Δ. Μη κυρτό boundary με ευθύγραμμα τμήματα παράλληλα στους άξονες χωρίςm περιορισμούς."<<endl;
+        if(data2.num_constraints==0) {
+            cout<<"Δ. Μη κυρτό boundary με ευθύγραμμα τμήματα παράλληλα στους άξονες χωρίςm περιορισμούς."<<endl;
+            return 4;
+        }
     }
-    else cout<<"Ε. Μη κυρτό boundary, ακανόνιστο, που δεν εντάσσεται στις κατηγορίες Α-Δ. "<<endl;
+    else {
+        cout<<"Ε. Μη κυρτό boundary, ακανόνιστο, που δεν εντάσσεται στις κατηγορίες Α-Δ. "<<endl;
+        return 5;
+    }
 }
 
 
@@ -122,3 +138,46 @@ void checking(Custom_CDT& cdt, DATA2& data2){
         
    }
 }
+
+
+
+RT edge_length(Point &p1, Point& p2){
+    return  CGAL::sqrt(CGAL::to_double(CGAL::squared_distance(p1, p2)));
+}
+
+bool is_point_inside_triangle(const Point& p, const Point& v1, const Point& v2, const Point& v3) {
+    vector<Point> points={v1,v2,v3};
+    CGAL::Bounded_side side =  CGAL::bounded_side_2(points.begin(), points.end(), p, K());
+    return side == CGAL::ON_BOUNDED_SIDE;
+}
+
+
+
+Point compute_incenter(CDT::Face_handle face) {
+    CDT::Vertex_handle v1=face->vertex(1);
+    CDT::Vertex_handle v0=face->vertex(0);
+    CDT::Vertex_handle v2=face->vertex(2);
+    Point p1=v1->point();
+    Point p0=v0->point();
+    Point p2=v2->point();
+    RT a=edge_length(p1, p2);
+    RT b=edge_length(p0, p2);
+    RT c=edge_length(p0, p1);
+    if((a+b+c)==0) return Point(-1.0, -1.0);
+    RT x=(a*p0.x() + b*p1.x() + c*p2.x() ) / (a+b+c);
+    RT y=(a*p0.y() + b*p1.y() + c*p2.y() ) / (a+b+c);
+    Point incenter(x,y);
+   
+  //  cout<<"incenter"<<incenter<<endl;
+    return incenter;
+}
+
+Point gaussian_p(const Point& incenter, double sigma){
+    random_device rd;
+   mt19937 gen(rd());
+   normal_distribution<> d_x(CGAL::to_double(incenter.x()), sigma);
+   normal_distribution<> d_y(CGAL::to_double(incenter.y()), sigma);
+    return Point(d_x(gen), d_y(gen));
+}
+
+

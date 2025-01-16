@@ -1,0 +1,62 @@
+Input file: .vscode/temp_2_ant.json
+Output file: .vscode/output_2_ant.json
+simple-polygon-exterior_10_74050e4d
+10
+
+POINTS_X
+8250 ,7850 ,8050 ,7850 ,600 ,400 ,200 ,0 ,600 ,600 ,
+POINTS_Y
+0 ,4200 ,6800 ,6800 ,5950 ,5950 ,4000 ,2500 ,2300 ,700 ,
+REGION_BOUND
+7 ,9 ,0 ,2 ,3 ,5 ,
+NUM CONSTRAINTS
+8
+
+ADDITIONAL CONSTRAINTS
+[0,1] ,[1,2] ,[3,4] ,[4,5] ,[5,6] ,[6,7] ,[7,8] ,[8,9] ,
+METHOD: ant
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Β. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ (ΑΝΟΙΧΤΟ)
+pn:0 obtuses:5 steiners:3
+pn:-0.77566 obtuses:4 steiners:4
+pn:0 obtuses:4 steiners:5
+pn:-1.57788 obtuses:3 steiners:6
+pn:0 obtuses:3 steiners:7
+pn:0 obtuses:3 steiners:8
+pn:0 obtuses:3 steiners:9
+pn:0 obtuses:3 steiners:10
+pn:-4.25416 obtuses:2 steiners:11
+pn:0 obtuses:2 steiners:12
+pn:0 obtuses:2 steiners:13
+pn:0 obtuses:2 steiners:14
+pn:0 obtuses:2 steiners:15
+pn:0 obtuses:2 steiners:16
+pn:0 obtuses:2 steiners:17
+pn:0 obtuses:2 steiners:18
+pn:0 obtuses:2 steiners:19
+pn:-13.5134 obtuses:1 steiners:20
+pn:0 obtuses:1 steiners:21
+pn:0 obtuses:1 steiners:22
+Randomization pn: 0
+Μέσος ρυθμός σύγκλισης: -0.874831
+Method: Ant Colony: 
+	Original CDT had: 7/12 obtuse faces
+	We inserted 23 steiner points:
+		Middle of largest edge: 0
+		Circumcenter: 0
+		Projection: 22
+		Polygon Cnetroid: 0
+Final obtuse faces: 0/51
+Αρχικές αμβλείες: 7
+Τελικές αμβλείες: 0
+
+Αρχικά faces: 12
+Τελικές faces: 51
+
+Αρχική ενέργεια: 21
+Τελική ενέργεια: 18.4
+
+100% μείωση αμβλείων

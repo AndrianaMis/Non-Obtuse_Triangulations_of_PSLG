@@ -1,0 +1,116 @@
+Input file: .vscode/temp_6_ant.json
+Output file: .vscode/output_6_ant.json
+point-set_100_0245ce31
+100
+
+POINTS_X
+8050 ,7650 ,400 ,0 ,600 ,7850 ,200 ,400 ,7850 ,7650 ,600 ,8050 ,8050 ,8250 ,8250 ,7850 ,7850 ,8250 ,400 ,600 ,8250 ,8250 ,8250 ,200 ,600 ,8050 ,7850 ,600 ,7850 ,7850 ,8250 ,8250 ,0 ,200 ,7850 ,7650 ,8050 ,8250 ,600 ,7650 ,0 ,7850 ,600 ,400 ,600 ,0 ,8250 ,200 ,8050 ,7850 ,8050 ,0 ,7650 ,7850 ,8250 ,0 ,400 ,400 ,200 ,7850 ,7850 ,200 ,600 ,200 ,7650 ,200 ,7650 ,8050 ,7850 ,7650 ,200 ,400 ,200 ,200 ,7850 ,0 ,200 ,8250 ,200 ,600 ,200 ,600 ,8250 ,600 ,8250 ,400 ,8250 ,600 ,600 ,600 ,200 ,600 ,8250 ,8050 ,200 ,200 ,200 ,0 ,8250 ,7850 ,
+POINTS_Y
+4200 ,1700 ,6800 ,4200 ,2500 ,6000 ,950 ,900 ,3100 ,3300 ,200 ,3300 ,900 ,4000 ,900 ,2500 ,6600 ,1500 ,5950 ,5950 ,2500 ,1700 ,200 ,6000 ,4200 ,5950 ,3300 ,0 ,950 ,4000 ,5950 ,5100 ,5100 ,2500 ,1700 ,6000 ,5100 ,0 ,2300 ,950 ,2500 ,6800 ,4000 ,2500 ,6800 ,200 ,3300 ,3100 ,2500 ,5100 ,6800 ,1700 ,6800 ,200 ,4900 ,950 ,1700 ,5100 ,4000 ,0 ,4900 ,2300 ,1700 ,4200 ,4200 ,0 ,5100 ,200 ,4200 ,2500 ,5100 ,4200 ,4900 ,750 ,5800 ,6000 ,200 ,6600 ,1500 ,3300 ,5800 ,4900 ,4200 ,1500 ,5750 ,3300 ,2300 ,700 ,6600 ,900 ,6800 ,3100 ,3100 ,1700 ,3300 ,6600 ,1700 ,3300 ,700 ,750 ,
+REGION_BOUND
+45 ,65 ,37 ,77 ,50 ,90 ,75 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ant
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+pn:0 obtuses:31 steiners:3
+pn:0 obtuses:31 steiners:4
+pn:0 obtuses:31 steiners:5
+pn:0 obtuses:31 steiners:6
+pn:0 obtuses:31 steiners:7
+pn:0 obtuses:31 steiners:8
+pn:0 obtuses:31 steiners:9
+pn:0 obtuses:31 steiners:10
+pn:0 obtuses:31 steiners:11
+pn:0 obtuses:31 steiners:12
+pn:0 obtuses:31 steiners:13
+pn:0 obtuses:31 steiners:14
+pn:0 obtuses:31 steiners:15
+pn:0 obtuses:31 steiners:16
+pn:0 obtuses:31 steiners:17
+pn:0 obtuses:31 steiners:18
+pn:0 obtuses:31 steiners:19
+pn:0 obtuses:31 steiners:20
+pn:0 obtuses:31 steiners:21
+pn:0 obtuses:31 steiners:22
+pn:0.714228 obtuses:32 steiners:23
+pn:0 obtuses:32 steiners:24
+pn:0 obtuses:32 steiners:25
+pn:0 obtuses:32 steiners:26
+pn:0 obtuses:32 steiners:27
+pn:0 obtuses:32 steiners:28
+pn:0 obtuses:32 steiners:29
+pn:0 obtuses:32 steiners:30
+pn:0 obtuses:32 steiners:31
+pn:0 obtuses:32 steiners:32
+pn:0 obtuses:32 steiners:33
+pn:0 obtuses:32 steiners:34
+pn:1.06155 obtuses:33 steiners:35
+pn:0 obtuses:33 steiners:36
+pn:0 obtuses:33 steiners:37
+pn:0 obtuses:33 steiners:38
+pn:0 obtuses:33 steiners:39
+pn:0 obtuses:33 steiners:40
+pn:1.20898 obtuses:34 steiners:41
+pn:0 obtuses:34 steiners:42
+pn:0 obtuses:34 steiners:43
+pn:0 obtuses:34 steiners:44
+pn:1.28989 obtuses:35 steiners:45
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:35 steiners:46
+pn:0 obtuses:35 steiners:47
+pn:0 obtuses:35 steiners:48
+pn:0 obtuses:35 steiners:49
+pn:0 obtuses:35 steiners:50
+pn:0 obtuses:35 steiners:51
+
+Ο αλγόριθμος δεν συγκλίνει: Εκτελούμε τυχαιοποίηση
+pn:0 obtuses:35 steiners:52
+pn:0 obtuses:35 steiners:53
+pn:0 obtuses:35 steiners:54
+pn:0 obtuses:35 steiners:55
+pn:0 obtuses:35 steiners:56
+pn:0 obtuses:35 steiners:57
+pn:0 obtuses:35 steiners:58
+pn:0 obtuses:35 steiners:59
+pn:0 obtuses:35 steiners:60
+pn:0 obtuses:35 steiners:61
+pn:0 obtuses:35 steiners:62
+pn:0 obtuses:35 steiners:63
+pn:0 obtuses:35 steiners:64
+pn:0 obtuses:35 steiners:65
+pn:0 obtuses:35 steiners:66
+pn:0 obtuses:35 steiners:67
+pn:0 obtuses:35 steiners:68
+pn:0 obtuses:35 steiners:69
+pn:0 obtuses:35 steiners:70
+pn:0 obtuses:35 steiners:71
+
+Η μέθοδος της τυχαιοποίησης δεν συγκλίνει. Σταματάει η διαδικασία
+Randomization pn: 0
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 161.8
+Method: Ant Colony: 
+	Original CDT had: 32/164 obtuse faces
+	We inserted 71 steiner points:
+		Middle of largest edge: 9
+		Circumcenter: 0
+		Projection: 42
+		Polygon Cnetroid: 0
+Final obtuse faces: 35/259
+Αρχικές αμβλείες: 32
+Τελικές αμβλείες: 35
+
+Αρχικά faces: 164
+Τελικές faces: 259
+
+Αρχική ενέργεια: 96
+Τελική ενέργεια: 146.6
+
+-9.375% αύξηση αμβλείων

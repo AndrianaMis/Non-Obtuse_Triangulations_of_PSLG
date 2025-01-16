@@ -1,0 +1,254 @@
+Input file: .vscode/temp_8_ant.json
+Output file: .vscode/output_8_ant.json
+point-set_250_3c338713
+250
+
+POINTS_X
+4325 ,5204 ,6675 ,3975 ,2575 ,7975 ,7075 ,8775 ,7875 ,5425 ,7475 ,6000 ,7075 ,4450 ,4975 ,8825 ,6125 ,5450 ,7150 ,8825 ,4175 ,8175 ,2651 ,8825 ,4175 ,7575 ,7425 ,5460 ,4775 ,4125 ,4175 ,5375 ,5375 ,7425 ,7425 ,4925 ,8225 ,7410 ,4675 ,4425 ,2925 ,8225 ,4425 ,6375 ,8225 ,8175 ,2148 ,8325 ,3325 ,7075 ,6775 ,2556 ,8075 ,7825 ,4525 ,4525 ,3975 ,8425 ,7825 ,4925 ,2451 ,4500 ,7475 ,5075 ,6425 ,8525 ,4775 ,3925 ,4775 ,7725 ,2375 ,5075 ,3225 ,4325 ,2975 ,2656 ,4175 ,7325 ,7725 ,6450 ,2925 ,6975 ,3975 ,6125 ,7575 ,4375 ,3375 ,7750 ,5275 ,7925 ,7625 ,4325 ,7825 ,5908 ,2175 ,8625 ,3325 ,4325 ,4275 ,8820 ,7275 ,4275 ,7600 ,7975 ,4275 ,3725 ,7711 ,7475 ,6525 ,2925 ,4125 ,5175 ,4925 ,7875 ,4575 ,4275 ,4560 ,8075 ,8575 ,4500 ,7575 ,7975 ,8375 ,4175 ,7875 ,4275 ,6875 ,8125 ,7725 ,8575 ,4175 ,3875 ,7260 ,5275 ,8475 ,3275 ,5075 ,5160 ,2925 ,7775 ,7259 ,7725 ,8375 ,5075 ,8775 ,3900 ,7975 ,4710 ,2355 ,6675 ,6200 ,8675 ,3475 ,5175 ,4975 ,5610 ,5275 ,5310 ,2352 ,5025 ,7925 ,7425 ,4525 ,6050 ,6525 ,8775 ,5175 ,4775 ,3575 ,7575 ,5450 ,5450 ,6675 ,2575 ,8775 ,4425 ,8575 ,7075 ,8075 ,2375 ,5010 ,8075 ,6375 ,4600 ,8625 ,3825 ,8703 ,8775 ,7409 ,7425 ,4775 ,6875 ,7825 ,8725 ,4600 ,5250 ,2175 ,3975 ,4275 ,7975 ,6025 ,2675 ,7710 ,5175 ,7625 ,7825 ,6975 ,2925 ,2156 ,3875 ,5450 ,4775 ,7560 ,5675 ,6025 ,5075 ,8825 ,2275 ,8775 ,6975 ,5175 ,7525 ,8375 ,7425 ,3625 ,2456 ,4875 ,4775 ,4275 ,3875 ,8325 ,4175 ,8225 ,7150 ,5350 ,2256 ,5325 ,6575 ,4860 ,4425 ,4550 ,7875 ,4675 ,5025 ,7750 ,7825 ,6775 ,8275 ,5450 ,5275 ,
+POINTS_Y
+2150 ,3772 ,1725 ,3375 ,3675 ,2475 ,1975 ,3125 ,2350 ,1825 ,1975 ,1975 ,3675 ,1750 ,2025 ,1625 ,3025 ,2825 ,3750 ,2225 ,2925 ,3625 ,2787 ,2425 ,3400 ,2075 ,3125 ,1565 ,1875 ,3300 ,2425 ,3525 ,3250 ,3275 ,3425 ,1925 ,3425 ,1575 ,3400 ,3200 ,2425 ,3775 ,2050 ,3750 ,2500 ,1575 ,2786 ,3625 ,2450 ,2175 ,2075 ,1639 ,3775 ,1675 ,2050 ,2150 ,2075 ,3625 ,3125 ,3800 ,2785 ,3300 ,3525 ,2775 ,2075 ,3225 ,2125 ,2450 ,1725 ,3375 ,3675 ,1925 ,3750 ,3575 ,1725 ,1640 ,1950 ,3225 ,1825 ,3375 ,3475 ,3525 ,3275 ,2875 ,3075 ,1675 ,1600 ,2800 ,1825 ,2875 ,1775 ,3725 ,2175 ,3574 ,2525 ,2600 ,3750 ,3200 ,2225 ,1928 ,2275 ,3125 ,3175 ,3075 ,1625 ,2450 ,1575 ,2175 ,1725 ,1875 ,2050 ,2475 ,3675 ,3675 ,3025 ,3025 ,1565 ,2875 ,2450 ,1675 ,3425 ,2625 ,1575 ,2150 ,1575 ,2050 ,1575 ,2975 ,3525 ,3325 ,3200 ,3275 ,1575 ,3675 ,3525 ,1600 ,3275 ,1565 ,3198 ,2350 ,1576 ,1975 ,3775 ,2575 ,2825 ,1625 ,2975 ,1565 ,1640 ,1925 ,1975 ,3800 ,1600 ,2675 ,3325 ,1565 ,3525 ,1565 ,2786 ,3450 ,3775 ,2875 ,3200 ,3375 ,1575 ,3275 ,3475 ,3225 ,1600 ,2875 ,3025 ,2675 ,1575 ,2525 ,3700 ,3675 ,3700 ,1575 ,1575 ,2525 ,1565 ,3075 ,1575 ,2325 ,3225 ,3475 ,2197 ,3025 ,1576 ,2325 ,3375 ,3325 ,2925 ,2375 ,2225 ,2400 ,3675 ,1975 ,3300 ,1575 ,3175 ,3675 ,1575 ,2325 ,3525 ,3375 ,3725 ,3725 ,1639 ,2075 ,2375 ,3675 ,1575 ,1825 ,2875 ,3800 ,1825 ,2525 ,2925 ,2075 ,2875 ,2375 ,2600 ,3025 ,3750 ,1639 ,2675 ,1975 ,1725 ,1900 ,3525 ,2625 ,3325 ,3475 ,2400 ,1640 ,3775 ,3525 ,1565 ,2150 ,1750 ,2775 ,1950 ,1825 ,2650 ,3525 ,3425 ,1575 ,2525 ,3250 ,
+REGION_BOUND
+46 ,208 ,135 ,116 ,155 ,122 ,15 ,23 ,174 ,151 ,59 ,72 ,196 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ant
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+pn:0 obtuses:257 steiners:3
+pn:0 obtuses:257 steiners:4
+pn:0 obtuses:257 steiners:5
+pn:0 obtuses:257 steiners:6
+pn:0.0251929 obtuses:258 steiners:7
+pn:0 obtuses:258 steiners:8
+pn:0.0655616 obtuses:260 steiners:9
+pn:0 obtuses:260 steiners:10
+pn:0 obtuses:260 steiners:11
+pn:0 obtuses:260 steiners:12
+pn:0 obtuses:260 steiners:13
+pn:0 obtuses:260 steiners:14
+pn:0 obtuses:260 steiners:15
+pn:0 obtuses:260 steiners:16
+pn:0 obtuses:260 steiners:17
+pn:0 obtuses:260 steiners:18
+pn:0 obtuses:260 steiners:19
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:260 steiners:20
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0.157058 obtuses:262 steiners:21
+pn:0 obtuses:262 steiners:22
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:262 steiners:23
+pn:0.178681 obtuses:264 steiners:24
+pn:-0.0929663 obtuses:263 steiners:25
+pn:0.193158 obtuses:265 steiners:26
+pn:0 obtuses:265 steiners:27
+pn:0 obtuses:265 steiners:28
+pn:0 obtuses:265 steiners:29
+pn:0.221784 obtuses:267 steiners:30
+pn:0 obtuses:267 steiners:31
+pn:0 obtuses:267 steiners:32
+pn:0 obtuses:267 steiners:33
+pn:0 obtuses:267 steiners:34
+pn:0.257446 obtuses:269 steiners:35
+pn:0 obtuses:269 steiners:36
+pn:0 obtuses:269 steiners:37
+pn:0 obtuses:269 steiners:38
+pn:0 obtuses:269 steiners:39
+pn:0 obtuses:269 steiners:40
+pn:0 obtuses:269 steiners:41
+pn:-0.154555 obtuses:268 steiners:42
+pn:0.315972 obtuses:270 steiners:43
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:270 steiners:44
+pn:0.328401 obtuses:272 steiners:45
+pn:0.166966 obtuses:273 steiners:46
+pn:0.170012 obtuses:274 steiners:47
+pn:2.20174 obtuses:287 steiners:48
+pn:0 obtuses:287 steiners:49
+pn:0 obtuses:287 steiners:50
+pn:0 obtuses:287 steiners:51
+pn:0 obtuses:287 steiners:52
+pn:0 obtuses:287 steiners:53
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:287 steiners:54
+pn:0 obtuses:287 steiners:55
+pn:0 obtuses:287 steiners:56
+pn:0 obtuses:287 steiners:57
+pn:-0.200693 obtuses:286 steiners:58
+pn:0 obtuses:286 steiners:59
+pn:0 obtuses:286 steiners:60
+pn:0.421595 obtuses:288 steiners:61
+pn:0 obtuses:288 steiners:62
+pn:0 obtuses:288 steiners:63
+pn:0.439439 obtuses:290 steiners:64
+pn:0 obtuses:290 steiners:65
+pn:0 obtuses:290 steiners:66
+pn:0 obtuses:290 steiners:67
+pn:-0.233157 obtuses:289 steiners:68
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:289 steiners:69
+pn:0 obtuses:289 steiners:70
+pn:0 obtuses:289 steiners:71
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0.493097 obtuses:291 steiners:72
+pn:0 obtuses:291 steiners:73
+pn:0 obtuses:291 steiners:74
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:-0.256451 obtuses:290 steiners:75
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:290 steiners:76
+pn:-0.264245 obtuses:289 steiners:77
+pn:0 obtuses:289 steiners:78
+pn:0 obtuses:289 steiners:79
+pn:0 obtuses:289 steiners:80
+pn:0 obtuses:289 steiners:81
+pn:0.562064 obtuses:291 steiners:82
+pn:0 obtuses:291 steiners:83
+pn:0 obtuses:291 steiners:84
+pn:0 obtuses:291 steiners:85
+pn:0 obtuses:291 steiners:86
+pn:0 obtuses:291 steiners:87
+pn:0 obtuses:291 steiners:88
+pn:0 obtuses:291 steiners:89
+pn:0 obtuses:291 steiners:90
+pn:0 obtuses:291 steiners:91
+pn:0 obtuses:291 steiners:92
+pn:0 obtuses:291 steiners:93
+pn:0 obtuses:291 steiners:94
+pn:0 obtuses:291 steiners:95
+pn:0.327613 obtuses:292 steiners:96
+pn:0 obtuses:292 steiners:97
+pn:0 obtuses:292 steiners:98
+pn:0.672352 obtuses:294 steiners:99
+pn:0 obtuses:294 steiners:100
+pn:0 obtuses:294 steiners:101
+pn:0 obtuses:294 steiners:102
+pn:-0.349231 obtuses:293 steiners:103
+pn:0.352638 obtuses:294 steiners:104
+pn:0.354836 obtuses:295 steiners:105
+pn:0 obtuses:295 steiners:106
+pn:0 obtuses:295 steiners:107
+pn:0 obtuses:295 steiners:108
+pn:0 obtuses:295 steiners:109
+pn:0 obtuses:295 steiners:110
+pn:0 obtuses:295 steiners:111
+pn:0 obtuses:295 steiners:112
+pn:0 obtuses:295 steiners:113
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:295 steiners:114
+pn:0.387477 obtuses:296 steiners:115
+pn:0 obtuses:296 steiners:116
+pn:0.392915 obtuses:297 steiners:117
+pn:0 obtuses:297 steiners:118
+pn:0 obtuses:297 steiners:119
+pn:0 obtuses:297 steiners:120
+pn:0 obtuses:297 steiners:121
+pn:0 obtuses:297 steiners:122
+pn:0 obtuses:297 steiners:123
+pn:0.415124 obtuses:298 steiners:124
+pn:0 obtuses:298 steiners:125
+pn:0 obtuses:298 steiners:126
+pn:0 obtuses:298 steiners:127
+pn:0 obtuses:298 steiners:128
+pn:0 obtuses:298 steiners:129
+pn:1.29717 obtuses:301 steiners:130
+pn:0 obtuses:301 steiners:131
+pn:0 obtuses:301 steiners:132
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0.877482 obtuses:303 steiners:133
+pn:-0.441321 obtuses:302 steiners:134
+pn:0 obtuses:302 steiners:135
+pn:0 obtuses:302 steiners:136
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:302 steiners:137
+pn:0 obtuses:302 steiners:138
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:302 steiners:139
+pn:0.920791 obtuses:304 steiners:140
+pn:0 obtuses:304 steiners:141
+pn:0 obtuses:304 steiners:142
+pn:0 obtuses:304 steiners:143
+pn:0 obtuses:304 steiners:144
+pn:0 obtuses:304 steiners:145
+pn:0 obtuses:304 steiners:146
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0.960655 obtuses:306 steiners:147
+pn:0 obtuses:306 steiners:148
+pn:0 obtuses:306 steiners:149
+pn:0 obtuses:306 steiners:150
+pn:0 obtuses:306 steiners:151
+pn:0 obtuses:306 steiners:152
+pn:0 obtuses:306 steiners:153
+pn:0 obtuses:306 steiners:154
+pn:0 obtuses:306 steiners:155
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:306 steiners:156
+pn:1.52684 obtuses:309 steiners:157
+pn:1.01613 obtuses:311 steiners:158
+pn:0 obtuses:311 steiners:159
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:1.02244 obtuses:313 steiners:160
+pn:0.511961 obtuses:314 steiners:161
+pn:0 obtuses:314 steiners:162
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:314 steiners:163
+pn:0 obtuses:314 steiners:164
+pn:0 obtuses:314 steiners:165
+pn:1.5737 obtuses:317 steiners:166
+pn:1.04717 obtuses:319 steiners:167
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:1.56787 obtuses:322 steiners:168
+pn:0 obtuses:322 steiners:169
+pn:0 obtuses:322 steiners:170
+pn:0 obtuses:322 steiners:171
+pn:0 obtuses:322 steiners:172
+pn:0 obtuses:322 steiners:173
+pn:0.537983 obtuses:323 steiners:174
+pn:0 obtuses:323 steiners:175
+pn:-0.544185 obtuses:322 steiners:176
+pn:0 obtuses:322 steiners:177
+pn:0 obtuses:322 steiners:178
+pn:0 obtuses:322 steiners:179
+pn:0 obtuses:322 steiners:180
+pn:1.11765 obtuses:324 steiners:181
+pn:0 obtuses:324 steiners:182
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:1.12308 obtuses:326 steiners:183
+pn:0 obtuses:326 steiners:184
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0.565083 obtuses:327 steiners:185
+pn:0 obtuses:327 steiners:186
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:327 steiners:187
+pn:0 obtuses:327 steiners:188
+Warning: The Steiner point is too close to an existing point and will not be inserted.
+pn:0 obtuses:327 steiners:189
+Randomization pn: 0
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 1132.2
+Method: Ant Colony: 
+	Original CDT had: 257/476 obtuse faces
+	We inserted 189 steiner points:
+		Middle of largest edge: 10
+		Circumcenter: 29
+		Projection: 150
+		Polygon Cnetroid: 0
+Final obtuse faces: 327/862
+Αρχικές αμβλείες: 257
+Τελικές αμβλείες: 327
+
+Αρχικά faces: 476
+Τελικές faces: 862
+
+Αρχική ενέργεια: 771
+Τελική ενέργεια: 1132.2
+
+-27.2374% αύξηση αμβλείων

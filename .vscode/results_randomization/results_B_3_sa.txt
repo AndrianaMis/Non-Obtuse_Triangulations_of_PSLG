@@ -1,0 +1,64 @@
+Input file: .vscode/temp_3_sa.json
+Output file: .vscode/output_3_sa.json
+simple-polygon-exterior-20_20_1e719235
+20
+
+POINTS_X
+0 ,307 ,496 ,850 ,1134 ,2047 ,1472 ,1220 ,1409 ,2102 ,2661 ,2488 ,2204 ,567 ,338 ,63 ,496 ,669 ,370 ,441 ,
+POINTS_Y
+165 ,165 ,291 ,425 ,0 ,0 ,449 ,1417 ,1417 ,1268 ,1496 ,3087 ,2772 ,3111 ,3733 ,3670 ,3111 ,2646 ,2339 ,425 ,
+REGION_BOUND
+0 ,4 ,5 ,10 ,11 ,14 ,15 ,
+NUM CONSTRAINTS
+14
+
+ADDITIONAL CONSTRAINTS
+[0,1] ,[1,2] ,[2,3] ,[3,4] ,[5,6] ,[6,7] ,[7,8] ,[8,9] ,[9,10] ,[11,12] ,[12,13] ,[16,17] ,[17,18] ,[18,19] ,
+METHOD: sa
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Β. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ (ΑΝΟΙΧΤΟ)
+Αρχική Ενέργεια: 75
+pn:0 obtuses:25 steiners:3
+pn:0 obtuses:25 steiners:4
+pn:-0.182941 obtuses:24 steiners:5
+pn:0 obtuses:24 steiners:6
+pn:0 obtuses:24 steiners:7
+
+Ο αλγόριθμος δεν συγκλίνει: Εκτελούμε τυχαιοποίηση
+pn:0.305711 obtuses:25 steiners:8
+pn:0 obtuses:25 steiners:9
+pn:0 obtuses:25 steiners:10
+pn:0 obtuses:25 steiners:11
+pn:0 obtuses:25 steiners:12
+pn:0 obtuses:25 steiners:13
+pn:0 obtuses:25 steiners:14
+pn:0 obtuses:25 steiners:15
+pn:0 obtuses:25 steiners:16
+pn:0 obtuses:25 steiners:17
+pn:0 obtuses:25 steiners:18
+pn:0 obtuses:25 steiners:19
+pn:0 obtuses:25 steiners:20
+pn:0 obtuses:25 steiners:21
+pn:0 obtuses:25 steiners:22
+pn:0 obtuses:25 steiners:23
+pn:0 obtuses:25 steiners:24
+pn:0 obtuses:25 steiners:25
+pn:0 obtuses:25 steiners:26
+pn:0 obtuses:25 steiners:27
+
+Η μέθοδος της τυχαιοποίησης δεν συγκλίνει. Σταματάει η διαδικασία
+Randomization pn: 0.305711
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 96.6
+Αρχικές αμβλείες: 25
+Τελικές αμβλείες: 25
+
+Αρχικά faces: 31
+Τελικές faces: 46
+
+Αρχική ενέργεια: 75
+Τελική ενέργεια: 81.4
+
+0% μείωση αμβλείων

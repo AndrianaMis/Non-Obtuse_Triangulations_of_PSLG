@@ -1,0 +1,40 @@
+Input file: .vscode/temp_2_ls.json
+Output file: .vscode/output_2_ls.json
+point-set_20_0c4009d9
+20
+
+POINTS_X
+3925 ,9825 ,10375 ,9975 ,9875 ,3525 ,3625 ,4025 ,4025 ,10175 ,3625 ,3725 ,3725 ,9875 ,9675 ,3675 ,4225 ,10275 ,10175 ,9975 ,
+POINTS_Y
+5350 ,8050 ,5650 ,5150 ,5850 ,8300 ,3650 ,5850 ,3850 ,3350 ,4850 ,4350 ,5650 ,4850 ,4850 ,8050 ,5650 ,3850 ,8300 ,6150 ,
+REGION_BOUND
+5 ,6 ,9 ,17 ,2 ,18 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ls
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+pn:-0.104965 obtuses:23 steiners:3
+pn:-0.154517 obtuses:22 steiners:4
+Stopping cause triangulation was not improved
+iteration: 17 out of: 200
+Μέσος ρυθμός σύγκλισης: -0.0648705
+Method: Local search
+	Inserted: 4 Steiner points
+Obtuse faces are now: 22/36
+Αρχικές αμβλείες: 26
+Τελικές αμβλείες: 22
+
+Αρχικά faces: 32
+Τελικές faces: 36
+
+Αρχική ενέργεια: 78
+Τελική ενέργεια: 69.2
+
+15.3846% μείωση αμβλείων

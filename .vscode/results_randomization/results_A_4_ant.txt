@@ -1,0 +1,90 @@
+Input file: .vscode/temp_4_ant.json
+Output file: .vscode/output_4_ant.json
+point-set_60_9fc02edd
+60
+
+POINTS_X
+7300 ,13100 ,14200 ,5400 ,8350 ,11400 ,6650 ,14900 ,200 ,7850 ,11400 ,14900 ,13993 ,12050 ,14900 ,13992 ,7300 ,9450 ,16800 ,15108 ,9242 ,19800 ,19800 ,10150 ,4700 ,16800 ,12050 ,8350 ,3100 ,8350 ,12600 ,12600 ,14900 ,9450 ,4700 ,5608 ,10150 ,3100 ,3600 ,7850 ,10150 ,19800 ,16150 ,14200 ,9450 ,5400 ,12050 ,11400 ,15110 ,200 ,3100 ,4700 ,10360 ,19800 ,5400 ,200 ,16150 ,7300 ,13100 ,12600 ,
+POINTS_Y
+10950 ,10800 ,11650 ,11650 ,2300 ,10800 ,10800 ,8450 ,1100 ,7250 ,2300 ,5750 ,7102 ,7250 ,1600 ,10052 ,3300 ,5750 ,7250 ,7103 ,10052 ,800 ,10000 ,1600 ,5750 ,3300 ,10950 ,6950 ,3300 ,10800 ,7250 ,3300 ,11650 ,8450 ,11650 ,7103 ,11650 ,10950 ,2300 ,3300 ,8450 ,12200 ,2300 ,8450 ,11650 ,1600 ,3300 ,6950 ,10053 ,800 ,7250 ,8450 ,10053 ,11900 ,5750 ,12200 ,6950 ,7250 ,6950 ,10950 ,
+REGION_BOUND
+49 ,21 ,41 ,55 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ant
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+pn:-0.0310231 obtuses:79 steiners:3
+pn:0 obtuses:79 steiners:4
+pn:0.112041 obtuses:81 steiners:5
+pn:0.0672992 obtuses:82 steiners:6
+pn:0.233097 obtuses:85 steiners:7
+pn:0 obtuses:85 steiners:8
+pn:0.0993016 obtuses:86 steiners:9
+pn:0.218199 obtuses:88 steiners:10
+pn:0.351722 obtuses:91 steiners:11
+pn:0.249852 obtuses:93 steiners:12
+pn:0.396647 obtuses:96 steiners:13
+pn:-0.141298 obtuses:95 steiners:14
+pn:0.301974 obtuses:97 steiners:15
+pn:0.316228 obtuses:99 steiners:16
+pn:0.492423 obtuses:102 steiners:17
+pn:0 obtuses:102 steiners:18
+pn:0 obtuses:102 steiners:19
+pn:0 obtuses:102 steiners:20
+pn:0.397992 obtuses:104 steiners:21
+pn:0 obtuses:104 steiners:22
+pn:0.639748 obtuses:107 steiners:23
+pn:0.649713 obtuses:110 steiners:24
+pn:0.659141 obtuses:113 steiners:25
+pn:0 obtuses:113 steiners:26
+
+Ο αλγόριθμος δεν συγκλίνει: Εκτελούμε τυχαιοποίηση
+pn:0.464869 obtuses:115 steiners:27
+pn:0 obtuses:115 steiners:28
+pn:0 obtuses:115 steiners:29
+pn:0 obtuses:115 steiners:30
+pn:0 obtuses:115 steiners:31
+pn:0 obtuses:115 steiners:32
+pn:0 obtuses:115 steiners:33
+pn:0 obtuses:115 steiners:34
+pn:0 obtuses:115 steiners:35
+pn:0 obtuses:115 steiners:36
+pn:0 obtuses:115 steiners:37
+pn:0 obtuses:115 steiners:38
+pn:0 obtuses:115 steiners:39
+pn:0 obtuses:115 steiners:40
+pn:0 obtuses:115 steiners:41
+pn:0 obtuses:115 steiners:42
+pn:0 obtuses:115 steiners:43
+pn:0 obtuses:115 steiners:44
+pn:0 obtuses:115 steiners:45
+pn:0 obtuses:115 steiners:46
+
+Η μέθοδος της τυχαιοποίησης δεν συγκλίνει. Σταματάει η διαδικασία
+Randomization pn: 0.464869
+Ενέργεια τριγωνοποίσης που δεν συγκλίνει: 381.8
+Method: Ant Colony: 
+	Original CDT had: 80/111 obtuse faces
+	We inserted 46 steiner points:
+		Middle of largest edge: 3
+		Circumcenter: 12
+		Projection: 11
+		Polygon Cnetroid: 0
+Final obtuse faces: 115/165
+Αρχικές αμβλείες: 80
+Τελικές αμβλείες: 115
+
+Αρχικά faces: 111
+Τελικές faces: 165
+
+Αρχική ενέργεια: 240
+Τελική ενέργεια: 366.6
+
+-43.75% αύξηση αμβλείων

@@ -74,7 +74,7 @@ def avg_pn():
             for i, inst in enumerate(instaces):
                 #print(f'i: {i+1}, method: {method}, category: {cat}')
                 
-                with open(f'.vscode/results/results_{cat}_{i+1}_{method}.txt', 'r') as file:
+                with open(f'.vscode/results_randomization/results_{cat}_{i+1}_{method}.txt', 'r') as file:
                     lines = file.readlines()
 
                     for line in lines:
@@ -85,8 +85,8 @@ def avg_pn():
                             sum_avg_pn[method] += avg_pn
                             count[method] += 1
         avg_avg[cat] = {method: (sum_avg_pn[method] / count[method] if count[method] > 0 else 0) for method in methods}
-    ##  print(cat)
-    #  print(avg_avg[cat])
+        print(cat)
+        print( avg_avg[cat])
 
 
 
@@ -104,7 +104,7 @@ def avg_pn():
         plt.ylim(y_min, y_max)
         
         # Προσαρμογές στο διάγραμμα
-        plt.title(f"Μέσος ρυθμός σύγκλισης για την κατηγορία: {cat}")
+        plt.title(f"Μέσος ρυθμός σύγκλισης ({cat}. Κατηγορία) (Όλες οι μέθοδοι με προσθήκη τυχαιότητας) ")
         plt.xlabel("Μέθοδος")
         plt.ylabel("Μέσος ρυθμός σύγκλισης")
         plt.xticks(rotation=45)
@@ -193,7 +193,7 @@ def percentage_graph():
             for i, inst in enumerate(instaces):
                 #print(f'i: {i+1}, method: {method}, category: {cat}')
                 
-                with open(f'.vscode/results/results_{cat}_{i+1}_{method}.txt', 'r') as file:
+                with open(f'.vscode/results_proj-circum/results_{cat}_{i+1}_{method}.txt', 'r') as file:
                     lines = file.readlines()
 
                     for line in lines:
@@ -225,7 +225,7 @@ def percentage_graph():
         plt.ylim(y_min, y_max)
         
         # Προσαρμογές στο διάγραμμα
-        plt.title(f"Μέσο ποσοστό μεταβολής αμβλείων για την κατηγορία: {cat}")
+        plt.title(f"Μέσο ποσοστό μεταβολής αμβλείων ({cat}. Κατηγορία) (Μέθοδοι: Προβολή & Περίκεντρο)")
         plt.xlabel("Μέθοδος")
         plt.ylabel("Μέσο ποσοστό μεταβολής")
         plt.xticks(rotation=45)
@@ -239,3 +239,4 @@ def percentage_graph():
 if __name__ == "__main__":
     energy_finding()
     #percentage_graph()
+   # avg_pn()

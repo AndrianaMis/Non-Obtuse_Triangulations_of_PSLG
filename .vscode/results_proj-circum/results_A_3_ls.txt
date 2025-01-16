@@ -1,0 +1,43 @@
+Input file: .vscode/temp_3_ls.json
+Output file: .vscode/output_3_ls.json
+point-set_40_1b92b629
+40
+
+POINTS_X
+77 ,78 ,-5 ,51 ,7 ,-22 ,-47 ,40 ,19 ,69 ,-28 ,52 ,35 ,23 ,54 ,-42 ,-97 ,5 ,-35 ,85 ,60 ,-83 ,41 ,0 ,-50 ,64 ,99 ,-54 ,-66 ,-12 ,57 ,-64 ,-88 ,-67 ,59 ,85 ,91 ,-43 ,33 ,-19 ,
+POINTS_Y
+79 ,-87 ,-39 ,-77 ,-4 ,73 ,12 ,80 ,93 ,59 ,73 ,66 ,-1 ,52 ,-82 ,63 ,35 ,-41 ,-54 ,36 ,58 ,84 ,42 ,75 ,60 ,20 ,81 ,-50 ,63 ,42 ,95 ,70 ,36 ,72 ,-49 ,11 ,36 ,47 ,57 ,59 ,
+REGION_BOUND
+16 ,27 ,14 ,1 ,26 ,30 ,8 ,21 ,
+NUM CONSTRAINTS
+0
+
+ADDITIONAL CONSTRAINTS
+
+METHOD: ls
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Α. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ ΧΩΡΙΣ ΠΕΡΙΟΡΙΣΜΟΥΣ
+pn:-0.065772 obtuses:37 steiners:3
+pn:-0.0952405 obtuses:36 steiners:4
+pn:-0.126246 obtuses:35 steiners:5
+pn:-0.158991 obtuses:34 steiners:6
+pn:-0.193661 obtuses:33 steiners:7
+Stopping cause triangulation was not improved
+iteration: 17 out of: 200
+Μέσος ρυθμός σύγκλισης: -0.0914157
+Method: Local search
+	Inserted: 7 Steiner points
+Obtuse faces are now: 33/77
+Αρχικές αμβλείες: 40
+Τελικές αμβλείες: 33
+
+Αρχικά faces: 70
+Τελικές faces: 77
+
+Αρχική ενέργεια: 120
+Τελική ενέργεια: 104.6
+
+17.5% μείωση αμβλείων

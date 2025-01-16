@@ -1,0 +1,66 @@
+Input file: .vscode/temp_3_ls.json
+Output file: .vscode/output_3_ls.json
+simple-polygon-exterior-20_40_5faf6985
+40
+
+POINTS_X
+1 ,0 ,6 ,7 ,1 ,19 ,14 ,17 ,18 ,22 ,26 ,24 ,28 ,26 ,49 ,51 ,63 ,56 ,59 ,53 ,51 ,42 ,31 ,32 ,33 ,37 ,49 ,61 ,51 ,45 ,51 ,53 ,41 ,37 ,31 ,23 ,22 ,9 ,16 ,13 ,
+POINTS_Y
+27 ,15 ,17 ,11 ,2 ,0 ,15 ,21 ,24 ,24 ,22 ,15 ,9 ,2 ,9 ,2 ,2 ,9 ,20 ,26 ,17 ,10 ,14 ,23 ,28 ,34 ,40 ,52 ,51 ,55 ,57 ,65 ,62 ,46 ,32 ,40 ,49 ,49 ,37 ,31 ,
+REGION_BOUND
+1 ,4 ,5 ,16 ,27 ,31 ,32 ,37 ,0 ,
+NUM CONSTRAINTS
+31
+
+ADDITIONAL CONSTRAINTS
+[1,2] ,[2,3] ,[3,4] ,[5,6] ,[6,7] ,[7,8] ,[8,9] ,[9,10] ,[10,11] ,[11,12] ,[12,13] ,[13,14] ,[15,16] ,[17,18] ,[18,19] ,[19,20] ,[20,21] ,[21,22] ,[22,23] ,[24,25] ,[25,26] ,[26,27] ,[27,28] ,[28,29] ,[32,33] ,[33,34] ,[34,35] ,[35,36] ,[36,37] ,[38,39] ,[39,0] ,
+METHOD: ls
+
+PARAMETERS:
+L: 200, alpha: 3, beta: 0.8, kappa: 8, lambda: 0.5, psi: 3, xi: 1, 
+DELAUNAY: true
+Γ. ΚΥΡΤΟ ΠΕΡΙΒΛΗΜΑ (ΚΛΕΙΣΤΟ)
+pn:-0.0783019 obtuses:31 steiners:3
+pn:-0.113979 obtuses:30 steiners:4
+pn:-0.151927 obtuses:29 steiners:5
+pn:-0.192469 obtuses:28 steiners:6
+
+Ο αλγόριθμος δεν συγκλίνει: Εκτελούμε τυχαιοποίηση
+pn:0.447568 obtuses:30 steiners:7
+pn:0 obtuses:30 steiners:8
+pn:0 obtuses:30 steiners:9
+pn:0 obtuses:30 steiners:10
+pn:0 obtuses:30 steiners:11
+pn:0 obtuses:30 steiners:12
+pn:0 obtuses:30 steiners:13
+pn:0 obtuses:30 steiners:14
+pn:0 obtuses:30 steiners:15
+pn:0 obtuses:30 steiners:16
+pn:0 obtuses:30 steiners:17
+pn:0 obtuses:30 steiners:18
+pn:0 obtuses:30 steiners:19
+pn:0 obtuses:30 steiners:20
+pn:0 obtuses:30 steiners:21
+pn:0 obtuses:30 steiners:22
+pn:0 obtuses:30 steiners:23
+pn:0 obtuses:30 steiners:24
+pn:0 obtuses:30 steiners:25
+pn:0 obtuses:30 steiners:26
+
+Η μέθοδος της τυχαιοποίησης δεν συγκλίνει. Σταματάει η διαδικασία
+iteration: 51 out of: 200
+Randomization pn: 0.447568
+Μέσος ρυθμός σύγκλισης: -0.00342731
+Method: Local search
+	Inserted: 26 Steiner points
+Obtuse faces are now: 30/78
+Αρχικές αμβλείες: 34
+Τελικές αμβλείες: 30
+
+Αρχικά faces: 69
+Τελικές faces: 78
+
+Αρχική ενέργεια: 102
+Τελική ενέργεια: 95.6
+
+11.7647% μείωση αμβλείων

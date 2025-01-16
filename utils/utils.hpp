@@ -208,7 +208,8 @@ Point point_to_polyg(Custom_CDT& , CDT::Face_handle, DATA,int );
 Point point_to_h(Custom_CDT& , CDT::Face_handle , DATA, int);
 bool is_valid_point(const Custom_CDT& , const Point&);
 Point add_to_polygon_centroid(Custom_CDT& , vector<CDT::Vertex_handle> );
-
+bool is_valid_steiner_point(const Custom_CDT& cdt, const CDT::Face_handle& face, const Point& steiner, 
+                            DATA data) ;
 Point project_point_on_line(const Point& p, const Line& l);
 int project1(Custom_CDT&);
 void create_map();
@@ -221,7 +222,11 @@ void simulated_annealing(DATA2&, Custom_CDT&);
 
 
 void checking(Custom_CDT&, DATA2&);
-
+double randomization(Custom_CDT& , DATA&);
+Point compute_incenter(CDT::Face_handle); 
+bool is_point_inside_triangle(const Point& , const Point& , const Point& , const Point& ); 
+RT edge_length(Point &, Point& );
+Point gaussian_p(const Point& , double);
 
 
 
@@ -274,5 +279,5 @@ void create_results_map();
 void save_best_tring(Custom_CDT& , vector<ant_eval> , DATA );
 void update_pherormones(vector<pair<string, double>> &, double , double , int , int , double );
 
-void analyze_boundary(DATA2&);
+int analyze_boundary(DATA2&);
 #endif // UTILS_HP
